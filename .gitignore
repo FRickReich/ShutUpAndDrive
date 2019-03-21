@@ -1,0 +1,17 @@
+/Materials
+/Meshes
+/Prefabs
+/Scenes
+/Skys
+/Textures
+/Modules/*/Prefabs/
+/Modules/*/Scenes/
+/Modules/*/Animations/
+/Modules/*/Sprites/
+/Modules/*/Textures/
+/Modules/*/FX/
+/Modules/*/Materials/
+/Modules/*/Shaders/
+*.prefab
+*.meta
+.DS_Store
