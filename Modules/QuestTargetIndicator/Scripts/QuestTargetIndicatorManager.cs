@@ -2,42 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestTargetIndicatorManager : MonoBehaviour
+namespace Game.Modules.QuestTargetIndicator
 {
-    public GameObject indicator;
-    // Start is called before the first frame update
-    void Start()
+    public class QuestTargetIndicatorManager : MonoBehaviour
     {
-		GetAllQuestIndicators();
-    }
-
-    void GetAllQuestIndicators()
-    {
-        GameObject[] qTargets = GameObject.FindGameObjectsWithTag("QuestTarget");
-
-		foreach (GameObject target in qTargets)
-		{
-			CreateIndicator(target);
-		}
-    }
-
-    void CreateIndicator(GameObject target)
-    {
-        GameObject newIndicator = Instantiate(indicator, new Vector3(transform.position.x, transform.position.y + 0.25f, transform.position.z), transform.rotation);
+        public GameObject indicator;
         
-        newIndicator.GetComponent<QuestTargetIndicator>().target = target.transform;
-        newIndicator.transform.parent = gameObject.transform;
-
-        switch (target.GetComponent<QuestTarget>().questType)
+        // Start is called before the first frame update
+        void Start()
         {
-            case QuestType.MAINQUEST:
-                newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
-                break;
-            case QuestType.SIDEQUEST:
-                newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.green;
-                break;
-               
+    		GetAllQuestIndicators();
         }
-        
+
+        void GetAllQuestIndicators()
+        {
+            GameObject[] qTargets = GameObject.FindGameObjectsWithTag("QuestTarget");
+
+    		foreach (GameObject target in qTargets)
+	    	{
+		    	CreateIndicator(target);
+		    }
+        }
+
+        void CreateIndicator(GameObject target)
+        {
+            GameObject newIndicator = Instantiate(indicator, new Vector3(transform.position.x, transform.position.y + 0.25f, transform.position.z), transform.rotation);
+
+            newIndicator.GetComponent<QuestTargetIndicator>().target = target.transform;
+            newIndicator.transform.parent = gameObject.transform;
+
+            switch (target.GetComponent<QuestTarget>().questType)
+            {
+                case QuestType.MAINQUEST:
+                    newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
+                    break;
+                case QuestType.SIDEQUEST:
+                    newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                    break;
+            }        
+        }
     }
 }

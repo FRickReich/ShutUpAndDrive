@@ -2,26 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum QuestType
+namespace Game.Modules.QuestTargetIndicator
 {
-    MAINQUEST,
-    SIDEQUEST
-}
-
-public class QuestTarget : MonoBehaviour
-{
-
-    public QuestType questType;
-
-    // Start is called before the first frame update
-    void Start()
+    public enum QuestType
     {
-        
+        MAINQUEST,
+        SIDEQUEST
     }
 
-    // Update is called once per frame
-    void Update()
+    public class QuestTarget : MonoBehaviour
     {
-        
+        public QuestType questType;
     }
 }
