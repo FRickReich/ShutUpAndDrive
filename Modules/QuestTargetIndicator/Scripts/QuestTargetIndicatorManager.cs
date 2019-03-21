@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.Modules.QuestTargetIndicator
+namespace Game.Modules.QuestTargetSystem
 {
     public class QuestTargetIndicatorManager : MonoBehaviour
     {

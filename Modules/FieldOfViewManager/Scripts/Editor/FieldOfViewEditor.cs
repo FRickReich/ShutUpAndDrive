@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-
 namespace Game.Modules.FieldOfViewManager
 {
     [CustomEditor(typeof(FieldOfViewManager))]
