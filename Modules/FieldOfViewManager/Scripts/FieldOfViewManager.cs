@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using Game.Modules;
+
 namespace Game.Modules.FieldOfViewManager
 {
     public class FieldOfViewManager : MonoBehaviour
