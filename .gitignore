@@ -13,6 +13,7 @@
 /Modules/*/FX/
 /Modules/*/Materials/
 /Modules/*/Shaders/
+.DS_Store
 *.prefab
 *.meta
-.DS_Store
+*.unity
