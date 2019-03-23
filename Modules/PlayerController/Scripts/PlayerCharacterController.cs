@@ -46,6 +46,8 @@ namespace Game.Modules.PlayerController
 
         private Vector3 velocity;
         private Vector3 prevPosition;
+
+        public GameObject enterableCar;
    
         // Start is called before the first frame update
         void Awake()

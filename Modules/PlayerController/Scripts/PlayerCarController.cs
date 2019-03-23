@@ -39,7 +39,14 @@ namespace Game.Modules.PlayerController
     	public string kmhspeed;
     	public GameObject brakeLights;
 
+        public Transform carEnterPoint;
+
     	private WheelCollider[] m_Wheels;
+
+		private void Awake() {
+			
+            carEnterPoint = gameObject.transform.Find("DriverEnterPoint");
+		}
 
     	// Find all the WheelColliders down in the hierarchy.
 		void Start()
