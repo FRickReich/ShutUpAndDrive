@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Game.Modules;
 
-namespace Game.Modules.FieldOfViewManager
+namespace Game.Modules.FieldOfView
 {
     public class FieldOfViewManager : MonoBehaviour
     {
