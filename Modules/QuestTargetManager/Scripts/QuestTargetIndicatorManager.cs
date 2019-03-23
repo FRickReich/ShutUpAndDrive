@@ -35,10 +35,10 @@ namespace Game.Modules.QuestTargetSystem
 
             switch (target.GetComponent<QuestTarget>().questType)
             {
-                case QuestType.MAINQUEST:
+                case Helpers.QuestType.MAINQUEST:
                     newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
                     break;
-                case QuestType.SIDEQUEST:
+                case Helpers.QuestType.SIDEQUEST:
                     newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.green;
                     break;
             }        

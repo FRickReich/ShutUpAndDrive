@@ -6,14 +6,6 @@ using Game.Modules;
 
 namespace Game.Modules.Managers
 {
-	public enum PlayerMode
-	{
-		PLAYSCHARACTER,
-		ENTERCAR,
-		LEAVECAR,
-		PLAYSCAR,
-		DYING
-	}
 	public class GameManager : MonoBehaviour
 	{
 		public PlayerController.PlayerCharacterController playerCharacter;
@@ -21,7 +13,7 @@ namespace Game.Modules.Managers
 
 		public GameObject enterableVehicle;
 
-		public PlayerMode currentPlayMode = PlayerMode.PLAYSCHARACTER;
+		public Helpers.PlayerMode currentPlayMode = Helpers.PlayerMode.PLAYSCHARACTER;
 		
 		private CameraManager.CameraManager cameraManager;
 
@@ -35,7 +27,7 @@ namespace Game.Modules.Managers
 
 			if(playerCharacter)
 			{
-				if(currentPlayMode == PlayerMode.PLAYSCHARACTER)
+				if(currentPlayMode == Helpers.PlayerMode.PLAYSCHARACTER)
 				{
 					gameObject.transform.position = playerCharacter.gameObject.transform.position;
 
@@ -46,45 +38,45 @@ namespace Game.Modules.Managers
 						if(Input.GetKeyDown(KeyCode.Return))
 						{
 							playerCar = enterableVehicle;
-							currentPlayMode = PlayerMode.ENTERCAR;
+							currentPlayMode = Helpers.PlayerMode.ENTERCAR;
 						}
 					}
 				}
 			}
 			
-			if(currentPlayMode == PlayerMode.PLAYSCAR)
+			if(currentPlayMode == Helpers.PlayerMode.PLAYSCAR)
 			{
 				gameObject.transform.position = playerCar.gameObject.transform.position;
 
 				if(Input.GetKeyDown(KeyCode.Return))
 				{
-					currentPlayMode = PlayerMode.LEAVECAR;
+					currentPlayMode = Helpers.PlayerMode.LEAVECAR;
 				}
 			}
 
 			switch (currentPlayMode)
 			{
 				default:
-				case PlayerMode.PLAYSCHARACTER:
+				case Helpers.PlayerMode.PLAYSCHARACTER:
 					playerCharacter.enabled = true;
 					cameraManager.AttachCameraToPlayer();
 					break;
-				case PlayerMode.ENTERCAR:
+				case Helpers.PlayerMode.ENTERCAR:
 					playerCharacter.enabled = false;
 					playerCharacter.gameObject.SetActive(false);
-					currentPlayMode = PlayerMode.PLAYSCAR;
+					currentPlayMode = Helpers.PlayerMode.PLAYSCAR;
 					break;
-				case PlayerMode.LEAVECAR:
-					playerCar.GetComponent<PlayerController.CarStateManager>().currentState = PlayerController.CurrentCarState.PARKED;
+				case Helpers.PlayerMode.LEAVECAR:
+					playerCar.GetComponent<PlayerController.CarStateManager>().currentState = Helpers.VehicleState.PARKED;
 					playerCharacter.transform.position = playerCar.GetComponent<PlayerController.PlayerCarController>().carEnterPoint.position;
 					playerCharacter.gameObject.SetActive(true);
-					currentPlayMode = PlayerMode.PLAYSCHARACTER;
+					currentPlayMode = Helpers.PlayerMode.PLAYSCHARACTER;
 					break;
-				case PlayerMode.PLAYSCAR:
+				case Helpers.PlayerMode.PLAYSCAR:
 					cameraManager.AttachCameraToCar();
-					playerCar.GetComponent<PlayerController.CarStateManager>().currentState = PlayerController.CurrentCarState.PLAYERDRIVEN;
+					playerCar.GetComponent<PlayerController.CarStateManager>().currentState = Helpers.VehicleState.PLAYERDRIVEN;
 					break;
-				case PlayerMode.DYING:
+				case Helpers.PlayerMode.DYING:
 					break;
 			}
 		}

@@ -40,13 +40,13 @@ namespace Game.Modules.CameraManager
 
         private void FixedUpdate()
         {
-            if(gameManager.currentPlayMode == Managers.PlayerMode.PLAYSCHARACTER)
+            if(gameManager.currentPlayMode == Helpers.PlayerMode.PLAYSCHARACTER)
             {
                 zoomAmount = gameManager.playerCharacter.GetComponent<PlayerController.PlayerCharacterController>().cameraPointPos;
                 SetCameraZoom(initialCharacterZoom, zoomAmount, maxCharacterZoom, characterDampingRate);
             }
 
-            if(gameManager.currentPlayMode == Managers.PlayerMode.PLAYSCAR)
+            if(gameManager.currentPlayMode == Helpers.PlayerMode.PLAYSCAR)
             {
                 zoomAmount = gameManager.playerCar.GetComponent<PlayerController.PlayerCarController>().cameraPointPos;
                 SetCameraZoom(initialCarZoom, zoomAmount, maxCarZoom, carDampingRate);

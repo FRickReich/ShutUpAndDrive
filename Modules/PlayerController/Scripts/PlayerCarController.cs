@@ -3,12 +3,6 @@ using UnityEngine;
 using Game.Modules;
 namespace Game.Modules.PlayerController
 {
-	public enum DriveType
-	{
-		RearWheelDrive,
-		FrontWheelDrive,
-		AllWheelDrive
-	}
 
 	public class PlayerCarController : MonoBehaviour 
 	{
@@ -34,7 +28,7 @@ namespace Game.Modules.PlayerController
 		public int stepsAbove = 1;
 
 		[Tooltip("The vehicle's drive type: rear-wheels drive, front-wheels drive or all-wheels drive.")]
-		public DriveType driveType;
+		public Helpers.DriveType driveType;
 
     	public string kmhspeed;
     	public GameObject brakeLights;
@@ -112,12 +106,12 @@ namespace Game.Modules.PlayerController
 					wheel.brakeTorque = handBrake;
 				}
 
-				if (wheel.transform.localPosition.z < 0 && driveType != DriveType.FrontWheelDrive)
+				if (wheel.transform.localPosition.z < 0 && driveType != Helpers.DriveType.FRONTWHEEL)
 				{
 					wheel.motorTorque = torque;
 				}
 
-				if (wheel.transform.localPosition.z >= 0 && driveType != DriveType.RearWheelDrive)
+				if (wheel.transform.localPosition.z >= 0 && driveType != Helpers.DriveType.REARWHEEL)
 				{
 					wheel.motorTorque = torque;
 				}

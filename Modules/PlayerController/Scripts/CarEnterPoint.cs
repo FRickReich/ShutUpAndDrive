@@ -4,19 +4,9 @@ using UnityEngine;
 
 namespace Game.Modules
 {
-    public enum CarHingePosition
-	{
-		HOOD,
-		TRUNK,
-		LEFTFRONTDOOR,
-        RIGHTFRONTDOOR,
-        LEFTREARDOOR,
-        RIGHTREARDOOR
-	}
-
     public class CarEnterPoint : MonoBehaviour
     {
-        public CarHingePosition position;
+        public Helpers.CarHingePosition position;
         public Transform closestCharacter = null;
         
         private void OnTriggerEnter(Collider other)

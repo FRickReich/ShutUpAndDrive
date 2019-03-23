@@ -2,16 +2,9 @@ using UnityEngine;
 
 namespace Game.Modules.PlayerController
 {
-	public enum CurrentCarState
-	{
-		PARKED,
-		PLAYERDRIVEN,
-		NPCDRIVEN
-	}
-
 	public class CarStateManager : MonoBehaviour 
 	{
-		public CurrentCarState currentState = CurrentCarState.PARKED;
+		public Helpers.VehicleState currentState = Helpers.VehicleState.PARKED;
 		
 		private PlayerCarController playerCarController;
 		private CarLightManager carLights;
@@ -27,13 +20,13 @@ namespace Game.Modules.PlayerController
 			switch (currentState)
 			{
 				default:
-				case CurrentCarState.PARKED:
+				case Helpers.VehicleState.PARKED:
 					CarParkedState();
 					break;
-				case CurrentCarState.PLAYERDRIVEN:
+				case Helpers.VehicleState.PLAYERDRIVEN:
 					CarPlayerDrivenState();
 					break;
-				case CurrentCarState.NPCDRIVEN:
+				case Helpers.VehicleState.NPCDRIVEN:
 					CarNPCDrivenState();
 					break;
 			}
