@@ -32,10 +32,13 @@ namespace Game.Modules.Managers
 
 		void Update()
 		{
+
 			if(playerCharacter)
 			{
 				if(currentPlayMode == PlayerMode.PLAYSCHARACTER)
 				{
+					gameObject.transform.position = playerCharacter.gameObject.transform.position;
+
 					enterableVehicle = playerCharacter.enterableCar;
 
 					if(enterableVehicle != null)
@@ -51,6 +54,8 @@ namespace Game.Modules.Managers
 			
 			if(currentPlayMode == PlayerMode.PLAYSCAR)
 			{
+				gameObject.transform.position = playerCar.gameObject.transform.position;
+
 				if(Input.GetKeyDown(KeyCode.Return))
 				{
 					currentPlayMode = PlayerMode.LEAVECAR;
