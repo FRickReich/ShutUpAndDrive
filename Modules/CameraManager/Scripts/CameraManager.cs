@@ -38,7 +38,7 @@ namespace Game.Modules.CameraManager
 
         private void FixedUpdate()
         {
-            zoomAmount = player.GetComponent<PlayerController.PlayerController>().cameraPointPos;
+            zoomAmount = player.GetComponent<PlayerController.PlayerCharacterController>().cameraPointPos;
 
             SetCameraZoom(zoomAmount);
         }
