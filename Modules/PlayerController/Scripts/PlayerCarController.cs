@@ -43,9 +43,20 @@ namespace Game.Modules.PlayerController
 
     	private WheelCollider[] m_Wheels;
 
+		public float cameraPointPos = 0f;
+        public float cameraPointMultiplier = 5f;
+
+		private Vector3 velocity;
+        private Vector3 prevPosition;
+		
+		private Transform cameraPointController;
+		private CarLightManager carLightManager;
+
 		private void Awake() {
 			
             carEnterPoint = gameObject.transform.Find("DriverEnterPoint");
+			cameraPointController = gameObject.transform.Find("CameraPointController");
+			carLightManager = GetComponent<CarLightManager>();
 		}
 
     	// Find all the WheelColliders down in the hierarchy.
@@ -71,13 +82,22 @@ namespace Game.Modules.PlayerController
 		// This helps us to figure our which wheels are front ones and which are rear.
 		void Update()
 		{
+			float fwdDotProduct = Vector3.Dot(transform.forward, velocity);
+            float upDotProduct = Vector3.Dot(transform.up, velocity);
+            float rightDotProduct = Vector3.Dot(transform.right, velocity);
+   
+            Vector3 velocityVector = new Vector3(rightDotProduct, upDotProduct, fwdDotProduct);
+   
+            cameraPointPos = Mathf.Clamp(velocityVector.magnitude, 0, 40);
+
 			m_Wheels[0].ConfigureVehicleSubsteps(criticalSpeed, stepsBelow, stepsAbove);
 
 			float angle = maxAngle * Input.GetAxis("Horizontal");
 			float torque = maxTorque * Input.GetAxis("Vertical");
 
 			float handBrake = Input.GetKey(KeyCode.X) ? brakeTorque : 0;
-        	brakeLights.SetActive(Input.GetKey(KeyCode.X) ? true : false);
+
+			carLightManager.Brake(Input.GetKey(KeyCode.X) ? true : false);
 
         	kmhspeed = string.Format("Speed: {0:0.00} m/s", this.GetComponent<Rigidbody>().velocity.magnitude);
 
@@ -115,6 +135,12 @@ namespace Game.Modules.PlayerController
 					shapeTransform.rotation = q;
 				}
 			}
+		}
+
+		private void FixedUpdate() 
+		{
+			velocity = (transform.position - prevPosition)/Time.deltaTime;
+            prevPosition = transform.position;	
 		}
 	}
 }
