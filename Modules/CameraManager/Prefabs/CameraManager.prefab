@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702366945785433179}
   - component: {fileID: 702366945785433178}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 702366946029736845}
   - component: {fileID: 702366946029736847}
   - component: {fileID: 702366946029736844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 702366946815858048}
   - component: {fileID: 702366946815858051}
   - component: {fileID: 702366946815858050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Virtual Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4700f9f03ad19f94baf0367cb7a9c988, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Width: 15
+  m_Width: 16.37228
   m_Damping: 2
   m_MinFOV: 1
   m_MaxFOV: 60
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 702366947080994574}
   - component: {fileID: 702366947080994575}
   - component: {fileID: 702366947080994572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 53.130104
+  field of view: 57.246365
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

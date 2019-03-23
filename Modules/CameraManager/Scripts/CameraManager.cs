@@ -17,9 +17,12 @@ namespace Game.Modules.CameraManager
         private GameObject target;
         private Transform cameraPoint;
         private float zoomAmount;
-        private float initialZoom = 15f;
-        private float maxZoom = 60f;
-        private float dampingRate = 2f;
+        private float initialCharacterZoom = 15f;
+        private float initialCarZoom = 40f;
+        private float maxCharacterZoom = 60f;
+        private float maxCarZoom = 100f;
+        private float characterDampingRate = 2f;
+        private float carDampingRate = 0f;
 
         // Start is called before the first frame update
         void Awake()
@@ -37,14 +40,22 @@ namespace Game.Modules.CameraManager
 
         private void FixedUpdate()
         {
-            //zoomAmount = target.GetComponent<PlayerController.PlayerCharacterController>().cameraPointPos;
+            if(gameManager.currentPlayMode == Managers.PlayerMode.PLAYSCHARACTER)
+            {
+                zoomAmount = gameManager.playerCharacter.GetComponent<PlayerController.PlayerCharacterController>().cameraPointPos;
+                SetCameraZoom(initialCharacterZoom, zoomAmount, maxCharacterZoom, characterDampingRate);
+            }
 
-            SetCameraZoom(zoomAmount);
+            if(gameManager.currentPlayMode == Managers.PlayerMode.PLAYSCAR)
+            {
+                zoomAmount = gameManager.playerCar.GetComponent<PlayerController.PlayerCarController>().cameraPointPos;
+                SetCameraZoom(initialCarZoom, zoomAmount, maxCarZoom, carDampingRate);
+            }
         }
 
-        void SetCameraZoom(float zoomAmount)
+        void SetCameraZoom(float startZoom, float zoomAmount, float maxZoom, float dampingRate)
         {
-            virtualCameraZoom.m_Width = Mathf.Clamp(initialZoom + (zoomAmount / 2), initialZoom, maxZoom);
+            virtualCameraZoom.m_Width = Mathf.Clamp(startZoom + (zoomAmount / 2), startZoom, maxZoom);
             virtualCameraZoom.m_Damping = dampingRate;
         }
 
