@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 4198369906614622395}
   - component: {fileID: 4198369906614622394}
   - component: {fileID: 1463594408}
-  - component: {fileID: 138323451}
   - component: {fileID: 1740537024}
+  - component: {fileID: 1082467123}
   - component: {fileID: 136948011}
   m_Layer: 0
   m_Name: Player
@@ -114,39 +114,6 @@ MonoBehaviour:
   initialArmor: 100
   currentHealth: 10
   currentArmor: 0
---- !u!114 &138323451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4198369906614622393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2979a389cc46b49969237d6290a238fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 8534766306940032045}
-  y: 0
-  z: 0
-  speed: 5
-  rotateSpeed: 5
-  currentPlayerMoney: 0
-  currentArea: {fileID: 0}
-  currentLocation: {fileID: 0}
-  currentHealth: {fileID: 0}
-  currentArmor: {fileID: 0}
-  currentMoney: {fileID: 0}
-  theGun: {fileID: 0}
-  playerHealth: {fileID: 1463594408}
-  randomDying: 0
-  running: 0
-  armed: 0
-  shooting: 0
-  talking: 0
-  dying: 0
-  cameraPointPos: 0
-  cameraPointMultiplier: 5
 --- !u!114 &1740537024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +128,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   indicator: {fileID: 7716972256050767670, guid: f16320a419b3844c9827b63858e6a487,
     type: 3}
+--- !u!114 &1082467123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4198369906614622393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4e5bb8e16b174a6f932e58373a72128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8534766306940032045}
+  y: 0
+  z: 0
+  speed: 5
+  rotateSpeed: 5
+  currentPlayerMoney: 0
+  currentArea: {fileID: 0}
+  currentLocation: {fileID: 0}
+  currentHealth: {fileID: 0}
+  currentArmor: {fileID: 0}
+  currentMoney: {fileID: 0}
+  randomDying: 0
+  running: 0
+  armed: 0
+  shooting: 0
+  talking: 0
+  dying: 0
+  cameraPointPos: 0
+  cameraPointMultiplier: 5
 --- !u!114 &136948011
 MonoBehaviour:
   m_ObjectHideFlags: 0

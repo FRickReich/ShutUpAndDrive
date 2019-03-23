@@ -7,7 +7,7 @@ using Game.Modules;
 
 namespace Game.Modules.PlayerController
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerCharacterController : MonoBehaviour
     {
         private Rigidbody rb;
         public Animator animator;
@@ -29,8 +29,8 @@ namespace Game.Modules.PlayerController
         public Text currentArmor;
         public Text currentMoney;
 
-        public GunController theGun;
-        public HealthManager playerHealth;
+        //public GunController theGun;
+        //public HealthManager playerHealth;
 
         public int randomDying = 0;
         public bool running;
@@ -53,8 +53,8 @@ namespace Game.Modules.PlayerController
             rb = GetComponent<Rigidbody>();
             cameraPointController = gameObject.transform.Find("CameraPointController");
 
-            theGun = GetComponentInChildren<GunController>();
-            playerHealth = GetComponent<HealthManager>();
+            //theGun = GetComponentInChildren<GunController>();
+            //playerHealth = GetComponent<HealthManager>();
             randomDying = Random.Range(0, 4);
         }
 
@@ -66,7 +66,7 @@ namespace Game.Modules.PlayerController
         // Upda te is called once per frame
         void Update()
         {
-            if(Input.GetMouseButtonDown(0))
+            /*if(Input.GetMouseButtonDown(0))
             {
                 theGun.owner = this.tag;
 
@@ -79,6 +79,7 @@ namespace Game.Modules.PlayerController
                 shooting = false;
                 theGun.isFiring = false;
             }
+            */
 
             animator.SetFloat("speed", z);
             animator.SetBool("run", running);
