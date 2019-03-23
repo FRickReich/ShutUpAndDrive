@@ -48,7 +48,7 @@ namespace Game.Modules.PlayerController
 		public void CarPlayerDrivenState()
 		{
 			playerCarController.enabled = true;
-			carLights.MainLightsOn();
+			carLights.MainLights(true);
 		}
 
 		public void CarNPCDrivenState()
