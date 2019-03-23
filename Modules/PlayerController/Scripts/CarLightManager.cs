@@ -27,16 +27,10 @@ namespace Game.Modules.PlayerController
 			RightIndicators = lightObject.transform.Find("RightIndicators");	
 		}
 
-		public void MainLightsOn()
+		public void MainLights(bool lightState)
 		{
-			HandleLightState(headLights, true);
-			HandleLightState(tailLights, true);
-		}
-
-		public void MainLightsOff()
-		{
-			HandleLightState(headLights, false);
-			HandleLightState(tailLights, false);
+			HandleLightState(headLights, lightState);
+			HandleLightState(tailLights, lightState);
 		}
 
 		public void TurnLeft(bool isTurning)
@@ -63,7 +57,7 @@ namespace Game.Modules.PlayerController
 			}
 		}
 
-		public void Break(bool isBreaking)
+		public void Brake(bool isBreaking)
 		{
 			if(isBreaking)
 			{
