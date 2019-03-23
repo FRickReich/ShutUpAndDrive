@@ -15,6 +15,8 @@ namespace Game.Modules.FieldOfView
         public LayerMask targetMask;
         public LayerMask obstacleMask;
 
+        public bool isVisible = true;
+
         //[HideInInspector]
         public List<Transform> visibleTargets = new List<Transform>();
 
@@ -34,6 +36,17 @@ namespace Game.Modules.FieldOfView
             StartCoroutine("FindTargetsWithDelay", .2f);
         }
 
+        private void Update()
+        {
+            if(isVisible)
+            {
+                viewMeshFilter.GetComponent<MeshRenderer>().enabled = true;
+            }
+            else
+            {
+                viewMeshFilter.GetComponent<MeshRenderer>().enabled = false;
+            }
+        }
 
         IEnumerator FindTargetsWithDelay(float delay)
         {
