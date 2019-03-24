@@ -2,7 +2,7 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-using Game.Modules;
+using Game.Modules.Managers;
 
 namespace Game.Modules.Internal
 {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-using Game.Modules;
+using Game.Modules.Internal;
 
 namespace Game.Modules.Managers
 {
@@ -79,6 +79,26 @@ namespace Game.Modules.Managers
 				case Helpers.PlayerMode.DYING:
 					break;
 			}
+		}
+
+		public void SaveGame()
+		{
+			SaveSystem.SaveCurrent(this);
+		}
+
+		public void LoadGame()
+		{
+			GameData data = SaveSystem.LoadPlayer();
+
+			// level = data.level;
+			// health = data.health;
+
+			// Vector3 position;
+			// position.x = data.position[0];
+			// position.y = data.position[1];
+			// position.z = data.position[2];
+
+			// transform.position = position;
 		}
 	}
 }
