@@ -179,6 +179,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6493744374374865003, guid: 4358f5c63c27a45b38afbf99532a08fa,
+        type: 3}
+      propertyPath: closeDistance
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4358f5c63c27a45b38afbf99532a08fa, type: 3}
 --- !u!4 &40451466 stripped
@@ -193,7 +198,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh44786
+  m_Name: pb_Mesh41682
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -419,6 +424,11 @@ PrefabInstance:
       propertyPath: questType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6493744374374865003, guid: 4358f5c63c27a45b38afbf99532a08fa,
+        type: 3}
+      propertyPath: closeDistance
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4358f5c63c27a45b38afbf99532a08fa, type: 3}
 --- !u!4 &197536902 stripped
@@ -573,6 +583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: questType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493744374374865003, guid: 4358f5c63c27a45b38afbf99532a08fa,
+        type: 3}
+      propertyPath: closeDistance
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4358f5c63c27a45b38afbf99532a08fa, type: 3}
@@ -1418,6 +1433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: questType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493744374374865003, guid: 4358f5c63c27a45b38afbf99532a08fa,
+        type: 3}
+      propertyPath: closeDistance
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4358f5c63c27a45b38afbf99532a08fa, type: 3}
