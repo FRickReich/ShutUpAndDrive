@@ -1169,6 +1169,7 @@ MonoBehaviour:
   indicatorPrefab: {fileID: 8387664721394505035, guid: 3303b5b45d04c4e298f964188ae9fdcc,
     type: 3}
   distance: 0
+  closeDistance: 25
 --- !u!114 &1541834730 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1082467123, guid: 3cd17a8c75bf249b495ff01e1dc88c43,
