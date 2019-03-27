@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Game.Modules;
 
-namespace Game.Modules.QuestTargetSystem
+namespace Game.Modules
 {
     public class QuestTargetIndicatorManager : MonoBehaviour
     {
@@ -38,8 +38,14 @@ namespace Game.Modules.QuestTargetSystem
                 case Helpers.QuestType.MAINQUEST:
                     newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.yellow;
                     break;
+                case Helpers.QuestType.MAINQUESTTARGET:
+                    newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.cyan;
+                    break;
                 case Helpers.QuestType.SIDEQUEST:
                     newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.green;
+                    break;
+                case Helpers.QuestType.SIDEQUESTTARGET:
+                    newIndicator.GetComponentInChildren<SpriteRenderer>().color = Color.blue;
                     break;
             }        
         }

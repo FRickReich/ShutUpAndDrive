@@ -4,10 +4,8 @@ using UnityEngine;
 
 using Game.Modules;
 
-namespace Game.Modules.QuestTargetSystem
+namespace Game.Modules
 {
-    
-
     public class QuestTarget : MonoBehaviour
     {
         public Helpers.QuestType questType;
