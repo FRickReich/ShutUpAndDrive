@@ -9,12 +9,12 @@ namespace Game.Modules.MiniMapManager
 		public Sprite IndicatorSprite;
 		public SpriteRenderer indicatorPrefab;
 		public float distance;
+		public float closeDistance = 25f;
 
 		private SpriteRenderer newIndicator;
 		private float playerSizeOnMap = 7.5f;
 		private float initialSize = 2.5f;
 		private float maxSize = 5f;
-		private float closeDistance = 100f;
 		private Transform player; 
 
 		private void Awake()
