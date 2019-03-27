@@ -17,7 +17,7 @@ namespace Game.Modules.Objects
 		[Header("Model")]
 		public GameObject wheelModel;
 		public GameObject vehicleModel;
-		public MeshFilter vehicleCollider;
+		public GameObject vehicleCollider;
 
 		[Header("Paint")]
 		public List<Material> vehiclePaints;

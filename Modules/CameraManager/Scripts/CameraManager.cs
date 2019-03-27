@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 
 using Game.Modules;
+using Game.Modules.Internal;
 
 namespace Game.Modules.CameraManager
 {
@@ -12,7 +13,7 @@ namespace Game.Modules.CameraManager
         private CinemachineVirtualCamera virtualCamera;
         private CinemachineFollowZoom virtualCameraZoom;
 
-        private Managers.GameManager gameManager;
+        GameManager gameManager;
 
         private GameObject target;
         private Transform cameraPoint;
@@ -29,7 +30,7 @@ namespace Game.Modules.CameraManager
         {
             virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
             virtualCameraZoom = GetComponentInChildren<CinemachineFollowZoom>();
-            gameManager = FindObjectOfType<Managers.GameManager>();
+            gameManager = FindObjectOfType<GameManager>();
         }
 
         void SetCameraFollowObject(Transform followObject)

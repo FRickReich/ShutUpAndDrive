@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-using Game.Modules;
-
 namespace Game.Modules
 {
 	public class VehicleManager : MonoBehaviour
@@ -33,7 +31,7 @@ namespace Game.Modules
 		{
 			vehicleName = vehicle.name;
 
-			Mesh vehicleMesh = vehicle.vehicleCollider.sharedMesh;
+			Mesh vehicleMesh = vehicle.vehicleCollider.GetComponent<MeshCollider>().sharedMesh;
 
 			rigidbody.mass = vehicle.weight;
 			boxCollider.size = new Vector3(vehicleMesh.bounds.size.x, vehicleMesh.bounds.size.y, vehicleMesh.bounds.size.z);
