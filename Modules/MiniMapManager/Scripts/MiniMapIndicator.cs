@@ -42,6 +42,8 @@ namespace Game.Modules.MiniMapManager
         private void CreateMiniMapIndicator()
         {
             newIndicator = Instantiate(indicatorPrefab, gameObject.transform.position, Quaternion.LookRotation(Vector3.up), gameObject.transform);
+			newIndicator.flipY = true;
+			newIndicator.name = "MiniMapIndicator";
         }
 
 		public void ChangeSprite(Sprite newSprite)
