@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Game.Modules.PlayerController
+namespace Game.Modules
 {
 	public class CarLightManager : MonoBehaviour
 	{
@@ -13,6 +13,8 @@ namespace Game.Modules.PlayerController
 		private Transform BrakeLights;
 		private Transform LeftIndicators;
 		private Transform RightIndicators;
+
+		
 
 		private Coroutine indicatorBlink = null;
 
@@ -67,6 +69,11 @@ namespace Game.Modules.PlayerController
 			{
 				HandleLightState(BrakeLights, false);
 			}
+		}
+
+		public void EmergencyLight(bool isPoweredUp)
+		{
+			
 		}
 
 		public void EngineOff()

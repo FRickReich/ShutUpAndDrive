@@ -2,8 +2,6 @@ using UnityEngine;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-using Game.Modules.Managers;
-
 namespace Game.Modules.Internal
 {
 	public static class SaveSystem

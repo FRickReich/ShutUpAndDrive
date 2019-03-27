@@ -1,6 +1,7 @@
 using UnityEngine;
 
 using Game.Modules;
+using Game.Modules.Internal;
 
 namespace Game.Modules.Internal
 {
@@ -11,7 +12,7 @@ namespace Game.Modules.Internal
 		public int health;
 		public float[] position;
 
-		public GameData(Modules.Managers.GameManager gameManager)
+		public GameData(GameManager gameManager)
 		{
 			level = 20;
 			health = 20;

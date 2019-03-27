@@ -2,9 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-using Game.Modules.Internal;
-
-namespace Game.Modules.Managers
+namespace Game.Modules.Internal
 {
 	public class GameManager : MonoBehaviour
 	{
@@ -65,12 +63,14 @@ namespace Game.Modules.Managers
 					playerCharacter.enabled = false;
 					playerCharacter.gameObject.SetActive(false);
 					currentPlayMode = Helpers.PlayerMode.PLAYSCAR;
+					playerCar.tag = "Player";
 					break;
 				case Helpers.PlayerMode.LEAVECAR:
 					playerCar.GetComponent<PlayerController.CarStateManager>().currentState = Helpers.VehicleState.PARKED;
 					playerCharacter.transform.position = playerCar.GetComponent<PlayerController.PlayerCarController>().carEnterPoint.position;
 					playerCharacter.gameObject.SetActive(true);
 					currentPlayMode = Helpers.PlayerMode.PLAYSCHARACTER;
+					playerCar.tag = "Traffic";
 					break;
 				case Helpers.PlayerMode.PLAYSCAR:
 					cameraManager.AttachCameraToCar();
