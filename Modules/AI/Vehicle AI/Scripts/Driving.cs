@@ -151,7 +151,6 @@ namespace Game.Modules.VehicleAI
 
         void Sensors()
         {
-
             Vector3 pos;
             RaycastHit hit;
 
@@ -228,7 +227,6 @@ namespace Game.Modules.VehicleAI
                     Debug.DrawLine(pos, hit.point, sensorColor);
                 }
             }
-
 
             // RIGHT SIDE SENSOR
             if (Physics.Raycast(transform.position, transform.right, out hit, sidewaySensorLength))
