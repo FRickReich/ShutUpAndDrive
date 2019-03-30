@@ -15,7 +15,11 @@ namespace Game.Modules.FieldOfView
         public LayerMask targetMask;
         public LayerMask obstacleMask;
 
+  
 
+
+
+  
         public bool isVisible = true;
 
         //[HideInInspector]
