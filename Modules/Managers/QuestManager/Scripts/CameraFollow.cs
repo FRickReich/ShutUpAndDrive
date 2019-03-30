@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraFollow : MonoBehaviour {
-
+public class CameraFollow : MonoBehaviour 
+{
 	public Transform target;
 
 //	private bool smooth = true;
@@ -10,25 +10,19 @@ public class CameraFollow : MonoBehaviour {
 //	private Vector3 offset = new Vector3(0, 0, -10f);
 
 	public float distance = 10f;
-
 	public float height = 5f;
-
 	public float heightDamping = 2f;
-
 
 	void Start()
 	{
 		//target = GameObject.Find("HeroCharacter").transform;
 	}
 
-
 	void LateUpdate()
 	{
 //		Vector3 desiredPosition = target.transform.position + offset;
 //
 //		transform.position = desiredPosition;
-
-
 
 		if (!target)
 		{
