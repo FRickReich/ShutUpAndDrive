@@ -2,8 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class QuestManager : MonoBehaviour {
-
+public class QuestManager : MonoBehaviour 
+{
 	public static QuestManager questManager;
 
 	public List <Quest> questList = new List<Quest>();			// Master Quest List
@@ -118,9 +118,7 @@ public class QuestManager : MonoBehaviour {
 		return false;
 	}
 
-
-
-	public void AcceptQuest(int questID)// on button click
+	public void AcceptQuest(int questID) // on button click
 	{
 		for (int i = 0; i < questList.Count; i++)
 		{
@@ -132,7 +130,7 @@ public class QuestManager : MonoBehaviour {
 		}
 	}
 
-	public void GiveUpQuest(int questID)//giveup the quest
+	public void GiveUpQuest(int questID) //giveup the quest
 	{
 		for (int i = 0; i < currentQuestList.Count; i++)
 		{
@@ -157,7 +155,7 @@ public class QuestManager : MonoBehaviour {
 				//give rewards later here
 
 				//remove possible items from Inventory
-				RemoveQuestItem();// This function is currently Empty so fill it with your inventory data
+				RemoveQuestItem(); // This function is currently Empty so fill it with your inventory data
 			}
 		}
 		//ACTIVATE A CHAIN QUEST - IF THERE IS ANY
@@ -188,15 +186,14 @@ public class QuestManager : MonoBehaviour {
 
 	}
 
-
-	public void AddQuestItem(string questObjective,int itemAmount)// add items or kill amount or whatever  // name of the item, amount to add
+	public void AddQuestItem(string questObjective,int itemAmount) // add items or kill amount or whatever  // name of the item, amount to add
 	{
 		//loop through the existing quests and check if there is any active one with this item requested
 		for (int i = 0; i < currentQuestList.Count; i++)
 		{
 			if (currentQuestList[i].questObjective == questObjective && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED) // if is a searched item && quest is on accepted state
 			{
-				currentQuestList[i].questObjectiveCount += itemAmount;//increase item by passed amount
+				currentQuestList[i].questObjectiveCount += itemAmount; //increase item by passed amount
 				//later also add it to an inventory if needed
 			}
 
@@ -209,8 +206,7 @@ public class QuestManager : MonoBehaviour {
 		}
 	}
 
-
-	public void RemoveQuestItem()//remove an item from inventory later
+	public void RemoveQuestItem() //remove an item from inventory later
 	{
 		//Iterate through your Inventory and remove the correct item and item amount if its there.
 	}
@@ -222,8 +218,8 @@ public class QuestManager : MonoBehaviour {
 		{
 			if (currentQuestList[i].questObjective == itemName && currentQuestList[i].progress == Quest.QuestProgress.ACCEPTED || currentQuestList[i].progress == Quest.QuestProgress.COMPLETE) // if is a searched item && quest is on accepted state
 			{
-				currentQuestList[i].questObjectiveCount -= itemAmount;//decrease item by passed amount
-				if (currentQuestList[i].questObjectiveCount < 0)//prevent underflow
+				currentQuestList[i].questObjectiveCount -= itemAmount; //decrease item by passed amount
+				if (currentQuestList[i].questObjectiveCount < 0) //prevent underflow
 				{
 					currentQuestList[i].questObjectiveCount = 0;
 				}
@@ -252,8 +248,7 @@ public class QuestManager : MonoBehaviour {
 		}
 	}
 
-
-//------------------------------------------------------------------BOOLS FOR BUTTONS-------------------------------------------------------------
+	//------------------------------------------------------------------BOOLS FOR BUTTONS-------------------------------------------------------------
 	public bool RequestAvailableQuest(int questID)
 	{
 		for (int i = 0; i < questList.Count; i++)

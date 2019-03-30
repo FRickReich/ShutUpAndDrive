@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class QuestUIManager : MonoBehaviour {
-
+public class QuestUIManager : MonoBehaviour 
+{
 	public static QuestUIManager uiManager;
 
 	[HideInInspector]public bool questAvailable = false;
@@ -33,9 +33,9 @@ public class QuestUIManager : MonoBehaviour {
 	[HideInInspector]public GameObject completeButton;
 
 	//SPACER
-	public Transform QButtonSpacer;//availables
-	public Transform QButtonSpacer2;//running
-	public Transform QLogButtonSpacer;//running
+	public Transform QButtonSpacer; //availables
+	public Transform QButtonSpacer2; //running
+	public Transform QLogButtonSpacer; //running
 
 	//ALL QUEST INFOS
 	public Text questTitle;
@@ -99,12 +99,12 @@ public class QuestUIManager : MonoBehaviour {
 	{
 		if (Input.GetKeyDown(KeyCode.Q))
 		{
-			questLogPanel = !questLogPanel;//switch
+			questLogPanel = !questLogPanel; //switch
 			ShowQuestLogPanel();
 		}
     }
 
-//------------------------------------------------CALLED FROM THE QUESTOBJECT----------------------------------------------
+	//------------------------------------------------CALLED FROM THE QUESTOBJECT----------------------------------------------
 	public void CheckQuests(QuestObject questObject)
 	{
 		//currentQuestObject = questObject;//NOT NEEDED
@@ -121,7 +121,8 @@ public class QuestUIManager : MonoBehaviour {
 			Debug.Log("No Quest Available");
 		}
 	}
-//------------------------------------------------------------------SHOW PANELS---------------------------------------------------------
+
+	//------------------------------------------------------------------SHOW PANELS---------------------------------------------------------
 	public void ShowQuestPanel()
 	{
 		panelActive = true;
@@ -191,7 +192,6 @@ public class QuestUIManager : MonoBehaviour {
 		{
 			Destroy(QButtons[i]);
 		}
-			
 
 		QButtons.Clear();
 		//hide panel
@@ -262,7 +262,6 @@ public class QuestUIManager : MonoBehaviour {
 	}
 
 	//---------------------------------------------------------SHOW QUEST LOG FOR A RUNNING SELECTED QUEST----------------------------------------------
-
 	public void showQuestLog(Quest activeQuest)
 	{
 		questLogTitle.text = activeQuest.title;

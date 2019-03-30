@@ -53,7 +53,6 @@ public class Character : MonoBehaviour
 
 		if (movedirection != Vector3.zero)
 		{
-			
 			Quaternion newRotation = Quaternion.LookRotation(movedirection);
 			transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * 5);
 		}

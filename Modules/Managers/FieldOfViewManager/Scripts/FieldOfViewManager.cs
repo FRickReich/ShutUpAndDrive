@@ -15,6 +15,7 @@ namespace Game.Modules.FieldOfView
         public LayerMask targetMask;
         public LayerMask obstacleMask;
 
+
         public bool isVisible = true;
 
         //[HideInInspector]
@@ -111,7 +112,6 @@ namespace Game.Modules.FieldOfView
 
                 }
 
-
                 viewPoints.Add(newViewCast.point);
                 oldViewCast = newViewCast;
             }
@@ -140,7 +140,6 @@ namespace Game.Modules.FieldOfView
             viewMesh.RecalculateNormals();
         }
 
-
         EdgeInfo FindEdge(ViewCastInfo minViewCast, ViewCastInfo maxViewCast)
         {
             float minAngle = minViewCast.angle;
@@ -168,7 +167,6 @@ namespace Game.Modules.FieldOfView
 
             return new EdgeInfo(minPoint, maxPoint);
         }
-
 
         ViewCastInfo ViewCast(float globalAngle)
         {
@@ -221,6 +219,5 @@ namespace Game.Modules.FieldOfView
                 pointB = _pointB;
             }
         }
-
     }
 }
