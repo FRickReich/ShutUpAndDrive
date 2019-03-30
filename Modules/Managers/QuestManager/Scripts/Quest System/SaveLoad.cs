@@ -22,8 +22,8 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Collections.Generic;
 
-public class SaveLoad: MonoBehaviour{
-	
+public class SaveLoad: MonoBehaviour
+{	
 	public List <Quest> allQuests = new List<Quest>();
 
 	public void SaveQuests()
@@ -36,10 +36,8 @@ public class SaveLoad: MonoBehaviour{
 			allQuests.Add(QuestManager.questManager.questList[i]);
 		}
 
-
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream stream = new FileStream(Application.persistentDataPath + "/QuestList.stad", FileMode.Create);
-
 
 		bf.Serialize(stream, allQuests);
 		stream.Close();
@@ -75,7 +73,6 @@ public class SaveLoad: MonoBehaviour{
 					QuestManager.questManager.currentQuestList.Add(QuestManager.questManager.questList[i]);
 				}
 			}
-
 
 			//update all npcs object markers
 			QuestObject[] NPCs = GameObject.FindObjectsOfType(typeof(QuestObject)) as QuestObject[];

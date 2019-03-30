@@ -6,12 +6,12 @@ using UnityEngine.UI;
 using Game.Modules;
 using Game.Modules.Helpers;
 
-public class QuestObject : MonoBehaviour {
-
-	private bool inTrigger = false;// trigger ón or off
+public class QuestObject : MonoBehaviour 
+{
+	private bool inTrigger = false; // trigger ón or off
 
 	public List<int> availableQuestIDs = new List<int>();	// List of questIDs the questobject can give away
-	public List<int> receivableQuestIDs = new List<int>();// List of questIDs the questobject can receive or take as completed
+	public List<int> receivableQuestIDs = new List<int>(); // List of questIDs the questobject can receive or take as completed
 
 	public GameObject QuestMarker;
 	public QuestTarget questIndicator;
@@ -20,7 +20,7 @@ public class QuestObject : MonoBehaviour {
 	public GameObject pressSpace;
 
 	public Sprite questAvailableSprite; //(!)
-	public Sprite questReceivableSprite;//(?) has priority
+	public Sprite questReceivableSprite; //(?) has priority
 
 	// Use this for initialization
 	void Start () 
@@ -65,7 +65,6 @@ public class QuestObject : MonoBehaviour {
 			questIndicator.enabled = false;
 		}
 	}
-
 
 	// Update is called once per frame
 	void Update () 

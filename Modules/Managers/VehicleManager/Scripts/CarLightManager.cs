@@ -14,8 +14,6 @@ namespace Game.Modules
 		private Transform LeftIndicators;
 		private Transform RightIndicators;
 
-		
-
 		private Coroutine indicatorBlink = null;
 
 		private void Awake()

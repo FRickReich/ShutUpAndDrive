@@ -5,9 +5,9 @@ public class CameraFollow : MonoBehaviour
 {
 	public Transform target;
 
-//	private bool smooth = true;
-//	private float smoothSpeed = 0.125f;
-//	private Vector3 offset = new Vector3(0, 0, -10f);
+	//	private bool smooth = true;
+	//	private float smoothSpeed = 0.125f;
+	//	private Vector3 offset = new Vector3(0, 0, -10f);
 
 	public float distance = 10f;
 	public float height = 5f;
@@ -20,9 +20,9 @@ public class CameraFollow : MonoBehaviour
 
 	void LateUpdate()
 	{
-//		Vector3 desiredPosition = target.transform.position + offset;
-//
-//		transform.position = desiredPosition;
+	//		Vector3 desiredPosition = target.transform.position + offset;
+	//
+	//		transform.position = desiredPosition;
 
 		if (!target)
 		{

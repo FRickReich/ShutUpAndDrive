@@ -19,7 +19,6 @@ public class QuestIngameUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         var questTitle = Localization.FindAllLocalizedAssets().Length;
         var quests = Localization.FindAllLocalizedAssets();
         var currentQuest = 0;
@@ -45,7 +44,6 @@ public class QuestIngameUI : MonoBehaviour
 
         if (QuestManager.questManager.currentQuestList.Count > 0)
         {
-
             string currentStatus = QuestManager.questManager.currentQuestList[0].questObjective;
             string questDescription = "";
             string questCounter = "";
@@ -69,7 +67,6 @@ public class QuestIngameUI : MonoBehaviour
                     questDescription = QuestManager.questManager.currentQuestList[0].summary;
                 }
 
-
                 currentQuestDescription.text = currentProgress + questDescription; 
             }
         }
@@ -79,6 +76,4 @@ public class QuestIngameUI : MonoBehaviour
             currentQuestDescription.text = "";
         }
     }
-
-
 }
