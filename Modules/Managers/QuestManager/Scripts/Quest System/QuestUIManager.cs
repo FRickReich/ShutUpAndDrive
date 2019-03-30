@@ -262,7 +262,7 @@ public class QuestUIManager : MonoBehaviour
 								}
 						}
 				}
-	}
+		}
 
 		public void showQuestLog(Quest activeQuest)
 		{
