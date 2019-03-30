@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Character : MonoBehaviour {
-
+public class Character : MonoBehaviour 
+{
 	private Animator anim;
 
 	//public Vector2 speed = new Vector2(1,1);
@@ -26,12 +26,10 @@ public class Character : MonoBehaviour {
 		Vector3 movement = new Vector3(inputX, 0 ,inputZ);
 		//movement = movement.normalized * speed * Time.deltaTime;
 
-
-
-//		float dirX = Input.GetAxisRaw("Horizontal");
-//		float dirZ = Input.GetAxisRaw("Vertical");
-//
-//		transform.eulerAngles = (dirX > 0) ? Vector3.up * 90 : Vector3.up * -90 ;
+		//		float dirX = Input.GetAxisRaw("Horizontal");
+		//		float dirZ = Input.GetAxisRaw("Vertical");
+		//
+		//		transform.eulerAngles = (dirX > 0) ? Vector3.up * 90 : Vector3.up * -90 ;
 
 		transform.Translate(movement* speed * Time.deltaTime,Space.World);
 	}
