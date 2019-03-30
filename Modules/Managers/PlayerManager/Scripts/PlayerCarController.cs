@@ -60,13 +60,15 @@ namespace Game.Modules.PlayerController
 
 			for(int i = 0; i < m_Wheels.Length; ++i) 
 			{
-				var wheel = m_Wheels [i];
-
 				// Create wheel shapes only when needed.
 				if (wheelShape != null)
 				{
-					var ws = Instantiate (wheelShape);
-					ws.transform.parent = wheel.transform;
+					GameObject wheel = Instantiate(wheelShape, Vector3.zero, Quaternion.identity, m_Wheels[i].transform);
+					
+					if(m_Wheels[i].name.Contains("Right"))
+					{
+						wheel.transform.localScale = new Vector3(-1, 1, 1);
+					}
 				}
 			}
 		}
