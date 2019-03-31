@@ -1,4 +1,3 @@
-/Materials
 /Meshes
 /Prefabs
 /Scenes
@@ -9,7 +8,6 @@
 /Modules/*/Sprites/
 /Modules/*/Textures/
 /Modules/*/FX/
-/Modules/*/Materials/
 /Modules/*/Shaders/
 .DS_Store
 *.meta
