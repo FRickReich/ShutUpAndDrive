@@ -165,7 +165,7 @@ namespace VehicleBehaviour
                 drift = GetInput(driftInput) > 0 && _rb.velocity.sqrMagnitude > 100;
                 
                 // Jump
-                jumping = GetInput(jumpInput) != 0;
+                //jumping = GetInput(jumpInput) != 0;
 
                 handbrake = Input.GetKey(KeyCode.X) ? true : false;
                 carLightManager.Brake(handbrake);
