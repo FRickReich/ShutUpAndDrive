@@ -12,22 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710c889b7c9074eb980bc70e07a85895, type: 3}
   m_Name: Panther (Police)
   m_EditorClassIdentifier: 
-  name: Freeway
+  name: Panther (Police)
   vehicleType: 0
   driveType: 0
-  wheelModel: {fileID: 0}
-  vehicleModel: {fileID: 1687498668476628829, guid: a75db2e8b47db48cdad1fc819d2eb63a,
-    type: 3}
-  vehicleCollider: {fileID: 3589521303075458923, guid: a75db2e8b47db48cdad1fc819d2eb63a,
+  wheelModel: {fileID: 100008, guid: 8c377e49a74d74b1597a39ddf939034c, type: 3}
+  vehicleModel: {fileID: 7237576355702623884, guid: 450cad5c7ef044c85a06cd978f53262e,
     type: 3}
   vehiclePaints:
-  - {fileID: 2100000, guid: 7114694d106cf4132969f6b70cfc6d49, type: 2}
-  - {fileID: 2100000, guid: 26f5f6467ae5f4581ba6b6354bdf69e7, type: 2}
-  - {fileID: 2100000, guid: 44107c061b61b478095cc0407073bc4f, type: 2}
-  - {fileID: 2100000, guid: cd3219520aed14b32bca2a347de51775, type: 2}
-  vehicleDecals:
-  - {fileID: 10906, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1eb748aedeb074e0d87960e5be2327e2, type: 2}
+  vehicleDecals: []
   weight: 1700
   torque: 0
   brakepower: 0
