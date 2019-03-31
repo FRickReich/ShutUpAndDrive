@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 namespace VehicleBehaviour.Trails
 {
-	public class TrailEmitter : MonoBehaviour {
-
+	public class TrailEmitter : MonoBehaviour
+	{
 		//Stores all live trails
 		private LinkedList<Trail> trails = new LinkedList<Trail>();
 

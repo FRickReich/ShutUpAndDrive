@@ -26,8 +26,6 @@ namespace Game.Modules
 
 		private void Start()
 		{
-			
-
 			Transform[] allChildren = vehicle.vehicleModel.GetComponentsInChildren<Transform>();
             foreach (Transform child in allChildren)
             {
@@ -35,7 +33,6 @@ namespace Game.Modules
 				{
 					paintableParts.Add(child.gameObject.GetComponent<Renderer>());
 				}
-
             }
 
 			CreateVehicle();

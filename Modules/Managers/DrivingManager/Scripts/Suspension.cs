@@ -5,8 +5,8 @@ using UnityEngine;
 namespace VehicleBehaviour
 {
     [RequireComponent(typeof(WheelCollider))]
-    public class Suspension : MonoBehaviour {
-
+    public class Suspension : MonoBehaviour
+    {
         public GameObject _wheelModel;
         private WheelCollider _wheelCollider;
 
