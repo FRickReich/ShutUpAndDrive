@@ -62,15 +62,15 @@ namespace Game.Modules.Internal
 				case Helpers.PlayerMode.ENTERCAR:
 					playerCharacter.enabled = false;
 					playerCharacter.gameObject.SetActive(false);
-					currentPlayMode = Helpers.PlayerMode.PLAYSCAR;
 					playerCar.tag = "Player";
+					currentPlayMode = Helpers.PlayerMode.PLAYSCAR;
 					break;
 				case Helpers.PlayerMode.LEAVECAR:
 					playerCar.GetComponent<PlayerController.CarStateManager>().currentState = Helpers.VehicleState.PARKED;
-					playerCharacter.transform.position = playerCar.GetComponent<PlayerController.PlayerCarController>().carEnterPoint.position;
+					playerCharacter.transform.position = playerCar.GetComponent<VehicleBehaviour.WheelVehicle>().carEntryPoint.position;
 					playerCharacter.gameObject.SetActive(true);
-					currentPlayMode = Helpers.PlayerMode.PLAYSCHARACTER;
 					playerCar.tag = "Traffic";
+					currentPlayMode = Helpers.PlayerMode.PLAYSCHARACTER;
 					break;
 				case Helpers.PlayerMode.PLAYSCAR:
 					cameraManager.AttachCameraToCar();

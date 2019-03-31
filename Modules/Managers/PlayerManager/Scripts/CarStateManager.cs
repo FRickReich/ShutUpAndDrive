@@ -6,12 +6,13 @@ namespace Game.Modules.PlayerController
 	{
 		public Helpers.VehicleState currentState = Helpers.VehicleState.PARKED;
 		
-		private PlayerCarController playerCarController;
+		//private PlayerCarController playerCarController;
+		private VehicleBehaviour.WheelVehicle playerCarController;
 		private CarLightManager carLights;
 
 		private void Awake()
 		{
-			playerCarController = GetComponent<PlayerCarController>();
+			playerCarController = GetComponent<VehicleBehaviour.WheelVehicle>();
 			carLights = GetComponent<CarLightManager>();
 		}
 
@@ -34,19 +35,21 @@ namespace Game.Modules.PlayerController
 
 		public void CarParkedState()
 		{
-			playerCarController.enabled = false;
+			playerCarController.IsPlayer = false;
+			playerCarController.Handbrake = true;
 			carLights.EngineOff();
 		}
 
 		public void CarPlayerDrivenState()
 		{
-			playerCarController.enabled = true;
+			playerCarController.IsPlayer = true;
+			playerCarController.Handbrake = false;
 			carLights.MainLights(true);
 		}
 
 		public void CarNPCDrivenState()
 		{
-			playerCarController.enabled = false;
+			playerCarController.IsPlayer = false;
 		}
 	}
 }

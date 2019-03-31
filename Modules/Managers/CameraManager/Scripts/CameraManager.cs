@@ -49,7 +49,7 @@ namespace Game.Modules.CameraManager
 
             if(gameManager.currentPlayMode == Helpers.PlayerMode.PLAYSCAR)
             {
-                zoomAmount = gameManager.playerCar.GetComponent<PlayerController.PlayerCarController>().cameraPointPos;
+                zoomAmount = gameManager.playerCar.GetComponent<VehicleBehaviour.WheelVehicle>().cameraPointPos;
                 SetCameraZoom(initialCarZoom, zoomAmount, maxCarZoom, carDampingRate);
             }
         }
