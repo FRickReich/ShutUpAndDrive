@@ -13,8 +13,7 @@ namespace VehicleBehaviour
 {
     [RequireComponent(typeof(Rigidbody))]
     public class WheelVehicle : MonoBehaviour
-    {
-        
+    {   
         [Header("Inputs")]
 #if MULTIOSCONTROLS
         [SerializeField] PlayerNumber playerId;
@@ -136,7 +135,6 @@ namespace VehicleBehaviour
 
         void Update()
         {
-
             foreach (ParticleSystem gasParticle in gasParticles)
             {
                 gasParticle.Play();
@@ -168,7 +166,6 @@ namespace VehicleBehaviour
                 // Jump
                 jumping = GetInput(jumpInput) != 0;
 
-			
                 handbrake = Input.GetKey(KeyCode.X) ? true : false;
                 carLightManager.Brake(handbrake);
             }
@@ -241,7 +238,9 @@ namespace VehicleBehaviour
                 if (!boostSource.isPlaying) {
                     boostSource.Play();
                 }
-            } else {
+            }
+            else
+            {
                 if (boostParticles[0].isPlaying) {
                     foreach (ParticleSystem boostParticle in boostParticles) {
                         boostParticle.Stop();

@@ -21,7 +21,6 @@ namespace VehicleBehaviour
 		public float steering;
 		public bool boost;
 		public bool drift;
-
 	}
 
 	public class Ghost : MonoBehaviour 
@@ -31,15 +30,15 @@ namespace VehicleBehaviour
 		float _startTime = 0;
 
 		public float duration 
-		{ internal set; get;}
+		{ internal set; get; }
 		public int freq
-		{ internal set; get;}
+		{ internal set; get; }
 
 		public bool exist 
-		{ internal set; get;}
+		{ internal set; get; }
 
 		public float score
-		{ internal set; get;}
+		{ internal set; get; }
 
 		WheelVehicle _vehicle;
 		Rigidbody _rb;
@@ -136,7 +135,6 @@ namespace VehicleBehaviour
 			_vehicle = vehicle;
 			_vehicleT = vehicle.transform;
 			_vehicleR = vehicle.GetComponent<Rigidbody>();
-
 			
 			this.duration = duration;
 			this.freq = freq;

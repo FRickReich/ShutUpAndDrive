@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 namespace VehicleBehaviour.Trails
 {
-	public class Trail {
-
+	public class Trail
+	{
 		//Properties of the trail
 		private float width;
 		private float decay;
