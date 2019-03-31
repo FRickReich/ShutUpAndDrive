@@ -14,40 +14,81 @@ namespace Game.Modules
 		public Texture vehicleDecal;
 
 		private Rigidbody rigidbody;
-		private BoxCollider boxCollider;
+
+		public List<Renderer> paintableParts = new List<Renderer>();
+
+		public Transform colliderMesh;
 
 		private void Awake()
 		{
 			rigidbody = GetComponent<Rigidbody>();
-			boxCollider = GetComponent<BoxCollider>();
 		}
 
 		private void Start()
 		{
+			
+
+			Transform[] allChildren = vehicle.vehicleModel.GetComponentsInChildren<Transform>();
+            foreach (Transform child in allChildren)
+            {
+				if(child.name.Contains("_paintable"))
+				{
+					paintableParts.Add(child.gameObject.GetComponent<Renderer>());
+				}
+
+            }
+
 			CreateVehicle();
+
+			SpawnWheels();
+		}
+
+		public void SpawnWheels()
+		{
+			WheelCollider[] wheelPositions = GetComponent<VehicleBehaviour.WheelVehicle>().wheels;
+
+			foreach (WheelCollider wheelPosition in wheelPositions)
+			{
+				GameObject wheel = Instantiate(vehicle.wheelModel, wheelPosition.transform.position, wheelPosition.transform.rotation, wheelPosition.transform);
+				wheelPosition.GetComponent<VehicleBehaviour.Suspension>()._wheelModel = wheel;
+				wheelPosition.GetComponent<VehicleBehaviour.Trails.TrailEmitter>().parent = wheel.transform;
+			}
 		}
 
 		public void CreateVehicle()
 		{
 			vehicleName = vehicle.name;
 
-			Mesh vehicleMesh = vehicle.vehicleCollider.GetComponent<MeshCollider>().sharedMesh;
-
 			rigidbody.mass = vehicle.weight;
-			boxCollider.size = new Vector3(vehicleMesh.bounds.size.x, vehicleMesh.bounds.size.y, vehicleMesh.bounds.size.z);
-			boxCollider.center = vehicleMesh.bounds.center;
 
 			GameObject carModel = Instantiate(vehicle.vehicleModel, transform.position, transform.rotation, gameObject.transform);
+			carModel.name = "Car";
+
+			colliderMesh = gameObject.transform.Find("Car/Collider");
+
+			gameObject.GetComponent<MeshCollider>().sharedMesh = null;
+			gameObject.GetComponent<MeshCollider>().sharedMesh = colliderMesh.GetComponent<MeshFilter>().mesh;
 
 			if(!isSpecialVehicle)
 			{
 				vehiclePaint = vehicle.vehiclePaints[Random.RandomRange(0, vehicle.vehiclePaints.Count)];
 
-				vehicleDecal = (Random.value < 0.5f) ? vehicle.vehicleDecals[Random.RandomRange(0, vehicle.vehicleDecals.Count)] : null;
+				if(vehicle.vehicleDecals.Count != null)
+				{
+					vehicleDecal = (Random.value < 0.5f) ? vehicle.vehicleDecals[Random.RandomRange(0, vehicle.vehicleDecals.Count)] : null;
+				}
 			}
 
-			carModel.GetComponent<Renderer>().material = vehiclePaint;
-			carModel.GetComponent<Renderer>().material.SetTexture("_BaseColorMap", vehicleDecal);
+			foreach (Renderer carPart in paintableParts)
+			{
+				Debug.Log(carPart.sharedMaterial.name);
+				carPart.sharedMaterial = vehiclePaint;
+
+				if(vehicle.vehicleDecals.Count != null)
+				{
+					carPart.sharedMaterial.SetTexture("_BaseColorMap", vehicleDecal);	
+				}
+			}
 		}
 	}
 }
