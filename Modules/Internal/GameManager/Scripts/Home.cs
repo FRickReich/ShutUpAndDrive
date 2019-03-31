@@ -29,7 +29,7 @@ namespace Game.Modules.Internal {
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.tag == "Player")
+            if(other.gameObject.tag == "Player" && gm.currentPlayMode == Helpers.PlayerMode.PLAYSCHARACTER)
             {
                 saving = true;
             }
