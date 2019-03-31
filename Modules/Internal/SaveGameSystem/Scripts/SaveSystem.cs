@@ -16,6 +16,8 @@ namespace Game.Modules.Internal
 
 			GameData data = new GameData(gameManager);
 
+			Debug.Log("Saving game.");
+
 			formatter.Serialize(stream, data);
 			stream.Close();
 		}
@@ -32,6 +34,8 @@ namespace Game.Modules.Internal
 
 				GameData data = formatter.Deserialize(stream) as GameData;
 				stream.Close();
+
+				Debug.Log("Loading game.");
 
 				return data;
 			}
