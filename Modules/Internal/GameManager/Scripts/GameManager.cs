@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
+using Game.Modules;
+
 namespace Game.Modules.Internal
 {
 	public class GameManager : MonoBehaviour
@@ -14,14 +16,26 @@ namespace Game.Modules.Internal
 		public Helpers.PlayerMode currentPlayMode = Helpers.PlayerMode.PLAYSCHARACTER;
 		
 		private CameraManager.CameraManager cameraManager;
+		private DayTimeManager dayTimeManager;
+
+		public Helpers.DayTime currentTimeOfDay;
 
 		private void Awake() 
 		{
-			cameraManager = FindObjectOfType<CameraManager.CameraManager>();	
+			cameraManager = FindObjectOfType<CameraManager.CameraManager>();
+			dayTimeManager = GetComponent<DayTimeManager>();
 		}
 
 		void Update()
 		{
+			if(currentTimeOfDay == Helpers.DayTime.DAY)
+			{
+				dayTimeManager.SetDayTime();
+			}
+			else if(currentTimeOfDay == Helpers.DayTime.NIGHT)
+			{
+				dayTimeManager.SetNightTime();
+			}
 
 			if(playerCharacter)
 			{
@@ -84,6 +98,15 @@ namespace Game.Modules.Internal
 		public void SaveGame()
 		{
 			SaveSystem.SaveCurrent(this);
+
+			if(currentTimeOfDay == Helpers.DayTime.DAY)
+			{
+				currentTimeOfDay = Helpers.DayTime.NIGHT;
+			}
+			else if(currentTimeOfDay == Helpers.DayTime.NIGHT)
+			{
+				currentTimeOfDay = Helpers.DayTime.DAY;
+			}
 		}
 
 		public void LoadGame()
