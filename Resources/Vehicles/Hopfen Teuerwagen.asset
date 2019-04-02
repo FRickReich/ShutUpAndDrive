@@ -16,7 +16,7 @@ MonoBehaviour:
   vehicleName: Teuerwagen
   vehicleType: 0
   driveType: 0
-  wheelModel: {fileID: 100008, guid: 159ad25c09e014d8c9094686af4410c6, type: 3}
+  wheelModel: {fileID: 100008, guid: 2e1cfea691afd447fb44f1d98cb4870d, type: 3}
   vehicleModel: {fileID: 5544348262924059000, guid: 2722d361d699f4a2d9f32d83bb7aee51,
     type: 3}
   vehiclePaints:

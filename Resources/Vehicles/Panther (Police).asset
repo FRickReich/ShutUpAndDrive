@@ -16,7 +16,7 @@ MonoBehaviour:
   vehicleName: Panther (Police)
   vehicleType: 0
   driveType: 0
-  wheelModel: {fileID: 100008, guid: 8c377e49a74d74b1597a39ddf939034c, type: 3}
+  wheelModel: {fileID: 100008, guid: 2e1cfea691afd447fb44f1d98cb4870d, type: 3}
   vehicleModel: {fileID: 7237576355702623884, guid: 450cad5c7ef044c85a06cd978f53262e,
     type: 3}
   vehiclePaints:

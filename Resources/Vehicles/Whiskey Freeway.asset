@@ -16,7 +16,7 @@ MonoBehaviour:
   vehicleName: Freeway
   vehicleType: 0
   driveType: 0
-  wheelModel: {fileID: 100008, guid: 9f491d806b73146fb993f4ad841027f8, type: 3}
+  wheelModel: {fileID: 100008, guid: 2e1cfea691afd447fb44f1d98cb4870d, type: 3}
   vehicleModel: {fileID: 2861446948611202014, guid: bb56660355c274150be56c9dcfc8fa81,
     type: 3}
   vehiclePaints:
