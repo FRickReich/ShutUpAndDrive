@@ -18,12 +18,12 @@ namespace Game.Modules.CameraManager
         private GameObject target;
         private Transform cameraPoint;
         private float zoomAmount;
-        private float initialCharacterZoom = 15f;
-        private float initialCarZoom = 40f;
-        private float maxCharacterZoom = 60f;
-        private float maxCarZoom = 100f;
-        private float characterDampingRate = 2f;
-        private float carDampingRate = 0f;
+        public float initialCharacterZoom = 15f;
+        public float initialCarZoom = 40f;
+        public float maxCharacterZoom = 60f;
+        public float maxCarZoom = 100f;
+        public float characterDampingRate = 2f;
+        public float carDampingRate = 0f;
 
         // Start is called before the first frame update
         void Awake()
