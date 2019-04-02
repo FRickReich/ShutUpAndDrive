@@ -14,7 +14,7 @@ namespace Game.Modules.MiniMapManager
 
         public GameObject player;
 
-        private void Awake() 
+        private void Update()
         {
             player = GameObject.FindGameObjectWithTag("Player");
         }

@@ -10,7 +10,8 @@ namespace Game.Modules.Objects
 	public class Vehicle : ScriptableObject
 	{
 		[Header("Specifications")]
-		public new string name;
+		public string vehicleCompany;
+		public string vehicleName;
 		public Helpers.VehicleType vehicleType;
 		public Helpers.DriveType driveType;
 

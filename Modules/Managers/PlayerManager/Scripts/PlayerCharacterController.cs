@@ -22,16 +22,8 @@ namespace Game.Modules.PlayerController
         Vector3 movementZ;
         Vector3 rotationY;
 
-        public int currentPlayerMoney;
-
-        public Text currentArea;
-        public Text currentLocation;
-        public Text currentHealth;
-        public Text currentArmor;
-        public Text currentMoney;
-
         //public GunController theGun;
-        //public HealthManager playerHealth;
+        public HealthManager playerHealth;
 
         public int randomDying = 0;
         public bool running;
@@ -57,7 +49,7 @@ namespace Game.Modules.PlayerController
             cameraPointController = gameObject.transform.Find("CameraPointController");
 
             //theGun = GetComponentInChildren<GunController>();
-            //playerHealth = GetComponent<HealthManager>();
+            playerHealth = GetComponent<HealthManager>();
             randomDying = Random.Range(0, 4);
         }
 
@@ -99,9 +91,7 @@ namespace Game.Modules.PlayerController
    
             cameraPointPos = Mathf.Clamp(velocityVector.magnitude, 0, 20);
 
-            //currentHealth.text = playerHealth.currentHealth.ToString();
-            //currentArmor.text = playerHealth.currentArmor.ToString();
-            //currentMoney.text = currentPlayerMoney.ToString();
+            
         }
 
         void FixedUpdate()
@@ -165,16 +155,6 @@ namespace Game.Modules.PlayerController
             cameraPointController.transform.rotation = transform.localRotation;
 
             cameraPoint.localPosition = new Vector3(0, 0, addToPosition);
-        }
-
-        public void ChangeArea(string areaName)
-        {
-            //currentArea.text = areaName;
-        }
-
-        public void ChangeLocation(string locationName)
-        {
-            //currentLocation.text = locationName;
         }
     }
 }

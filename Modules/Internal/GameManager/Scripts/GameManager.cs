@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 using Game.Modules;
 
@@ -20,10 +21,26 @@ namespace Game.Modules.Internal
 
 		public Helpers.DayTime currentTimeOfDay;
 
+        public int currentPlayerMoney;
+
+		public Text currentArea;
+        public Text currentLocation;
+        public Text currentCar;
+        public Text currentHealth;
+        public Text currentArmor;
+        public Text currentMoney;
+
 		private void Awake() 
 		{
 			cameraManager = FindObjectOfType<CameraManager.CameraManager>();
 			dayTimeManager = GetComponent<DayTimeManager>();
+		}
+
+		private void Start() 
+		{
+			SetPlayerHealth(playerCharacter.playerHealth.currentHealth);
+			SetPlayerArmor(playerCharacter.playerHealth.currentArmor);
+			SetPlayerMoney(currentPlayerMoney);
 		}
 
 		void Update()
@@ -43,6 +60,13 @@ namespace Game.Modules.Internal
 				{
 					gameObject.transform.position = playerCharacter.gameObject.transform.position;
 
+					if(playerCar)
+					{
+						playerCar.transform.Find("MiniMapIndicator").gameObject.SetActive(false);
+					}
+					
+					playerCharacter.transform.Find("MiniMapIndicator").gameObject.SetActive(true);
+					
 					enterableVehicle = playerCharacter.enterableCar;
 
 					if(enterableVehicle != null)
@@ -59,6 +83,13 @@ namespace Game.Modules.Internal
 			if(currentPlayMode == Helpers.PlayerMode.PLAYSCAR)
 			{
 				gameObject.transform.position = playerCar.gameObject.transform.position;
+
+					if(playerCharacter)
+					{
+						playerCharacter.transform.Find("MiniMapIndicator").gameObject.SetActive(false);
+					}
+
+					playerCar.transform.Find("MiniMapIndicator").gameObject.SetActive(true);
 
 				if(Input.GetKeyDown(KeyCode.Return))
 				{
@@ -77,6 +108,7 @@ namespace Game.Modules.Internal
 					playerCharacter.enabled = false;
 					playerCharacter.gameObject.SetActive(false);
 					playerCar.tag = "Player";
+					SetPlayerVehicle(true, playerCar.GetComponent<VehicleManager>().vehicleCompanyName, playerCar.GetComponent<VehicleManager>().vehicleName);
 					currentPlayMode = Helpers.PlayerMode.PLAYSCAR;
 					break;
 				case Helpers.PlayerMode.LEAVECAR:
@@ -84,6 +116,7 @@ namespace Game.Modules.Internal
 					playerCharacter.transform.position = playerCar.GetComponent<VehicleBehaviour.WheelVehicle>().carEntryPoint.position;
 					playerCharacter.gameObject.SetActive(true);
 					playerCar.tag = "Traffic";
+					SetPlayerVehicle(false);
 					currentPlayMode = Helpers.PlayerMode.PLAYSCHARACTER;
 					break;
 				case Helpers.PlayerMode.PLAYSCAR:
@@ -122,6 +155,36 @@ namespace Game.Modules.Internal
 			// position.z = data.position[2];
 
 			// transform.position = position;
+		}
+
+        public void SetPlayerArea(string name)
+        {
+            currentArea.text = "Current Area: " + name;
+        }
+
+        public void SetPlayerLocation(string name)
+        {
+            currentLocation.text = "Current Location: " + name;
+        }
+
+		public void SetPlayerVehicle(bool isDriving, string companyName = "", string vehicleName = "")
+		{
+			currentCar.text = "Current Vehicle: " + (isDriving ? companyName + " " + vehicleName : "NULL");
+		}
+
+		public void SetPlayerHealth(int amount)
+		{
+			currentHealth.text = "Current Health: " + amount.ToString();
+		}
+
+		public void SetPlayerArmor(int amount)
+		{
+			currentArmor.text = "Current Armor: " +  amount.ToString();
+		}
+
+		public void SetPlayerMoney(int amount)
+		{
+            currentMoney.text = "Current Money: " + amount.ToString();
 		}
 	}
 }
