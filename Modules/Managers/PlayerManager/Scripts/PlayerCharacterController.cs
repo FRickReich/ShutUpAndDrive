@@ -16,6 +16,7 @@ namespace Game.Modules.PlayerController
         public float z;
 
         public float speed = 5f;
+        public float runSpeed = 7.5f;
         public float rotateSpeed = 5f;
     
         Vector3 movementZ;
@@ -137,7 +138,15 @@ namespace Game.Modules.PlayerController
             {
                 movementZ = transform.forward;
 
-                movementZ = movementZ.normalized * speed * Time.deltaTime;
+                if(Input.GetKey(KeyCode.LeftShift))
+                {
+                    movementZ = movementZ.normalized * runSpeed * Time.deltaTime;
+                }
+                else
+                {
+                    movementZ = movementZ.normalized * speed * Time.deltaTime;
+                }
+                
 
                 rb.MovePosition(rb.position + movementZ);
             }
