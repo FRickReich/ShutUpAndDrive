@@ -9,6 +9,7 @@ namespace Game.Modules
 		public Objects.Vehicle vehicle;
 
 		public bool isSpecialVehicle;
+		public string vehicleCompanyName;
 		public string vehicleName;
 		public Material vehiclePaint;
 		public Texture vehicleDecal;
@@ -54,7 +55,8 @@ namespace Game.Modules
 
 		public void CreateVehicle()
 		{
-			vehicleName = vehicle.name;
+			vehicleCompanyName = vehicle.vehicleCompany;
+			vehicleName = vehicle.vehicleName;
 
 			rigidbody.mass = vehicle.weight;
 
