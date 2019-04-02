@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 710c889b7c9074eb980bc70e07a85895, type: 3}
-  m_Name: Bull
+  m_Name: Amaretto Bull
   m_EditorClassIdentifier: 
-  name: Bull
+  vehicleCompany: Amaretto
+  vehicleName: Bull
   vehicleType: 0
   driveType: 0
   wheelModel: {fileID: 100008, guid: 9f491d806b73146fb993f4ad841027f8, type: 3}

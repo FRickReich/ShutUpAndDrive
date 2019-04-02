@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710c889b7c9074eb980bc70e07a85895, type: 3}
   m_Name: Hopfen Teuerwagen
   m_EditorClassIdentifier: 
-  name: Freeway
+  vehicleCompany: Hopfen
+  vehicleName: Teuerwagen
   vehicleType: 0
   driveType: 0
   wheelModel: {fileID: 100008, guid: 159ad25c09e014d8c9094686af4410c6, type: 3}

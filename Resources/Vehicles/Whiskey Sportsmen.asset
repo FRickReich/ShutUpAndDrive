@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710c889b7c9074eb980bc70e07a85895, type: 3}
   m_Name: Whiskey Sportsmen
   m_EditorClassIdentifier: 
-  name: Freeway
+  vehicleCompany: Whiskey
+  vehicleName: Sportsman
   vehicleType: 0
   driveType: 0
   wheelModel: {fileID: 100008, guid: 5db081c84044a4edfb409748a0f9b821, type: 3}

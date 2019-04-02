@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710c889b7c9074eb980bc70e07a85895, type: 3}
   m_Name: Panther (Police)
   m_EditorClassIdentifier: 
-  name: Panther (Police)
+  vehicleCompany: Tuscany
+  vehicleName: Panther (Police)
   vehicleType: 0
   driveType: 0
   wheelModel: {fileID: 100008, guid: 8c377e49a74d74b1597a39ddf939034c, type: 3}
