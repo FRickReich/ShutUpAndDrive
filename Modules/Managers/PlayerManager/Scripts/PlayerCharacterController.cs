@@ -147,7 +147,6 @@ namespace Game.Modules.PlayerController
                     movementZ = movementZ.normalized * speed * Time.deltaTime;
                 }
                 
-
                 rb.MovePosition(rb.position + movementZ);
             }
             else if (z < 0)
