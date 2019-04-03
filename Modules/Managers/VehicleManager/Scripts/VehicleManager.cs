@@ -36,38 +36,6 @@ namespace Game.Modules
 				}
             }
 
-			CreateVehicle();
-
-			SpawnWheels();
-		}
-
-		public void SpawnWheels()
-		{
-			WheelCollider[] wheelPositions = GetComponent<VehicleBehaviour.WheelVehicle>().wheels;
-
-			foreach (WheelCollider wheelPosition in wheelPositions)
-			{
-				GameObject wheel = Instantiate(vehicle.wheelModel, wheelPosition.transform.position, wheelPosition.transform.rotation, wheelPosition.transform);
-				wheelPosition.GetComponent<VehicleBehaviour.Suspension>()._wheelModel = wheel;
-				wheelPosition.GetComponent<VehicleBehaviour.Trails.TrailEmitter>().parent = wheel.transform;
-			}
-		}
-
-		public void CreateVehicle()
-		{
-			vehicleCompanyName = vehicle.vehicleCompany;
-			vehicleName = vehicle.vehicleName;
-
-			rigidbody.mass = vehicle.weight;
-
-			GameObject carModel = Instantiate(vehicle.vehicleModel, transform.position, transform.rotation, gameObject.transform);
-			carModel.name = "Car";
-
-			colliderMesh = gameObject.transform.Find("Car/Collider");
-
-			gameObject.GetComponent<MeshCollider>().sharedMesh = null;
-			gameObject.GetComponent<MeshCollider>().sharedMesh = colliderMesh.GetComponent<MeshFilter>().mesh;
-
 			if(!isSpecialVehicle)
 			{
 				vehiclePaint = vehicle.vehiclePaints[Random.RandomRange(0, vehicle.vehiclePaints.Count)];
@@ -78,9 +46,48 @@ namespace Game.Modules
 				}
 			}
 
+			vehicleCompanyName = vehicle.vehicleCompany;
+			vehicleName = vehicle.vehicleName;
+			rigidbody.mass = vehicle.weight;
+
+			CreateVehicle();
+			PaintVehicle();
+			CreateCollider();
+			AttachWheels();
+		}
+
+		public void CreateVehicle()
+		{
+			GameObject carModel = Instantiate(vehicle.vehicleModel, transform.position, transform.rotation, gameObject.transform);
+			carModel.name = "Car";			
+		}
+
+		public void CreateCollider()
+		{
+			colliderMesh = gameObject.transform.Find("Car/Collider");
+			gameObject.GetComponent<MeshCollider>().sharedMesh = null;
+			gameObject.GetComponent<MeshCollider>().sharedMesh = colliderMesh.GetComponent<MeshFilter>().mesh;
+		}
+
+		public void AttachWheels()
+		{
+			if(vehicle.wheelModel)
+			{
+				WheelCollider[] wheelPositions = gameObject.transform.GetComponentInChildren<VehicleBehaviour.WheelVehicle>().wheels;
+
+				foreach (WheelCollider wheelPosition in wheelPositions)
+				{
+					GameObject wheel = Instantiate(vehicle.wheelModel, wheelPosition.transform.position, wheelPosition.transform.rotation, wheelPosition.transform);
+					wheelPosition.GetComponent<VehicleBehaviour.Suspension>()._wheelModel = wheel;
+					wheelPosition.GetComponent<VehicleBehaviour.Trails.TrailEmitter>().parent = wheel.transform;
+				}
+			}
+		}
+
+		public void PaintVehicle()
+		{
 			foreach (Renderer carPart in paintableParts)
 			{
-				Debug.Log(carPart.sharedMaterial.name);
 				carPart.sharedMaterial = vehiclePaint;
 
 				if(vehicle.vehicleDecals.Count != null)

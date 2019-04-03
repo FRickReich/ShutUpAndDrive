@@ -32,6 +32,11 @@ namespace Game.Modules.CameraManager
             virtualCameraZoom = GetComponentInChildren<CinemachineFollowZoom>();
             gameManager = FindObjectOfType<GameManager>();
         }
+        
+        private void Start()
+        {
+            AttachCameraToPlayer();
+        }
 
         void SetCameraFollowObject(Transform followObject)
         {
@@ -52,6 +57,8 @@ namespace Game.Modules.CameraManager
                 zoomAmount = gameManager.playerCar.GetComponent<VehicleBehaviour.WheelVehicle>().cameraPointPos;
                 SetCameraZoom(initialCarZoom, zoomAmount, maxCarZoom, carDampingRate);
             }
+
+            cameraPoint.LookAt(Vector3.up);
         }
 
         void SetCameraZoom(float startZoom, float zoomAmount, float maxZoom, float dampingRate)

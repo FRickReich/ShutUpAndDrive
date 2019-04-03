@@ -31,8 +31,8 @@ namespace VehicleBehaviour
         [SerializeField] AnimationCurve turnInputCurve;
 
         [Header("Wheels")]
-        [SerializeField] WheelCollider[] driveWheel;
-        [SerializeField] WheelCollider[] turnWheel;
+        public WheelCollider[] driveWheel;
+        public WheelCollider[] turnWheel;
 
         [Header("Behaviour")]
         // Car
