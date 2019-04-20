@@ -57,6 +57,76 @@
   <ItemGroup>
      <Compile Include="Assets\Example\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Example\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\BreakingSection.cs" />
+     <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Driving.cs" />
+     <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Path.cs" />
+     <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Wheels.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\BlinkingLight.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\CarHingePosition.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\DayTime.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\DriveType.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\PlayMode.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\QuestType.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\VehicleState.cs" />
+     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\VehicleType.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\DayTimeManager.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\Home.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\SaveGameSystem\Scripts\GameData.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\SaveGameSystem\Scripts\SaveSystem.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\TimeManager\Scripts\TimeManager.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\Timer\Scripts\Destroyer.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\Timer\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Game\Modules\Internal\Timer\Scripts\Timer.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\CameraManager\Scripts\CameraManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\DrivingManager\Scripts\EngineSoundManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\DrivingManager\Scripts\Ghost.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\DrivingManager\Scripts\Suspension.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\DrivingManager\Scripts\Trails\Trail.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\DrivingManager\Scripts\Trails\TrailEmitter.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\DrivingManager\Scripts\WheelVehicle.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\FieldOfViewManager\Scripts\FieldOfViewManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\PlayerManager\Scripts\CarEnterPoint.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\PlayerManager\Scripts\CarStateManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\PlayerManager\Scripts\PlayerCharacterController.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\PopulationSystem\Scripts\PopulationItem.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\PopulationSystem\Scripts\PopulationManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\QuestIngameUI.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\DontDestroy.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\QButtonScript.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\QLogButtonScript.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\Quest.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\QuestManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\QuestObject.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\QuestObjective.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\QuestUIManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestManager\Scripts\Quest System\SaveLoad.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestTargetManager\Scripts\QuestTarget.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestTargetManager\Scripts\QuestTargetIndicator.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\QuestTargetManager\Scripts\QuestTargetIndicatorManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\VehicleManager\Scripts\CarLightManager.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\VehicleManager\Scripts\Vehicle.cs" />
+     <Compile Include="Assets\Game\Modules\Managers\VehicleManager\Scripts\VehicleManager.cs" />
+     <Compile Include="Assets\Game\Modules\UI\MiniMapManager\Scripts\MiniMapIndicator.cs" />
+     <Compile Include="Assets\Game\Modules\UI\MiniMapManager\Scripts\MiniMapManager.cs" />
+     <Compile Include="Assets\Legacy\BulletController.cs" />
+     <Compile Include="Assets\Legacy\Game\HealthManager.cs" />
+     <Compile Include="Assets\Legacy\Game\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Legacy\GunController.cs" />
+     <Compile Include="Assets\Legacy\Modules\AI Crowd\Scripts\AgentControl.cs" />
+     <Compile Include="Assets\Legacy\Modules\AI Crowd\Scripts\AgentObstacle.cs" />
+     <Compile Include="Assets\Legacy\Modules\BountySystem\Scripts\BountySystemBar.cs" />
+     <Compile Include="Assets\Legacy\Modules\NPCManager\Scripts\NPCController.cs" />
+     <Compile Include="Assets\Legacy\Modules\NPCManager\Scripts\Patrol.cs" />
+     <Compile Include="Assets\Legacy\Modules\NPCManager\Scripts\WaypointManager.cs" />
+     <Compile Include="Assets\Legacy\Modules\TileSystem\Scripts\TileManager.cs" />
+     <Compile Include="Assets\Legacy\Modules\TileSystem\StreetCrossingManager.cs" />
+     <Compile Include="Assets\Legacy\Modules\Train\Scripts\Node.cs" />
+     <Compile Include="Assets\Legacy\Modules\Train\Scripts\PathFollower.cs" />
+     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\Path.cs" />
+     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\PathManager.cs" />
+     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\WayPoint.cs" />
+     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\WayPointTester.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -338,6 +408,21 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="CsvHelper">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/CsvHelper.dll</HintPath>
+ </Reference>
+ <Reference Include="Antlr4.Runtime.Standard">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="YarnSpinner">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/YarnSpinner.dll</HintPath>
+ </Reference>
+ <Reference Include="P2T">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/Exploder/Scripts/3rd/P2T.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
