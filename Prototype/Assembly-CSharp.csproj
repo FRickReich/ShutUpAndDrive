@@ -83,6 +83,7 @@
      <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Driving.cs" />
      <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Path.cs" />
      <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Wheels.cs" />
+     <Compile Include="Assets\Game\Modules\BountySystem\Scripts\BountySystemBar.cs" />
      <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\DayTimeManager.cs" />
      <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\GameManager.cs" />
      <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\Home.cs" />
@@ -123,13 +124,16 @@
      <Compile Include="Assets\Game\Modules\Managers\VehicleManager\Scripts\VehicleManager.cs" />
      <Compile Include="Assets\Game\Modules\UI\MiniMapManager\Scripts\MiniMapIndicator.cs" />
      <Compile Include="Assets\Game\Modules\UI\MiniMapManager\Scripts\MiniMapManager.cs" />
+     <Compile Include="Assets\Game\Modules\WaypointSystem\Scripts\Path.cs" />
+     <Compile Include="Assets\Game\Modules\WaypointSystem\Scripts\PathManager.cs" />
+     <Compile Include="Assets\Game\Modules\WaypointSystem\Scripts\WayPoint.cs" />
+     <Compile Include="Assets\Game\Modules\WaypointSystem\Scripts\WayPointTester.cs" />
      <Compile Include="Assets\Legacy\BulletController.cs" />
      <Compile Include="Assets\Legacy\Game\HealthManager.cs" />
      <Compile Include="Assets\Legacy\Game\Scripts\EnemyController.cs" />
      <Compile Include="Assets\Legacy\GunController.cs" />
      <Compile Include="Assets\Legacy\Modules\AI Crowd\Scripts\AgentControl.cs" />
      <Compile Include="Assets\Legacy\Modules\AI Crowd\Scripts\AgentObstacle.cs" />
-     <Compile Include="Assets\Legacy\Modules\BountySystem\Scripts\BountySystemBar.cs" />
      <Compile Include="Assets\Legacy\Modules\NPCManager\Scripts\NPCController.cs" />
      <Compile Include="Assets\Legacy\Modules\NPCManager\Scripts\Patrol.cs" />
      <Compile Include="Assets\Legacy\Modules\NPCManager\Scripts\WaypointManager.cs" />
@@ -137,10 +141,6 @@
      <Compile Include="Assets\Legacy\Modules\TileSystem\StreetCrossingManager.cs" />
      <Compile Include="Assets\Legacy\Modules\Train\Scripts\Node.cs" />
      <Compile Include="Assets\Legacy\Modules\Train\Scripts\PathFollower.cs" />
-     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\Path.cs" />
-     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\PathManager.cs" />
-     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\WayPoint.cs" />
-     <Compile Include="Assets\Legacy\Modules\WaypointSystem\Scripts\WayPointTester.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
