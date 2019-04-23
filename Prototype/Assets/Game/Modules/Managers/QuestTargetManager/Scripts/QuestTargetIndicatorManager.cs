@@ -28,7 +28,7 @@ namespace Game.Modules
 
         void CreateIndicator(GameObject target)
         {
-            GameObject newIndicator = Instantiate(indicator, new Vector3(transform.position.x, transform.position.y + 0.25f, transform.position.z), transform.rotation);
+            GameObject newIndicator = Instantiate(indicator, new Vector3(transform.position.x, transform.position.y + 5f, transform.position.z), transform.rotation);
 
             newIndicator.GetComponent<QuestTargetIndicator>().target = target.transform;
             newIndicator.transform.parent = gameObject.transform;

@@ -57,18 +57,32 @@
   <ItemGroup>
      <Compile Include="Assets\Example\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Example\TutorialInfo\Scripts\Readme.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\ConstantVelocity.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\DrawArrow.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\BlinkingLight.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\CarHingePosition.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\DayTime.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\DriveType.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\MeasureUnits.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\PlayMode.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\QuestType.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\VehicleState.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Enums\VehicleType.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Experience.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\ExplosionForce.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Flashlight.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\GUIOverObject.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\LanguageFilter.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\MathFX.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Md5Sum.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\OnCollideExplode.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\RenderExtensions.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\SimpleTimer.cs" />
+     <Compile Include="Assets\Game\Helpers\Scripts\Teleporter.cs" />
      <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\BreakingSection.cs" />
      <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Driving.cs" />
      <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Path.cs" />
      <Compile Include="Assets\Game\Modules\AI\Vehicle AI\Scripts\Wheels.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\BlinkingLight.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\CarHingePosition.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\DayTime.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\DriveType.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\PlayMode.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\QuestType.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\VehicleState.cs" />
-     <Compile Include="Assets\Game\Modules\Helpers\Scripts\Enums\VehicleType.cs" />
      <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\DayTimeManager.cs" />
      <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\GameManager.cs" />
      <Compile Include="Assets\Game\Modules\Internal\GameManager\Scripts\Home.cs" />
@@ -400,6 +414,21 @@
  <Reference Include="nunit.framework">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
+ <Reference Include="CsvHelper">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/CsvHelper.dll</HintPath>
+ </Reference>
+ <Reference Include="Antlr4.Runtime.Standard">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
+ </Reference>
+ <Reference Include="YarnSpinner">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/YarnSpinner.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="P2T">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/Exploder/Scripts/3rd/P2T.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
@@ -408,21 +437,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="CsvHelper">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/CsvHelper.dll</HintPath>
- </Reference>
- <Reference Include="Antlr4.Runtime.Standard">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="YarnSpinner">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/YarnSpinner.dll</HintPath>
- </Reference>
- <Reference Include="P2T">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/Exploder/Scripts/3rd/P2T.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

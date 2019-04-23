@@ -739,6 +739,21 @@
  <Reference Include="nunit.framework">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
+ <Reference Include="CsvHelper">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/CsvHelper.dll</HintPath>
+ </Reference>
+ <Reference Include="Antlr4.Runtime.Standard">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
+ </Reference>
+ <Reference Include="YarnSpinner">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/YarnSpinner.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="P2T">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/Exploder/Scripts/3rd/P2T.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
@@ -747,21 +762,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="CsvHelper">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/CsvHelper.dll</HintPath>
- </Reference>
- <Reference Include="Antlr4.Runtime.Standard">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="YarnSpinner">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/YarnSpinner/Code/YarnSpinner.dll</HintPath>
- </Reference>
- <Reference Include="P2T">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Assets/Plugins/Exploder/Scripts/3rd/P2T.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
