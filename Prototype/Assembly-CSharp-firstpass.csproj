@@ -94,6 +94,8 @@
      <Compile Include="Assets\Plugins\CodeMonkey\Utils\World_Bar.cs" />
      <Compile Include="Assets\Plugins\CodeMonkey\Utils\World_Mesh.cs" />
      <Compile Include="Assets\Plugins\CodeMonkey\Utils\World_Sprite.cs" />
+     <Compile Include="Assets\Plugins\Example\Scripts\SimpleCameraController.cs" />
+     <Compile Include="Assets\Plugins\Example\TutorialInfo\Scripts\Readme.cs" />
      <Compile Include="Assets\Plugins\Exploder\Demos - safe to delete\DemoClickExplode\DemoClickExplode.cs" />
      <Compile Include="Assets\Plugins\Exploder\Demos - safe to delete\DemoQuickStart\QuickStartDemo.cs" />
      <Compile Include="Assets\Plugins\Exploder\Demos - safe to delete\DemoShooter\Assets\Scripts\CursorLocking.cs" />

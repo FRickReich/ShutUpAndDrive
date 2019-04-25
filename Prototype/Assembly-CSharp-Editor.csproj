@@ -55,8 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Example\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
-     <Compile Include="Assets\Game\Modules\Managers\FieldOfViewManager\Scripts\Editor\FieldOfViewEditor.cs" />
+     <Compile Include="Assets\Legacy\_Modules\Managers\FieldOfViewManager\Scripts\Editor\FieldOfViewEditor.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
