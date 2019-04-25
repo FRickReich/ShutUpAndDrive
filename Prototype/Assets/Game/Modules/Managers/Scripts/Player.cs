@@ -20,7 +20,7 @@ namespace snd
 
 		private void FixedUpdate()
 		{
-			credits = "Credits: " + GameStateManager.Instance.credits + "$";
+			//credits = "Credits: " + GameManager.Instance.credits + "$";
 
 			float h = InputManager.Instance.xboxLHorizontal;
 			float v = InputManager.Instance.xboxLVertical;

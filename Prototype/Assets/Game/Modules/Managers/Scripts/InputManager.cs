@@ -45,8 +45,6 @@ namespace snd
             if(Input.GetButtonDown("xboxButtonGuide"))
             {
                 xboxButtonGuide = true;
-
-                Handheld.Vibrate();
             }
             else if(Input.GetButtonUp("xboxButtonGuide"))
             {
@@ -160,7 +158,7 @@ namespace snd
             xboxDPadHorizontal = Input.GetAxisRaw("xboxDPadHorizontal");
             xboxDPadVertical = Input.GetAxisRaw("xboxDPadVertical");
             
-            GameStateManager.Instance.PauseGame(gamePaused ? true : false);
+            GameManager.Instance.PauseGame(gamePaused ? true : false);
 
             if(xboxDPadHorizontal == 1)
             {
