@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8792201638180494628}
   - component: {fileID: 8792201638180494629}
   - component: {fileID: 8792201638180494626}
+  - component: {fileID: 708139250}
+  - component: {fileID: 1354248277}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -48,7 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 100
   playerArmor: 100
+  playerCredits: 0
   playerDead: 0
+  playerCharacterPrefab: {fileID: 1927526377224738998, guid: eb55032e6a3dc4a47861d52ed5880f62,
+    type: 3}
 --- !u!114 &8792201638180494628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +66,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55301d20ee5341648fb0c901bc0e5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentCheckpoint: {fileID: 0}
+  gameSpeed: 0
+  gameTime: 0
+  gamePaused: 0
+  debugMode: 0
 --- !u!114 &8792201638180494629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54faf684a071249449903f8495f6dc0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamePaused: 0
   xboxButtonGuide: 0
   xboxButtonA: 0
   xboxButtonB: 0
@@ -106,3 +115,41 @@ MonoBehaviour:
   xboxLeftTrigger: 0
   xboxRightTrigger: 0
   currentWeapon: 0
+--- !u!114 &708139250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792201638180494627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9590dde22816847a7b74001dca1c071f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowdownLength: 2
+  slowDown: 0
+--- !u!114 &1354248277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8792201638180494627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f56aeac8b9f249d6b28d6555de69c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebugPanel: {fileID: 0}
+  DebugPlayerHealth: {fileID: 0}
+  DebugPlayerArmor: {fileID: 0}
+  DebugPlayerCredits: {fileID: 0}
+  DebugPlayerVehicle: {fileID: 0}
+  DebugPlayerCostume: {fileID: 0}
+  DebugGameSpeed: {fileID: 0}
+  DebugGamePaused: {fileID: 0}
+  DebugGameTime: {fileID: 0}
+  DebugGameCheckpoint: {fileID: 0}
+  GameMenuPanel: {fileID: 0}
+  SavingIndicatorPanel: {fileID: 0}

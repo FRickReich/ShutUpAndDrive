@@ -8,6 +8,8 @@ namespace snd
 	{
 		private StateManager stateManager = new StateManager();
 
+		private bool isPause;
+
 		public GameRunningState(StateManager stateManager)
 		{
 			this.stateManager = stateManager;
@@ -15,7 +17,10 @@ namespace snd
 
 		public void Execute(float delta)
 		{
-			Debug.Log("Game Running");
+			if(GameManager.Instance.gamePaused == true)
+			{
+				GameManager.Instance.PauseGame();
+			}
 		}
 
 		public void OnEnter()

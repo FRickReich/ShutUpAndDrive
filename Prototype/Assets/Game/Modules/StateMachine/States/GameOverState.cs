@@ -15,7 +15,7 @@ namespace snd
 
 		public void Execute(float delta)
 		{
-			Debug.Log("Game Over");
+			
 		}
 
 		public void OnEnter()

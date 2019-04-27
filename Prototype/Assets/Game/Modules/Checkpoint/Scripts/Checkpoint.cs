@@ -11,10 +11,7 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if(initializer)
-        {
-            //GameManager.Instance.ChangeCheckpoint(this);
-        }
+        
     }
 
     // Update is called once per frame

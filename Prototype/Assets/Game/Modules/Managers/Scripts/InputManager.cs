@@ -6,8 +6,6 @@ namespace snd
 {
     public class InputManager : SingletonPersistent<InputManager>
     {
-        public bool gamePaused;
-
         public bool xboxButtonGuide;
         public bool xboxButtonA;
         public bool xboxButtonB;
@@ -46,7 +44,7 @@ namespace snd
             {
                 xboxButtonGuide = true;
             }
-            else if(Input.GetButtonUp("xboxButtonGuide"))
+            else
             {
                 xboxButtonGuide = false;
             }
@@ -55,7 +53,7 @@ namespace snd
             {
                 xboxButtonA = true;
             }
-            else if(Input.GetButtonUp("xboxButtonA"))
+            else
             {
                 xboxButtonA = false;
             }
@@ -64,7 +62,7 @@ namespace snd
             {
                 xboxButtonB = true;
             }
-            else if(Input.GetButtonUp("xboxButtonB"))
+            else
             {
                 xboxButtonB = false;
             }
@@ -73,7 +71,7 @@ namespace snd
             {
                 xboxButtonX = true;
             }
-            else if(Input.GetButtonUp("xboxButtonX"))
+            else
             {
                 xboxButtonX = false;
             }
@@ -82,7 +80,7 @@ namespace snd
             {
                 xboxButtonY = true;
             }
-            else if(Input.GetButtonUp("xboxButtonY"))
+            else
             {
                 xboxButtonY = false;
             }
@@ -100,7 +98,7 @@ namespace snd
             {
                 xboxButtonRB = true;
             }
-            else if(Input.GetButtonUp("xboxButtonRB"))
+            else
             {
                 xboxButtonRB = false;
             }
@@ -109,7 +107,7 @@ namespace snd
             {
                 xboxButtonStart = true;
             }
-            else if(Input.GetButtonUp("xboxButtonStart"))
+            else
             {
                 xboxButtonStart = false;
             }
@@ -118,7 +116,7 @@ namespace snd
             {
                 xboxButtonL = true;
             }
-            else if(Input.GetButtonUp("xboxButtonL"))
+            else
             {
                 xboxButtonL = false;
             }
@@ -127,7 +125,7 @@ namespace snd
             {
                 xboxButtonR = true;
             }
-            else if(Input.GetButtonUp("xboxButtonR"))
+            else
             {
                 xboxButtonR = false;
             }
@@ -135,30 +133,18 @@ namespace snd
             if(Input.GetButtonDown("xboxButtonSelect"))
             {
                 xboxButtonSelect = true;
-
-                if(!gamePaused)
-                {
-                    gamePaused = true;
-                }
-                else if(gamePaused)
-                {
-                    gamePaused = false;
-                }
-                
             }
-            else if(Input.GetButtonUp("xboxButtonSelect"))
+            else
             {
                 xboxButtonSelect = false;
             }
 
             xboxLHorizontal = Input.GetAxis("xboxLHorizontal");
-            xboxLVertical = Input.GetAxis("xboxLVertical");
+            xboxLVertical = -Input.GetAxis("xboxLVertical");
             xboxRHorizontal = Input.GetAxis("xboxRHorizontal");
             xboxRVertical = Input.GetAxis("xboxRVertical");
             xboxDPadHorizontal = Input.GetAxisRaw("xboxDPadHorizontal");
             xboxDPadVertical = Input.GetAxisRaw("xboxDPadVertical");
-            
-            GameManager.Instance.PauseGame(gamePaused ? true : false);
 
             if(xboxDPadHorizontal == 1)
             {

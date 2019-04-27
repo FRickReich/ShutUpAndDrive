@@ -11,22 +11,29 @@ namespace snd
 		public GameLoadState(StateManager stateManager)
 		{
 			this.stateManager = stateManager;
+
+			GameManager.Instance.timer = new SimpleTimer();
 		}
 
 		public void Execute(float delta)
 		{
-			Debug.Log("Game Loading");
+
+			if(PlayerPrefsPro.HasKey("currentCheckpoint"))
+			{
+				GameManager.Instance.ChangeCheckpoint(GameObject.Find(PlayerPrefsPro.GetString("currentCheckpoint")).GetComponent<Checkpoint>());
+			}
+
+			if(PlayerPrefsPro.HasKey("gameTime"))
+			{
+				GameManager.Instance.timer.AddTime(PlayerPrefsPro.GetFloat("gameTime"));
+			}
 			
-			//GameManager.Instance.currentCheckpoint = GameObject.Find(PlayerPrefs.GetString("currentCheckpoint")).GetComponent<Checkpoint>();
-
-			GameManager.Instance.ChangeCheckpoint(GameObject.Find(PlayerPrefs.GetString("currentCheckpoint")).GetComponent<Checkpoint>());
-
 			if(GameManager.Instance.currentCheckpoint)
 			{
 				PlayerManager.Instance.SpawnPlayerCharacter();
 			}
 
-			this.stateManager.ChangeState(new GameRunningState(stateManager));
+			GameManager.Instance.RunGame();
 		}
 
 		public void OnEnter()

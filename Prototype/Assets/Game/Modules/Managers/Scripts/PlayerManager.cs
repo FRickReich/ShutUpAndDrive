@@ -4,34 +4,28 @@ namespace snd
 {
 	public class PlayerManager : SingletonPersistent<PlayerManager>
 	{
-		public int playerHealth = 100;
-		public int playerArmor = 100;
+		public int playerHealth;
+		public int playerArmor;
+		public float playerHealthInPercent;
+		public float playerArmorInPercent;
 		public int playerCredits = 0;
 		public bool playerDead;
 		public GameObject playerCharacterPrefab;
 
 		private GameObject playerCharacter;
 
-		public void TakeDamage(int damage)
-		{
-			if(playerArmor > 0)
-			{
-				playerArmor -= damage;
-				
-				if(playerArmor <= 0)
-				{
-					playerArmor = 0;
-				}
-			}
-			if(playerArmor == 0)
-			{
-				playerHealth -= damage;
+		private void Awake() {
+			 
+		}
 
-				if(playerHealth <= 0)
-				{
-					playerHealth = 0;
-					this.KillPlayer();
-				}
+		private void Update() {
+
+			if(playerCharacter != null)
+			{	
+				playerHealth = playerCharacter.GetComponent<PlayerCharacterController>().healthAndArmor.GetHealh();
+				playerArmor = playerCharacter.GetComponent<PlayerCharacterController>().healthAndArmor.getArmor();
+				playerHealthInPercent = playerCharacter.GetComponent<PlayerCharacterController>().healthAndArmor.getHealthInPercent();
+				playerArmorInPercent = playerCharacter.GetComponent<PlayerCharacterController>().healthAndArmor.getArmorInPercent();
 			}
 		}
 

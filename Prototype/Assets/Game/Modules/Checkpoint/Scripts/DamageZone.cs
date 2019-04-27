@@ -12,7 +12,7 @@ namespace snd
 		{
 			if (col.tag == "Player")
 			{
-				PlayerManager.Instance.TakeDamage(damage);
+				col.GetComponent<PlayerCharacterController>().healthAndArmor.TakeDamage(damage);
 			}
 		}
 	}

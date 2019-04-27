@@ -55,6 +55,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\DemoScripts\CameraFollow.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\DemoScripts\CheckPointEvent.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\DemoScripts\RaceTrackCheckpointsManager.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\EngineSoundManager.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\Ghost.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\Suspension.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\Trails\Trail.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\Trails\TrailEmitter.cs" />
+     <Compile Include="Assets\Plugins\Arcade_Car_Physics\Scripts\WheelVehicle.cs" />
      <Compile Include="Assets\Plugins\BezierPathCreator\Core\Scripts\Objects\BezierPath.cs" />
      <Compile Include="Assets\Plugins\BezierPathCreator\Core\Scripts\Objects\EndOfPathInstruction.cs" />
      <Compile Include="Assets\Plugins\BezierPathCreator\Core\Scripts\Objects\GlobalDisplaySettings.cs" />
@@ -199,6 +208,13 @@
      <Compile Include="Assets\Plugins\GameToolkit\Localization\Scripts\Utilities\GoogleTranslateRequest.cs" />
      <Compile Include="Assets\Plugins\GameToolkit\Localization\Scripts\Utilities\GoogleTranslateResponse.cs" />
      <Compile Include="Assets\Plugins\GameToolkit\Localization\Scripts\Utilities\GoogleTranslator.cs" />
+     <Compile Include="Assets\Plugins\PlayerPrefsPro\PlayerPrefsPro.cs" />
+     <Compile Include="Assets\Plugins\PlayerPrefsPro\Test Scenes\Data Manager\HoverTextDM.cs" />
+     <Compile Include="Assets\Plugins\PlayerPrefsPro\Test Scenes\Data Manager\PPPTest_DataManager.cs" />
+     <Compile Include="Assets\Plugins\PlayerPrefsPro\Test Scenes\General Test\HoverTexts.cs" />
+     <Compile Include="Assets\Plugins\PlayerPrefsPro\Test Scenes\General Test\PPPTest_General.cs" />
+     <Compile Include="Assets\Plugins\PlayerPrefsPro\Test Scenes\Loading Sign\PPPTest_LoadSign.cs" />
+     <Compile Include="Assets\Plugins\PlayerPrefsPro\Test Scenes\Loading Sign\rotate.cs" />
      <Compile Include="Assets\Plugins\Realistic Explosions_Unity5\Scripts\debris_force.cs" />
      <Compile Include="Assets\Plugins\Realistic Explosions_Unity5\Scripts\debris_force_big.cs" />
      <Compile Include="Assets\Plugins\Realistic Explosions_Unity5\Scripts\demo_scene_control.cs" />
@@ -425,13 +441,14 @@
      <None Include="Assets\Plugins\Animations\Mobility_Pro_Combo\Demo_Scene_Animation_README.txt" />
      <None Include="Assets\Plugins\YarnSpinner\Examples\DemoAssets\Space\Ship.yarn.txt" />
      <None Include="Assets\Plugins\YarnSpinner\Examples\DemoAssets\SimpleExampleScript.yarn.txt" />
+     <None Include="Assets\Plugins\Animations\Rifle_27A1_Starter\READ ME! - Rifle Attaches to RightHandMiddle1 Finger.txt" />
      <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UI Particle Premultiply Blend.shader" />
      <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UISoftAdditive.shader" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Plugins\Animations\Rifle_27A1_Starter\Demo_Scene_Animation_README.txt" />
      <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UIParticleHidden.shader" />
      <None Include="Assets\Plugins\CodeMonkey\README.txt" />
      <None Include="Assets\Plugins\unity-ui-extensions\Shaders\SoftMaskShader.shader" />
-     <None Include="Assets\Plugins\Animations\Rifle_01_v25\Docs\READ_ME_RH_WP_Unmask_Transform_01.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Plugins\CarToolkit\Fonts\LICENSE.txt" />
      <None Include="Assets\Plugins\Exploder\Demos - safe to delete\DemoShooter\Assets\Shaders\VertexColor.shader" />
@@ -443,7 +460,6 @@
      <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UIImageCrop.shader" />
      <None Include="Assets\Plugins\YarnSpinner\Examples\DemoAssets\Space\Sally.yarn.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\Plugins\Animations\Rifle_01_v25\Docs\Military_Rifle_Unity_Info.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\Plugins\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Plugins\unity-ui-extensions\Shaders\UILinearDodge.shader" />

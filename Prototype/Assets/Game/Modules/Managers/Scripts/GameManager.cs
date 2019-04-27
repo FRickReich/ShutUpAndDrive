@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,12 +9,19 @@ namespace snd
 	public class GameManager : SingletonPersistent<GameManager>
 	{
 		public Checkpoint currentCheckpoint;
-		private float gameTime;
+		
+		public float gameSpeed;
+		public float gameTime;
+
+		public SimpleTimer timer;
+
+		public bool gamePaused;
+		public bool debugMode;
 
 		private StateManager stateManager = new StateManager();
 
 		private void Start()
-		{
+		{	
 			this.stateManager.ChangeState(new GameLoadState(stateManager));
 		}
 
@@ -19,43 +29,42 @@ namespace snd
 		{
 			this.stateManager.ExecuteStateUpdate();
 
-			Debug.Log(PlayerPrefs.GetString("currentCheckpoint"));
+			gameSpeed = Time.timeScale;
+			gameTime = timer.elapsed;
+
+			if(InputManager.Instance.xboxButtonSelect)
+			{
+				if(!gamePaused)
+                {
+                    gamePaused = true;
+                }
+                else if(gamePaused)
+                {
+                    gamePaused = false;
+                }
+
+			}
 		}
 
 		public void ChangeCheckpoint(Checkpoint newCheckpoint)
 		{
-			currentCheckpoint = newCheckpoint;
+			this.currentCheckpoint = newCheckpoint;
 
-			SaveGame();
+			this.stateManager.ChangeState(new GameSaveState(
+				stateManager, 
+				currentCheckpoint.name,
+				gameTime
+			));
 		}
 
-		public void SaveGame()
+		public void PauseGame()
 		{
-			Debug.Log("Saving Game");
-
-			PlayerPrefs.SetString("currentCheckpoint", currentCheckpoint.name);
+			this.stateManager.ChangeState(new GamePausedState(stateManager));
 		}
 
-		public void LoadGame()
+		public void RunGame()
 		{
-
-		}
-
-		public void GameOver()
-		{
-			
-		}
-
-		public void PauseGame(bool isPaused)
-		{
-			//if(isPaused)
-			//{
-			//	//this.stateManager.ChangeState(new GamePausedState(stateManager));
-			//}
-			//else
-			//{
-			//	//this.stateManager.ChangeState(new GameRunningState(stateManager));
-			//}
+			this.stateManager.ChangeState(new GameRunningState(stateManager));
 		}
 
 		public void ChangeScene(string sceneName)

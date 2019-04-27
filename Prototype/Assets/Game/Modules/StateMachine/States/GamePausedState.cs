@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 namespace snd
 {
-	public class GamePausedState : IState
+	public class GamePausedState : MonoBehaviour, IState
 	{
 		private StateManager stateManager;
+		private bool isRunning;
 
 		public GamePausedState(StateManager stateManager)
 		{
@@ -15,17 +16,26 @@ namespace snd
 
 		public void Execute(float delta)
 		{
-			Debug.Log("Game Paused");
+			if(GameManager.Instance.gamePaused == false)
+			{
+				GameManager.Instance.RunGame();
+			}
 		}
 
 		public void OnEnter()
 		{
-			
+			TimeManager.Instance.slowDown = true;
+
+			UIManager.Instance.ShowGameMenu();
+			GameManager.Instance.timer.Stop();
 		}
 
 		public void Exit()
 		{
-			
+			TimeManager.Instance.slowDown = false;
+
+			UIManager.Instance.HideGameMenu();
+			GameManager.Instance.timer.Resume();
 		}
 	}
 }
