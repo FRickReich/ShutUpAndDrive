@@ -21,6 +21,7 @@ namespace snd
 		public bool reloading;
 		public bool fireing;
 
+		public objects.Weapon weapon;
 		public Bullet bulletPrefab;
         public Transform bulletSpawner;
 

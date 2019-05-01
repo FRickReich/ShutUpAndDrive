@@ -13,6 +13,15 @@ namespace snd
         public int currentWeaponNumber = -1;
         public WeaponController currentWeapon;
 
+		public Transform attachmentPoint;
+
+		void Awake()
+		{
+			this.transform.parent = attachmentPoint;
+			this.transform.position = attachmentPoint.position;
+			this.transform.rotation = attachmentPoint.rotation;
+		}
+
 		// Start is called before the first frame update
 		void Start()
 		{

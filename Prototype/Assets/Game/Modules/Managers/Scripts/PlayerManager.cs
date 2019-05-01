@@ -12,6 +12,9 @@ namespace snd
 		public bool playerDead;
 		public GameObject playerCharacterPrefab;
 
+		public int mediumAmmo = 200;
+		public int bigAmmo = 200;
+
 		private GameObject playerCharacter;
 
 		private void Awake() {

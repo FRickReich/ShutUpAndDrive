@@ -146,6 +146,9 @@
  <Reference Include="UnityEngine.XR.LegacyInputHelpers">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
@@ -164,6 +167,9 @@
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.ShaderGraph.Editor">
+ <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
  </Reference>
@@ -178,12 +184,6 @@
  </Reference>
  <Reference Include="UnityEditor.XR.LegacyInputHelpers">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
