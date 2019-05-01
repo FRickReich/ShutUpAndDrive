@@ -42,7 +42,6 @@ namespace snd
                 {
                     gamePaused = false;
                 }
-
 			}
 		}
 

@@ -6,6 +6,7 @@ namespace snd
 {
     public class PlayerCharacterController : MonoBehaviour
     {
+        public WeaponSwitcher weaponSwitcher;
         public HealthAndArmor healthAndArmor;
         public float moveSpeed = 5f;
         public float runSpeed = 12f;
@@ -34,6 +35,31 @@ namespace snd
         {
             Vector3 forward;
             float speed;
+
+            if(weaponSwitcher.currentWeapon.smallWeapon)
+            {
+                pistolEquip = true;
+                rifleEquip = false;
+            }
+            else if(weaponSwitcher.currentWeapon.bigWeapon)
+            {
+                pistolEquip = false;
+                rifleEquip = true;
+            }
+            else if(weaponSwitcher.currentWeapon.noWeapon)
+            {
+                pistolEquip = false;
+                rifleEquip = false;
+            }
+
+            if(weaponSwitcher.currentWeapon.shooting)
+            {
+                shoot = true;
+            }
+            else
+            {
+                shoot = false;
+            }
 
             float horizontalInput = -InputManager.Instance.xboxLHorizontal;
             float verticalInput = InputManager.Instance.xboxLVertical;

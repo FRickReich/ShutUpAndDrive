@@ -28,7 +28,7 @@ public class ChangeScene : MonoBehaviour
         {
             enterText.SetActive(true);
 
-            if(InputManager.Instance.xboxButtonA)
+            if(InputManager.Instance.xboxButtonX)
             {
                 SceneManager.LoadScene(levelToLoad);
             }

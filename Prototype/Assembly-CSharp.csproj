@@ -83,14 +83,27 @@
      <Compile Include="Assets\Game\Modules\StateMachine\Scripts\StateManager.cs" />
      <Compile Include="Assets\Game\Modules\StateMachine\Scripts\TestCubeScript.cs" />
      <Compile Include="Assets\Game\Modules\StateMachine\Scripts\TestDataContainer.cs" />
-     <Compile Include="Assets\Game\Modules\StateMachine\States\GameLoadState.cs" />
-     <Compile Include="Assets\Game\Modules\StateMachine\States\GameOverState.cs" />
-     <Compile Include="Assets\Game\Modules\StateMachine\States\GamePausedState.cs" />
-     <Compile Include="Assets\Game\Modules\StateMachine\States\GameRunningState.cs" />
-     <Compile Include="Assets\Game\Modules\StateMachine\States\GameSaveState.cs" />
-     <Compile Include="Assets\Game\Modules\StateMachine\States\TestInputState.cs" />
-     <Compile Include="Assets\Game\Modules\StateMachine\States\TestStringState.cs" />
      <Compile Include="Assets\Game\Modules\UI\Scripts\SavingIndicator.cs" />
+     <Compile Include="Assets\Game\Modules\WeaponManager\Weapon.cs" />
+     <Compile Include="Assets\Game\Modules\WeaponManager\WeaponController.cs" />
+     <Compile Include="Assets\Game\Modules\WeaponManager\WeaponManager.cs" />
+     <Compile Include="Assets\Game\Modules\WeaponSystem\Bullet.cs" />
+     <Compile Include="Assets\Game\Modules\WeaponSystem\Weapon.cs" />
+     <Compile Include="Assets\Game\Modules\WeaponSystem\WeaponSwitcher.cs" />
+     <Compile Include="Assets\Game\States\Game\GameOverState.cs" />
+     <Compile Include="Assets\Game\States\Game\GamePausedState.cs" />
+     <Compile Include="Assets\Game\States\Game\GameRunningState.cs" />
+     <Compile Include="Assets\Game\States\SaveLoad\GameLoadState.cs" />
+     <Compile Include="Assets\Game\States\SaveLoad\GameSaveState.cs" />
+     <Compile Include="Assets\Game\States\Test\TestInputState.cs" />
+     <Compile Include="Assets\Game\States\Test\TestStringState.cs" />
+     <Compile Include="Assets\Game\States\WeaponController\FireWeaponState.cs" />
+     <Compile Include="Assets\Game\States\WeaponController\IdleWeaponState.cs" />
+     <Compile Include="Assets\Game\States\WeaponController\ReloadWeaponState.cs" />
+     <Compile Include="Assets\Game\States\WeaponManager\EquipWeaponState.cs" />
+     <Compile Include="Assets\Game\States\WeaponManager\NextWeaponState.cs" />
+     <Compile Include="Assets\Game\States\WeaponManager\PrevWeaponState.cs" />
+     <Compile Include="Assets\Game\States\WeaponManager\UnEquipWeaponState.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/rick/Dropbox/Projects/Games/Shut Up And Drive/Shut Up And Drive/Prototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
