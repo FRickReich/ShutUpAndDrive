@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace snd.objects
 {
-	[CreateAssetMenu(fileName = "Weapon", menuName = "Game/Assets", order = 0)]
+	[CreateAssetMenu(fileName = "Weapon", menuName = "Game/Assets/Weapon", order = 0)]
 	public class Weapon : ScriptableObject
 	{
 		[Header("Specifications")]
