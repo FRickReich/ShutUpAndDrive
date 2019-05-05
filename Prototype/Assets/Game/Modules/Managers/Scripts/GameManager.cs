@@ -18,6 +18,8 @@ namespace snd
 		public bool gamePaused;
 		public bool debugMode;
 
+		private bool sentMessage;
+
 		private StateManager stateManager = new StateManager();
 
 		private void Start()
@@ -56,6 +58,26 @@ namespace snd
 			));
 		}
 
+		public void SaveGame()
+		{
+			if(!sentMessage)
+			{
+				GameObject.Find("Create Notification").GetComponent<CreateNotification>().Create("test", "ok");
+
+				sentMessage = true;
+			}
+
+			PlayerPrefsPro.SetString("currentCheckpoint", currentCheckpoint.name);
+			PlayerPrefsPro.SetFloat("gameTime", gameTime);
+
+			PlayerPrefsPro.Save();
+		}
+
+		public void LoadGame()
+		{
+
+		}
+
 		public void PauseGame()
 		{
 			this.stateManager.ChangeState(new GamePausedState(stateManager));
@@ -63,6 +85,8 @@ namespace snd
 
 		public void RunGame()
 		{
+			sentMessage = false;
+			
 			this.stateManager.ChangeState(new GameRunningState(stateManager));
 		}
 

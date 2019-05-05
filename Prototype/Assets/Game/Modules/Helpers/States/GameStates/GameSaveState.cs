@@ -23,10 +23,7 @@ namespace snd
 
 		public void Save()
 		{
-			PlayerPrefsPro.SetString("currentCheckpoint", checkpointName);
-			PlayerPrefsPro.SetFloat("gameTime", gameTime);
-
-			PlayerPrefsPro.Save();
+			GameManager.Instance.SaveGame();
 		}
 
 		public void Execute(float delta)

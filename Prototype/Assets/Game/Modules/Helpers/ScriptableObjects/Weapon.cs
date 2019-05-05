@@ -6,7 +6,7 @@ namespace snd.objects
 	public class Weapon : ScriptableObject
 	{
 		[Header("Specifications")]
-		public wepaonType type;
+		public enums.weaponType weaponType;
 		public string weaponName;
 		public int maxAmmo;
 		public int damage;
@@ -17,8 +17,8 @@ namespace snd.objects
 		public float fireRate;
 
 		[Header("Visuals")]
-		public Sprite weaponSprite;
-		public Transform bulletPrefab;
+		public Bullet bulletPrefab;
 		public Transform weaponPrefab;
+		public Sprite weaponSprite;
 	}
 }

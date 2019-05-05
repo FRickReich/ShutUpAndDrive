@@ -1,6 +1,6 @@
-namespace snd.objects
+namespace snd.enums
 {
-	public enum wepaonType {
+	public enum weaponType {
 		SMALL,
 		MEDIUM,
 		LARGE

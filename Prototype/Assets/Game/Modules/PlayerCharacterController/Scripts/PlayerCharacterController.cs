@@ -6,7 +6,7 @@ namespace snd
 {
     public class PlayerCharacterController : MonoBehaviour
     {
-        public WeaponSwitcher weaponSwitcher;
+        public WeaponManager WeaponManager;
         public HealthAndArmor healthAndArmor;
         public float moveSpeed = 5f;
         public float runSpeed = 12f;
@@ -26,9 +26,10 @@ namespace snd
         private void Awake()
         {
             characterController = GetComponent<CharacterController>();
+            WeaponManager = GetComponent<WeaponManager>();
             rigidBody = GetComponent<Rigidbody>();
             healthAndArmor = new HealthAndArmor(100, 100);
-            animator = this.gameObject.GetComponent<Animator>();
+            animator = GetComponent<Animator>();
         }
 
         private void Update()
@@ -36,23 +37,23 @@ namespace snd
             Vector3 forward;
             float speed;
 
-            if(weaponSwitcher.currentWeapon.smallWeapon)
+            if(WeaponManager.weaponType == snd.enums.weaponType.SMALL)
             {
                 pistolEquip = true;
                 rifleEquip = false;
             }
-            else if(weaponSwitcher.currentWeapon.bigWeapon)
+            if(WeaponManager.weaponType == snd.enums.weaponType.MEDIUM || WeaponManager.weaponType == snd.enums.weaponType.LARGE)
             {
                 pistolEquip = false;
                 rifleEquip = true;
             }
-            else if(weaponSwitcher.currentWeapon.noWeapon)
+            else if(WeaponManager.currentWeaponNumber == -1)
             {
                 pistolEquip = false;
                 rifleEquip = false;
             }
 
-            if(weaponSwitcher.currentWeapon.shooting)
+            if(WeaponManager.fireing)
             {
                 shoot = true;
             }

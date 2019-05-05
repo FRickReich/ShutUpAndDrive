@@ -7,15 +7,15 @@ namespace snd
 	public class FireWeaponState : IState
 	{
 		private StateManager stateManager;
-		private readonly WeaponController weaponController;
+		private WeaponManager weaponManager;
 
 		private float fireRate;
 		private float timer;
 
-		public FireWeaponState(StateManager stateManager, WeaponController weaponController, float fireRate)
+		public FireWeaponState(StateManager stateManager, WeaponManager weaponManager, float fireRate)
 		{
 			this.stateManager = stateManager;
-			this.weaponController = weaponController;
+			this.weaponManager = weaponManager;
 			this.fireRate = fireRate;
 		}
 
@@ -32,14 +32,14 @@ namespace snd
 
 		public void OnEnter()
 		{
-			weaponController.currentAmmo--;
-			weaponController.SpawnBullet();
-			weaponController.fireing = true;
+			weaponManager.currentAmmo--;
+			weaponManager.SpawnBullet();
+			weaponManager.fireing = true;
 		}
 
 		public void Exit()
 		{
-			weaponController.fireing = false;
+			weaponManager.fireing = false;
 		}
 	}
 }

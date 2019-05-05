@@ -10,27 +10,26 @@ namespace snd
 	public class UIManager : SingletonPersistent<UIManager>
 	{
 		[Header("Debug Panel")]
-		public GameObject DebugPanel;
+		public GameObject debugPanel;
 
-		public TMP_Text DebugPlayerHealth;
-		public TMP_Text DebugPlayerArmor;
-		public TMP_Text DebugPlayerCredits;
-		public TMP_Text DebugPlayerVehicle;
+		public TMP_Text debugPlayerHealth;
+		public TMP_Text debugPlayerArmor;
+		public TMP_Text debugPlayerCredits;
+		public TMP_Text debugPlayerVehicle;
 		public TMP_Text DebugPlayerCostume;
 
-		public TMP_Text DebugGameSpeed;
-		public TMP_Text DebugGamePaused;
-		public TMP_Text DebugGameTime;
-		public TMP_Text DebugGameCheckpoint;
+		public TMP_Text debugGameSpeed;
+		public TMP_Text debugGamePaused;
+		public TMP_Text debugGameTime;
+		public TMP_Text debugGameCheckpoint;
 
 		// INGAME HUD
 		[Header("HUD Panel")]
-		public GameObject HUDPanel;
-		public Image HUDPlayerHealth;
-		public Image HUDPlayerArmor;
-
-		// INGAME MENU
-
+		public GameObject hudPanel;
+		public Image hudPlayerHealth;
+		public Image hudPlayerArmor;
+		public TMP_Text hudPlayerAmmo;
+		
 		// INGAME MENU
 		[Header("Ingame Menu Panel")]
 		public GameObject GameMenuPanel;
@@ -44,26 +43,26 @@ namespace snd
 		// Update is called once per frame
 		void Update()
 		{
-			UpdateDebugPanel();
+			//UpdateDebugPanel();
 			UpdateHUDPanel();
 		}
 
 		void UpdateDebugPanel()
 		{
-			DebugPlayerHealth.text  = "PlayerHealth: " + PlayerManager.Instance.playerHealth;
-			DebugPlayerArmor.text   = "PlayerArmor: " + PlayerManager.Instance.playerArmor;
-			DebugPlayerCredits.text = "PlayerCredits: " + PlayerManager.Instance.playerCredits;
+			debugPlayerHealth.text  = "PlayerHealth: " + PlayerManager.Instance.playerHealth;
+			debugPlayerArmor.text   = "PlayerArmor: " + PlayerManager.Instance.playerArmor;
+			debugPlayerCredits.text = "PlayerCredits: " + PlayerManager.Instance.playerCredits;
 
-			DebugGameSpeed.text = "GameSpeed: " + GameManager.Instance.gameSpeed;
-			DebugGamePaused.text = "GamePaused: " + GameManager.Instance.gamePaused;
-			DebugGameTime.text = "GameTime: " + this.formatTime(GameManager.Instance.gameTime);
-			DebugGameCheckpoint.text = "GameCheckpoint: " + GameManager.Instance.currentCheckpoint;
+			debugGameSpeed.text = "GameSpeed: " + GameManager.Instance.gameSpeed;
+			debugGamePaused.text = "GamePaused: " + GameManager.Instance.gamePaused;
+			debugGameTime.text = "GameTime: " + this.formatTime(GameManager.Instance.gameTime);
+			debugGameCheckpoint.text = "GameCheckpoint: " + GameManager.Instance.currentCheckpoint;
 		}
 
 		private void UpdateHUDPanel()
 		{
-			HUDPlayerHealth.fillAmount = PlayerManager.Instance.playerHealthInPercent / 2;
-			HUDPlayerArmor.fillAmount = PlayerManager.Instance.playerArmorInPercent / 2;
+			hudPlayerHealth.fillAmount = PlayerManager.Instance.playerHealthInPercent / 2;
+			hudPlayerArmor.fillAmount = PlayerManager.Instance.playerArmorInPercent / 2;
 		}
 
 		string formatTime(float timeInput)
@@ -72,6 +71,21 @@ namespace snd
 			float minutes = timeInput / 60;
 
 			return string.Format("{0:00}:{1:00}", minutes, seconds);
+		}
+
+		public void UpdateHUDAmmo(int currentAmmo, int completeAmmo, bool infinite = false)
+		{
+			hudPlayerAmmo.text = infinite ? $"{currentAmmo}/∞" : $"{currentAmmo}/{completeAmmo}";
+		}
+
+		public void ShowHudAmmo()
+		{
+			hudPlayerAmmo.gameObject.SetActive(true);
+		}
+
+		public void HideHudAmmo()
+		{
+			hudPlayerAmmo.gameObject.SetActive(false);
 		}
 
 		public void ShowSavingIndicatorPanel()

@@ -21,9 +21,9 @@ namespace snd
 		{
 			weaponManager.currentWeaponNumber = -1;
 
-			foreach(WeaponController weapon in weaponManager.weapons)
+			foreach(snd.objects.Weapon weapon in weaponManager.weapons)
 			{
-				weapon.gameObject.SetActive(false);
+				weaponManager.DestroyWeapon();
 			}
 
 			weaponManager.currentWeapon = null;
