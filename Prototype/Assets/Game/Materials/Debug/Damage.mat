@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Checkpoint Active
+  m_Name: Damage
   m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
   m_ShaderKeywords: _BLENDMODE_ALPHA _DISABLE_DECALS _DISABLE_SSR _NORMALMAP_TANGENT_SPACE
     _REFRACTION_PLANE _SURFACE_TYPE_TRANSPARENT
@@ -256,4 +256,4 @@ Material:
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UnlitColor: {r: 0.5607712, g: 1, b: 0, a: 0.5176471}
+    - _UnlitColor: {r: 1, g: 0.13348547, b: 0, a: 0.5176471}
