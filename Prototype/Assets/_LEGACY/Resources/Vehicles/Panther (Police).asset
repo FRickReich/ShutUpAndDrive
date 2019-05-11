@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710c889b7c9074eb980bc70e07a85895, type: 3}
+  m_Name: Panther (Police)
+  m_EditorClassIdentifier: 
+  vehicleCompany: Tuscany
+  vehicleName: Panther (Police)
+  vehicleType: 0
+  driveType: 0
+  wheelModel: {fileID: 100008, guid: 2e1cfea691afd447fb44f1d98cb4870d, type: 3}
+  vehicleModel: {fileID: 7237576355702623884, guid: 450cad5c7ef044c85a06cd978f53262e,
+    type: 3}
+  vehiclePaints:
+  - {fileID: 2100000, guid: 1eb748aedeb074e0d87960e5be2327e2, type: 2}
+  vehicleDecals: []
+  weight: 1700
+  torque: 0
+  brakepower: 0

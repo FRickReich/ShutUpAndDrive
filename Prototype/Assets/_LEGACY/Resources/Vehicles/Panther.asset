@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 710c889b7c9074eb980bc70e07a85895, type: 3}
+  m_Name: Panther
+  m_EditorClassIdentifier: 
+  vehicleCompany: Tuscany
+  vehicleName: Panther
+  vehicleType: 0
+  driveType: 0
+  wheelModel: {fileID: 100008, guid: 2e1cfea691afd447fb44f1d98cb4870d, type: 3}
+  vehicleModel: {fileID: 7962111975002347691, guid: c88c806298480411ba5a5806f71d7e62,
+    type: 3}
+  vehiclePaints:
+  - {fileID: 2100000, guid: 22b847381e32149a99eca197ac683e70, type: 2}
+  - {fileID: 2100000, guid: 222c9b611b2b7468c806b04b955810a2, type: 2}
+  - {fileID: 2100000, guid: 0a84ee3ffe7ed4ab08678c9901fdb850, type: 2}
+  - {fileID: 2100000, guid: 324ce53c40f65464b843fa23a2ffc2c7, type: 2}
+  - {fileID: 2100000, guid: 483f36024be8b44e0a9c6fa2edda5ea3, type: 2}
+  - {fileID: 2100000, guid: 2ae1af350fb004fd6bc53f531021291d, type: 2}
+  - {fileID: 2100000, guid: 33bdca4acda9340bbb631bde072c48f9, type: 2}
+  - {fileID: 2100000, guid: ee63ec287297f4c009b271630033fe98, type: 2}
+  - {fileID: 2100000, guid: 80b3ee73c81b8439aa0877ea263d4251, type: 2}
+  - {fileID: 2100000, guid: c88367e03c03346eb8625edf3e165f4f, type: 2}
+  - {fileID: 2100000, guid: f92451abf07334f5cbb758a264d5abcc, type: 2}
+  - {fileID: 2100000, guid: c8748eba0dff7467d95d549d4b29992c, type: 2}
+  - {fileID: 2100000, guid: 87038b440ebcb4f8793914f44de3d5b4, type: 2}
+  - {fileID: 2100000, guid: 6ba5500ffc3c844df8d4731afed08228, type: 2}
+  - {fileID: 2100000, guid: 43f494f64bb5b4806a0f7ce8423fe5f9, type: 2}
+  vehicleDecals: []
+  weight: 1700
+  torque: 0
+  brakepower: 0
