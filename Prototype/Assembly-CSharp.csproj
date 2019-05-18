@@ -144,8 +144,14 @@
      <Compile Include="Assets\Game\Scripts\Modules\DialogManager\v1.0\States\DialogEndState.cs" />
      <Compile Include="Assets\Game\Scripts\Modules\DialogManager\v1.0\States\DialogNextState.cs" />
      <Compile Include="Assets\Game\Scripts\Modules\DialogManager\v1.0\States\DialogStartState.cs" />
+     <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Demo\TestScript.cs" />
      <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Scripts\BaseGameEvent.cs" />
      <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Scripts\BaseGameEventListener.cs" />
+     <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Scripts\Events\VoidEvent.cs" />
+     <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Scripts\Interfaces\IGameEventListener.cs" />
+     <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Scripts\UnityEvents\UnityVoidEvent.cs" />
+     <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Scripts\UnityEvents\VoidListener.cs" />
+     <Compile Include="Assets\Game\Scripts\Modules\EventSystem\v1.0\Scripts\Void.cs" />
      <Compile Include="Assets\Game\Scripts\Modules\GameCharacterManager\v1.0\Scripts\GameCharacterManager.cs" />
      <Compile Include="Assets\Game\Scripts\Modules\GameCharacterManager\v1.0\Scripts\ScriptableObjects\Character.cs" />
      <Compile Include="Assets\Game\Scripts\Modules\GameCharacterManager\v1.0\Scripts\States\CreateCharacterState.cs" />
