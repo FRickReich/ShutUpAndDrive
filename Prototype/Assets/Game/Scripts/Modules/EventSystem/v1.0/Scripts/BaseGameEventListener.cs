@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
 
-namespace Toolkit.Events
+namespace Game.Events
 {
 	public abstract class BaseGameEventListener<T, E, UER> : MonoBehaviour, 
 	IGameEventListener <T> where E : BaseGameEvent<T> where UER : UnityEvent<T>

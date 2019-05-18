@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Toolkit.Events
+namespace Game.Events
 {
 	public abstract class BaseGameEvent<T> : ScriptableObject
 	{

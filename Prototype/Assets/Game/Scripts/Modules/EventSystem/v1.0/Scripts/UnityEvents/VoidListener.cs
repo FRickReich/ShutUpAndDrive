@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Toolkit.Events
+namespace Game.Events
 {
 	public class VoidListener : BaseGameEventListener<Void, VoidEvent, UnityVoidEvent> {  }
 }
