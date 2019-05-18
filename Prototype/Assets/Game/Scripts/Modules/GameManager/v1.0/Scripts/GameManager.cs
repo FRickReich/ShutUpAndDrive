@@ -108,10 +108,7 @@ namespace Game.Modules
 			// SAVE GAME
 		}
 
-		public void SaveGame()
-		{
-
-		}
+		public void SaveGame() {}
 
 		public void LoadGame()
 		{
@@ -142,10 +139,7 @@ namespace Game.Modules
 	        }
 		}
 
-		public void AttachCameraToPlayer()
-		{
-			
-		}
+		public void AttachCameraToPlayer() {}
 
 		public void SpawnPlayer()
 		{
