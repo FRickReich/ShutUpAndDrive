@@ -1,8 +1,0 @@
-pull_request_rules:
-  - name: automatic merge on CI success
-    conditions:
-      - status-success=CodeFactor/pr
-      - base=master
-    actions:
-      merge:
-        method: merge
