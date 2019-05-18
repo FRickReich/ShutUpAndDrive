@@ -13,12 +13,13 @@
 /*/Assets/Game/Art
 /*/Assets/Game/Meshes
 
-/UIElementsSchema
 .DS_Store
 .vscode
 *.meta
-Assembly-CSharp.csproj
-Assembly-CSharp-Editor-firstpass.csproj
-Assembly-CSharp-Editor.csproj
-Assembly-CSharp-firstpass.csproj
+
+/*/UIElementsSchema
+/*/Assembly-CSharp.csproj
+/*/Assembly-CSharp-Editor-firstpass.csproj
+/*/Assembly-CSharp-Editor.csproj
+/*/Assembly-CSharp-firstpass.csproj
 Prototype.sln
