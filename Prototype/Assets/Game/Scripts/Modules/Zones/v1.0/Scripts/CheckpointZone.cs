@@ -28,11 +28,6 @@ namespace Game.Modules
 			}
 		}
 
-		private void Update()
-        {
-            
-        }
-
 		private void OnEnable() 
 		{
 			GameManager.setDebugModeEvent -= SetDebugVisual;	

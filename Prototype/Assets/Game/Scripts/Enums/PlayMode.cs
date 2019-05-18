@@ -1,5 +1,3 @@
-
-
 namespace Game.Enums
 {
 	public enum PlayMode
