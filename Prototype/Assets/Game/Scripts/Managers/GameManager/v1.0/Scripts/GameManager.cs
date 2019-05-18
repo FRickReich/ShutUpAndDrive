@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Input;
 
+using Game.Modules;
 using Game.Events;
 using Game.States;
 using Game.Enums;
 
-namespace Game.Modules
+namespace Game.Managers
 {
 	public class GameManager : Game.Base.SingletonPersistent<GameManager>
 	{
@@ -21,6 +22,7 @@ namespace Game.Modules
 		public GameplayMode currentGameplayMode;
 
 		public GameObject playerCharacterPrefab;
+		public Transform aimIndicator; 
 
 		public GameObject player;
 
@@ -144,6 +146,7 @@ namespace Game.Modules
 		public void SpawnPlayer()
 		{
 			player = Instantiate(playerCharacterPrefab, currentCheckpoint.transform.position, currentCheckpoint.transform.rotation);
+			player.transform.GetComponent<PlayerCharacterController>().aimIndicator = aimIndicator;
 		}
 	}
 }

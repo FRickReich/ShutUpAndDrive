@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Game.Managers;
 using Game.Modules;
 using Game.Base;
 
@@ -32,7 +33,7 @@ namespace Game.States
 		{
 			GameManager.Instance.SpawnPlayer();
 
-			this.stateMachine.ChangeState(new GameInitializeState(stateMachine));
+			this.stateMachine.ChangeState(new GameRunningState(stateMachine));
 		}
 	}
 }
