@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using Toolkit.Events;
+using Game.Events;
 
-namespace Toolkit.Tests
+namespace Game.Tests
 {
 	public class TestScript : MonoBehaviour
 	{
