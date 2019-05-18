@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Game.Modules;
+using Game.Base;
 
 namespace Game.States
 {

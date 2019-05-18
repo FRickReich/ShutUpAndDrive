@@ -18,24 +18,30 @@ namespace Game.Modules
 		private void Awake()
 		{
 			debugVisual = this.transform.Find("DebugVisual").gameObject;
+		}
 
+		private void Start()
+		{
 			if(initializer)
 			{
-				checkpointChangeEvent(this);
+				SetCheckpointActive();
 			}
 		}
 
 		private void Update()
         {
-            if(debugMode)
-            {
-				ShowDebugVisual();
-            }
-            else
-            {
-				HideDebugVisual();
-            }
+            
         }
+
+		private void OnEnable() 
+		{
+			GameManager.setDebugModeEvent -= SetDebugVisual;	
+		}
+
+		private void OnDisable() 
+		{
+			GameManager.setDebugModeEvent -= SetDebugVisual;	
+		}
 
 		private void OnTriggerEnter(Collider col)
 		{
@@ -43,19 +49,19 @@ namespace Game.Modules
 			{
 				if (checkpointChangeEvent != null)
 				{
-					checkpointChangeEvent(this);
+					SetCheckpointActive();
 				}
 			}
 		}
 
-		public void ShowDebugVisual()
+		public void SetCheckpointActive()
 		{
-			debugVisual.SetActive(true);
+			checkpointChangeEvent(this);
 		}
 
-		public void HideDebugVisual()
+		public void SetDebugVisual(bool setActive)
 		{
-			debugVisual.SetActive(false);
+			debugVisual.SetActive(setActive);	
 		}
 	}
 }
