@@ -204,6 +204,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 264e6ce301b744cbabafaba3deee8b5b, type: 3}
+--- !u!1 &116371292 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2005658435562912338, guid: 264e6ce301b744cbabafaba3deee8b5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 116371291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &116371293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116371292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59da54790d71a49108c49525f18d239c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 84cef33a38de84ef79c33c2379e7ad41, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 116371294}
+        m_MethodName: SetDebugVisual
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: Game.Events.UnityVoidEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+--- !u!114 &116371294 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6545302621064761350, guid: 264e6ce301b744cbabafaba3deee8b5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 116371291}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116371292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486f511650ad14019ad4df18d2225263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &116371295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116371292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59da54790d71a49108c49525f18d239c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 5513ba1e9dd2d47f2ac93da29e4609e4, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 116371294}
+        m_MethodName: SetDebugVisual
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Game.Events.UnityVoidEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!1 &133166844
 GameObject:
   m_ObjectHideFlags: 3
@@ -959,6 +1035,18 @@ PrefabInstance:
       propertyPath: firstRun
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4115755649463879366, guid: bb6c300ff2dd84ba4aae9623f3273400,
+        type: 3}
+      propertyPath: activateDebugMode
+      value: 
+      objectReference: {fileID: 11400000, guid: 84cef33a38de84ef79c33c2379e7ad41,
+        type: 2}
+    - target: {fileID: 4115755649463879366, guid: bb6c300ff2dd84ba4aae9623f3273400,
+        type: 3}
+      propertyPath: deactivateDebugMode
+      value: 
+      objectReference: {fileID: 11400000, guid: 5513ba1e9dd2d47f2ac93da29e4609e4,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6c300ff2dd84ba4aae9623f3273400, type: 3}
 --- !u!1 &1733807183

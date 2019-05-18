@@ -9,13 +9,11 @@ namespace Game.Tests
 	public class TestScript : MonoBehaviour
 	{
         [SerializeField] private VoidEvent onTest;
-		[SerializeField] private BoolEvent onBool;
 
 		// Start is called before the first frame update
 		void Start()
 		{
             onTest.Raise();
-			onBool.Raise(true);
 		}
 	}
 }

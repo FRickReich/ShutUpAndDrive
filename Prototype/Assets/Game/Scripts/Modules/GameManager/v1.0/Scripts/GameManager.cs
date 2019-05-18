@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Input;
 
+using Game.Events;
 using Game.States;
 
 namespace Game.Modules
@@ -27,6 +28,8 @@ namespace Game.Modules
 		public bool firstRun;
 
 		public static event Action<bool> setDebugModeEvent;
+		public VoidEvent activateDebugMode;
+		public VoidEvent deactivateDebugMode;
 
 		private void OnEnable()
 		{
@@ -79,7 +82,14 @@ namespace Game.Modules
 				Time.fixedDeltaTime = .02f * Time.timeScale;
 			}
 
-			SetDebugMode(debugMode);
+			if(debugMode == true)
+			{
+				activateDebugMode.Raise();
+			}
+			else if(debugMode == false)
+			{
+				deactivateDebugMode.Raise();
+			}
 
 			Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
 		}
@@ -121,11 +131,6 @@ namespace Game.Modules
             {
 	            gamePaused = false;
 	        }
-		}
-
-		public void SetDebugMode(bool debugMode)
-		{
-			setDebugModeEvent(debugMode);
 		}
 	}
 }
