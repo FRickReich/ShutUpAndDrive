@@ -24,21 +24,13 @@ namespace Game.States
 			Initialize();
 		}
 
-		public void Exit()
-		{
-			
-		}
+		public void Exit() {}
 
-		public void OnEnter()
-		{
-			
-		}
+		public void OnEnter() {}
 		
 		private void Initialize()
 		{
 			GameManager.Instance.SpawnPlayer();
-
-
 
 			this.stateMachine.ChangeState(new GameInitializeState(stateMachine));
 		}

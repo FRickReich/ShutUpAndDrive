@@ -24,15 +24,9 @@ namespace Game.States
 			InitializeGame();
 		}
 
-		public void Exit()
-		{
-			
-		}
+		public void Exit() {}
 
-		public void OnEnter()
-		{
-			
-		}
+		public void OnEnter() {}
 		
 		private void InitializeGame()
 		{

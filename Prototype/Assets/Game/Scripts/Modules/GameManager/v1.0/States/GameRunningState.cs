@@ -27,15 +27,9 @@ namespace Game.States
 			}
 		}
 
-		public void Exit()
-		{
-			
-		}
+		public void Exit() {}
 
-		public void OnEnter()
-		{
-			
-		}
+		public void OnEnter() {}
 
 		public void isPaused(bool tx)
 		{
