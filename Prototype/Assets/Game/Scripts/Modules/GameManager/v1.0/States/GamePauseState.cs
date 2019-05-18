@@ -19,7 +19,7 @@ namespace Game.States
 
 		public void Execute(float delta)
 		{
-			Debug.Log("Running PAUSE STATE...");
+			Debug.Log("GAME PAUSE STATE...");
 
 			if(GameManager.Instance.gamePaused == false)
 			{

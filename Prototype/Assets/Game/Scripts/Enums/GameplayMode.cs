@@ -1,6 +1,6 @@
 namespace Game.Enums
 {
-	public enum PlayMode
+	public enum GameplayMode
 	{
 		CHARACTER,
 		VEHICLE,
