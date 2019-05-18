@@ -79,5 +79,9 @@ namespace Game.Extensions
 			return float.IsNaN(vec.x * vec.y * vec.z);
 		}
 
+		public static Vector3 TransformToScreenPosition(this Vector3 newPos)
+		{
+			return Camera.main.WorldToScreenPoint(newPos);
+		}
 	}
 }

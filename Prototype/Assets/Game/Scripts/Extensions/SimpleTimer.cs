@@ -3,46 +3,6 @@ using System.Collections;
  
 public class SimpleTimer
 {
-	/*
-	using UnityEngine;
-using System.Collections;
- 
-public class TimerTester : MonoBehaviour 
-{
-	public SimpleTimer timer;
-	public float life = 10f;
-	public float elapsed;
-	public float normalized;
-	public float timerLife;
-	public bool isFinished;
-	public bool isPaused;
- 
-	void Start () 
-	{
-		timer = new SimpleTimer(life);
-	}
- 
-	void Update () 
-	{
-		elapsed = timer.elapsed;
-		normalized = timer.normalized;
-		isFinished = timer.isFinished;
-		isPaused = timer.isPaused;
-		timerLife = timer.life;
- 
-		if (Input.GetMouseButtonDown(0))
-			timer = new Timer(life);
- 
-		if (Input.GetMouseButtonDown(1))
-                {
-			if(timer.isPaused)
-                                timer.Stop();
-                        else
-                                timer.Resume();
-                }
-	}
-}
- */
 	public float life { get { return _life; } private set { _life = value; } }
 	public float elapsed { get { return _curTime; } }
 	public float normalized { get { return _curTime / life; } } // returns timer as a range between 0 and 1
@@ -65,12 +25,21 @@ public class TimerTester : MonoBehaviour
 	/// </summary>
 	/// <param name="lifeSpan">length of the timer</param>
 	/// <param name="useFixedTime">use fixed (physics) time or screen update time</param>
-	public SimpleTimer(float lifeSpan, bool useFixedTime = false) { life = lifeSpan; _fixedTime = useFixedTime; _startTime = _getTime; }
+	public SimpleTimer(float lifeSpan, bool useFixedTime = false)
+	{
+		life = lifeSpan; 
+		_fixedTime = useFixedTime; 
+		_startTime = _getTime;
+	}
  
 	/// <summary>
 	/// starts timer again using time remaining 
 	/// </summary>
-	public void Resume() { _startTime = (isPaused ? _getTime - elapsed : _getTime); isPaused = false; }
+	public void Resume()
+	{
+		_startTime = (isPaused ? _getTime - elapsed : _getTime); 
+		isPaused = false; 
+	}
  
 	/// <summary>
 	/// stop pauses the timer and allows for resume at current elapsed time

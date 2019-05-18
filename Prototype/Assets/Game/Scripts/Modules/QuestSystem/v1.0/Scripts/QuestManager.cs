@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+using Game.Objects;
+
 namespace Game.Modules
 {
 	[ExecuteInEditMode]
@@ -9,8 +11,8 @@ public class QuestManager : MonoBehaviour {
 
 	public static QuestManager questManager;
 
-	public List <Quest> questList = new List<Quest>();			// Master Quest List
-	[HideInInspector]public List <Quest> currentQuestList = new List<Quest>();	// Current Quest List
+	public List <Game.Objects.Quest> questList = new List<Game.Objects.Quest>();			// Master Quest List
+	[HideInInspector]public List <Game.Objects.Quest> currentQuestList = new List<Game.Objects.Quest>();	// Current Quest List
 
 	private QuestObject currentQuestObject;						// the pointer to the current quest giver being processed
 	private QuestObject newQuestObject;							// the pointer to a new quest giver to be pocessed
@@ -47,7 +49,7 @@ public class QuestManager : MonoBehaviour {
 			{
 				for (int j = 0; j < currentQuestObject.availableQuestIDs.Count;j++)
 				//if the id is available in the questlist && available
-				if (questList[i].id == currentQuestObject.availableQuestIDs[j] && questList[i].progress == Quest.QuestStatus.AVAILABLE);
+				if (questList[i].id == currentQuestObject.availableQuestIDs[j] && questList[i].progress == Game.Objects.Quest.QuestStatus.AVAILABLE);
 				{
 					//show that in the GUI
 					//Debug.Log("Quest ID: " + currentQuestObject.availableQuestIDs[j] + " " + questList[i].progress);
@@ -62,7 +64,7 @@ public class QuestManager : MonoBehaviour {
 		{
 			for (int j = 0; j < currentQuestObject.receivableQuestIDs.Count;j++)
 			//for(int j = 0; j< currentQuestObject.receivableQuestIDs)
-			if (currentQuestList[i].id == currentQuestObject.receivableQuestIDs[j] && (currentQuestList[i].progress == Quest.QuestStatus.ACTIVE || currentQuestList[i].progress == Quest.QuestStatus.COMPLETE)) //or completed?
+			if (currentQuestList[i].id == currentQuestObject.receivableQuestIDs[j] && (currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.ACTIVE || currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.COMPLETE)) //or completed?
 			{
 				//show active quests in the GUI too
 				//Debug.Log("Quest ID: "+ currentQuestObject.receivableQuestIDs[j] + " is currently " + currentQuestList[i].progress);
@@ -80,7 +82,7 @@ public class QuestManager : MonoBehaviour {
 			for (int j = 0; j < thisQuestObject.availableQuestIDs.Count; j++)
 			{
 				//if the id is available in the questlist && available
-				if (questList[i].id == thisQuestObject.availableQuestIDs[j] && questList[i].progress == Quest.QuestStatus.AVAILABLE)
+				if (questList[i].id == thisQuestObject.availableQuestIDs[j] && questList[i].progress == Game.Objects.Quest.QuestStatus.AVAILABLE)
 				{
 					return true;
 				}
@@ -96,7 +98,7 @@ public class QuestManager : MonoBehaviour {
 			for (int j = 0; j < thisQuestObject.receivableQuestIDs.Count; j++)
 			{
 				//if the id is available in the questlist && accepted
-				if (questList[i].id == thisQuestObject.receivableQuestIDs[j] && questList[i].progress == Quest.QuestStatus.ACTIVE)
+				if (questList[i].id == thisQuestObject.receivableQuestIDs[j] && questList[i].progress == Game.Objects.Quest.QuestStatus.ACTIVE)
 				{
 					return true;
 				}
@@ -112,7 +114,7 @@ public class QuestManager : MonoBehaviour {
 			for (int j = 0; j < thisQuestObject.receivableQuestIDs.Count; j++)
 			{
 				//if the id is available in the questlist && completed
-				if (questList[i].id == thisQuestObject.receivableQuestIDs[j] && questList[i].progress == Quest.QuestStatus.COMPLETE)
+				if (questList[i].id == thisQuestObject.receivableQuestIDs[j] && questList[i].progress == Game.Objects.Quest.QuestStatus.COMPLETE)
 				{
 					return true;
 				}
@@ -127,10 +129,10 @@ public class QuestManager : MonoBehaviour {
 	{
 		for (int i = 0; i < questList.Count; i++)
 		{
-			if (questList[i].id == questID && questList[i].progress == Quest.QuestStatus.AVAILABLE)
+			if (questList[i].id == questID && questList[i].progress == Game.Objects.Quest.QuestStatus.AVAILABLE)
 			{
 				currentQuestList.Add(questList[i]);
-				questList[i].progress = Quest.QuestStatus.ACTIVE;
+				questList[i].progress = Game.Objects.Quest.QuestStatus.ACTIVE;
 			}
 		}
 	}
@@ -139,9 +141,9 @@ public class QuestManager : MonoBehaviour {
 	{
 		for (int i = 0; i < currentQuestList.Count; i++)
 		{
-			if (currentQuestList[i].id == questID && currentQuestList[i].progress == Quest.QuestStatus.ACTIVE)
+			if (currentQuestList[i].id == questID && currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.ACTIVE)
 			{
-				currentQuestList[i].progress = Quest.QuestStatus.AVAILABLE;
+				currentQuestList[i].progress = Game.Objects.Quest.QuestStatus.AVAILABLE;
 				currentQuestList[i].questObjectiveCount = 0;
 				currentQuestList.Remove(currentQuestList[i]);
 			}
@@ -152,9 +154,9 @@ public class QuestManager : MonoBehaviour {
 	{
 		for (int i = 0; i < currentQuestList.Count; i++)
 		{
-			if (currentQuestList[i].id == questID &&  currentQuestList[i].progress == Quest.QuestStatus.COMPLETE)
+			if (currentQuestList[i].id == questID &&  currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.COMPLETE)
 			{
-				currentQuestList[i].progress = Quest.QuestStatus.DONE;
+				currentQuestList[i].progress = Game.Objects.Quest.QuestStatus.DONE;
 				currentQuestList.Remove(currentQuestList[i]);
 
 				//give rewards later here
@@ -182,9 +184,9 @@ public class QuestManager : MonoBehaviour {
 		{
 			for (int i = 0; i < questList.Count; i++)
 			{
-				if (questList[i].id == num && questList[i].progress == Quest.QuestStatus.LOCKED)
+				if (questList[i].id == num && questList[i].progress == Game.Objects.Quest.QuestStatus.LOCKED)
 				{
-					questList[i].progress = Quest.QuestStatus.AVAILABLE;
+					questList[i].progress = Game.Objects.Quest.QuestStatus.AVAILABLE;
 				}
 			}
 		}
@@ -197,16 +199,16 @@ public class QuestManager : MonoBehaviour {
 		//loop through the existing quests and check if there is any active one with this item requested
 		for (int i = 0; i < currentQuestList.Count; i++)
 		{
-			if (currentQuestList[i].questObjective == questObjective && currentQuestList[i].progress == Quest.QuestStatus.ACTIVE) // if is a searched item && quest is on accepted state
+			if (currentQuestList[i].questObjective == questObjective && currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.ACTIVE) // if is a searched item && quest is on accepted state
 			{
 				currentQuestList[i].questObjectiveCount += itemAmount;//increase item by passed amount
 				//later also add it to an inventory if needed
 			}
 
 			//check if the quest is now completed
-			if (currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirement && currentQuestList[i].progress == Quest.QuestStatus.ACTIVE)
+			if (currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirement && currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.ACTIVE)
 			{
-				currentQuestList[i].progress = Quest.QuestStatus.COMPLETE;
+				currentQuestList[i].progress = Game.Objects.Quest.QuestStatus.COMPLETE;
 			}
 
 		}
@@ -223,7 +225,7 @@ public class QuestManager : MonoBehaviour {
 	{
 		for (int i = 0; i < currentQuestList.Count; i++)
 		{
-			if (currentQuestList[i].questObjective == itemName && currentQuestList[i].progress == Quest.QuestStatus.ACTIVE || currentQuestList[i].progress == Quest.QuestStatus.COMPLETE) // if is a searched item && quest is on accepted state
+			if (currentQuestList[i].questObjective == itemName && currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.ACTIVE || currentQuestList[i].progress == Game.Objects.Quest.QuestStatus.COMPLETE) // if is a searched item && quest is on accepted state
 			{
 				currentQuestList[i].questObjectiveCount -= itemAmount;//decrease item by passed amount
 				if (currentQuestList[i].questObjectiveCount < 0)//prevent underflow
@@ -233,11 +235,11 @@ public class QuestManager : MonoBehaviour {
 				//Update the quest now
 				if (currentQuestList[i].questObjectiveCount >= currentQuestList[i].questObjectiveRequirement)
 				{
-					currentQuestList[i].progress = Quest.QuestStatus.COMPLETE;
+					currentQuestList[i].progress = Game.Objects.Quest.QuestStatus.COMPLETE;
 				}
 				else
 				{
-					currentQuestList[i].progress = Quest.QuestStatus.ACTIVE;
+					currentQuestList[i].progress = Game.Objects.Quest.QuestStatus.ACTIVE;
 				}
 			}
 		}
@@ -262,7 +264,7 @@ public class QuestManager : MonoBehaviour {
 		for (int i = 0; i < questList.Count; i++)
 		{
 		//if the id is available in the questlist && available
-		if (questList[i].id == questID && questList[i].progress == Quest.QuestStatus.AVAILABLE)
+		if (questList[i].id == questID && questList[i].progress == Game.Objects.Quest.QuestStatus.AVAILABLE)
 			{
 				return true;
 			}
@@ -275,7 +277,7 @@ public class QuestManager : MonoBehaviour {
 		for (int i = 0; i < questList.Count; i++)
 		{
 			//if the id is available in the questlist && available
-			if (questList[i].id == questID && questList[i].progress == Quest.QuestStatus.ACTIVE)
+			if (questList[i].id == questID && questList[i].progress == Game.Objects.Quest.QuestStatus.ACTIVE)
 			{
 				return true;
 			}
@@ -288,7 +290,7 @@ public class QuestManager : MonoBehaviour {
 		for (int i = 0; i < questList.Count; i++)
 		{
 			//if the id is available in the questlist && available
-			if (questList[i].id == questID && questList[i].progress == Quest.QuestStatus.COMPLETE)
+			if (questList[i].id == questID && questList[i].progress == Game.Objects.Quest.QuestStatus.COMPLETE)
 			{
 				return true;
 			}

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Game.Objects;
+
 namespace Game.Modules
 {
     public class DialogManager : MonoBehaviour
@@ -12,6 +14,7 @@ namespace Game.Modules
 
         private string currentSpeaker;
         private string currentText;
+        private Sprite currentPortrait;
 
         public bool dialogEnded;
         public bool dialogRunning;
@@ -52,7 +55,8 @@ namespace Game.Modules
 		{
             DialogLine currentDialog = conversation.Dequeue();
 
-            currentSpeaker = currentDialog.speaker;
+            currentSpeaker = currentDialog.speaker.characterName;
+            currentPortrait = currentDialog.speaker.portrait;
 
             StartCoroutine("Type", currentDialog.sentence);
 		}
@@ -66,14 +70,17 @@ namespace Game.Modules
         public struct MinMax  
         {  
             public string speaker;  
-            public string sentence;  
+            public string sentence;
+            public Sprite portrait;
         }
 
         public MinMax GetCurrent()  
-        {  
+        {
             MinMax values = new MinMax();
             values.speaker = currentSpeaker;
+            values.sentence = null;
             values.sentence = currentText;
+            values.portrait = currentPortrait;
             return values;
         }  
 
@@ -87,59 +94,5 @@ namespace Game.Modules
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
-
-		// Start is called before the first frame update
-		/*void Start()
-        {
-            sentences = new Queue<string>();
-        }        
-
-		public void StartDialog(Dialog dialog)
-		{
-            sentences.Clear();
-
-            dialogRunning = true;
-
-            currentSpeaker = dialog.speaker;
-
-            foreach(string sentence in dialog.sentences)
-            {
-                sentences.Enqueue(sentence);
-            }
-
-            DisplayNextSentence();
-		}
-
-        private void Update()
-        {
-            if(dialogRunning && sentences.Count == 0)
-            {
-                EndDialog();
-                return;
-            }
-        }
-
-        public void DisplayNextSentence()
-        {
-            StartCoroutine("Type", sentences.Dequeue());
-        }
-
-		void EndDialog()
-		{
-			Debug.Log("End of conversation");
-            dialogEnded = true;
-		}
-
-        IEnumerator Type(string text)
-        {
-            currentText = "";
-            
-            foreach(char letter in text.ToCharArray())
-            {
-                currentText += letter;
-                yield return new WaitForSeconds(typingSpeed);
-            }
-        }
-        */
 	}
 }

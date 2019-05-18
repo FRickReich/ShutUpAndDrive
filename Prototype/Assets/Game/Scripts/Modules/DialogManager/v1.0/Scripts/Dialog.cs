@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Game.Modules
+using Game.Modules;
+
+namespace Game.Objects
 {
     [System.Serializable]
     [CreateAssetMenu(fileName = "Dialog", menuName = "Game/Assets/Dialog", order = 0)]

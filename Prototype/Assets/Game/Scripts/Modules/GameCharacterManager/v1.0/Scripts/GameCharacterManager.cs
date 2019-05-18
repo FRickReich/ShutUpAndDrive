@@ -11,12 +11,6 @@ namespace Game.Modules
 		ENEMY,
 		PEDESTRIAN
 	}
-	
-	public enum CharacterSex
-	{
-		MALE,
-		FEMALE
-	}
 
 	public class GameCharacterManager : MonoBehaviour
 	{
@@ -26,7 +20,6 @@ namespace Game.Modules
 		private StateMachine stateMachine = new StateMachine();
 
 		public CharacterType controlledBy;
-		public CharacterSex sex;
 		public HealthAndArmorManager healthAndArmor;
         
 		// Start is called before the first frame update
@@ -71,8 +64,6 @@ namespace Game.Modules
 		void Update()
 		{
             this.stateMachine.ExecuteStateUpdate();
-
-			Debug.Log(healthAndArmor.GetHealh());
 		}
 	}
 }

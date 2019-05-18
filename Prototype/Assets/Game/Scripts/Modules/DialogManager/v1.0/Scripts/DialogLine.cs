@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Modules
 {   
@@ -6,7 +7,8 @@ namespace Game.Modules
     public class DialogLine
     {
         [SerializeField]
-		public string speaker;
+		public Game.Objects.Character speaker;
+		public Sprite portrait;
 		
 		[SerializeField]
 		[TextArea(3, 10)]

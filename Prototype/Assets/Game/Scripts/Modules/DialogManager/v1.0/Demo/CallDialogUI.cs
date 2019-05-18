@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 using Game.Modules;
@@ -11,6 +12,8 @@ namespace Game.Test
 	{
 		public TMP_Text speaker;
 		public TMP_Text dialog;
+
+		public Image portrait;
 
 		public GameObject nextButton;
 		public GameObject exitButton;
@@ -29,6 +32,8 @@ namespace Game.Test
 		{
 			speaker.text = dialogManager.GetCurrent().speaker;
 			dialog.text = dialogManager.GetCurrent().sentence;
+			portrait.sprite = dialogManager.GetCurrent().portrait;
+
 			if (dialogManager.dialogEnded == true)
 			{
 				exitButton.SetActive(true);

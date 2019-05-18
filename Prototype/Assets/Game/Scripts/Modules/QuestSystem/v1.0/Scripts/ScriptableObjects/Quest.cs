@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace Game.Modules
+namespace Game.Objects
 {
 	[System.Serializable]
 	[CreateAssetMenu(fileName = "Quest", menuName = "Game/Assets/Quest", order = 0)]

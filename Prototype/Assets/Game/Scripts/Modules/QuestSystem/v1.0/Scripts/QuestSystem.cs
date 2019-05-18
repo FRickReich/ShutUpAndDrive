@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Game.Base;
+using Game.Objects;
 
 namespace Game.Modules
 {
@@ -10,14 +11,14 @@ namespace Game.Modules
     [ExecuteInEditMode]
 	public class QuestSystem : SingletonScriptableObject<QuestSystem>
 	{
-		public List<Quest> questList;
+		public List<Game.Objects.Quest> questList;
 
         void Awake()
         {
-            Quest[] quests = Resources.FindObjectsOfTypeAll<Quest>();
+            Game.Objects.Quest[] quests = Resources.FindObjectsOfTypeAll<Game.Objects.Quest>();
 
             Debug.Log("hi");
-            foreach (Quest quest in quests)
+            foreach (Game.Objects.Quest quest in quests)
 			{
 				questList.Add(quest);
 			}

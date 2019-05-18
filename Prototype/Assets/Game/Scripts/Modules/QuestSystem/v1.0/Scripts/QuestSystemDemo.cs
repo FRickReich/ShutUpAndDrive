@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-using QuestCall = Game.Modules.Quest;
+using Game.Objects;
 
 namespace Game.Test
 {
@@ -14,11 +14,11 @@ namespace Game.Test
 		// Start is called before the first frame update
 		void Start()
 		{
-			QuestCall[] quests;
+			Game.Objects.Quest[] quests;
 
-            quests = Resources.FindObjectsOfTypeAll<QuestCall>();
+            quests = Resources.FindObjectsOfTypeAll<Game.Objects.Quest>();
 
-			foreach (QuestCall quest in quests)
+			foreach (Game.Objects.Quest quest in quests)
 			{
 				Debug.Log(quest.description);
 			}
