@@ -6,16 +6,18 @@ using Game.Events;
 
 namespace Game.Tests
 {
-	public class TestScript : MonoBehaviour
+	public class TestReciever : MonoBehaviour
 	{
-        [SerializeField] private VoidEvent onTest;
-		[SerializeField] private BoolEvent onBool;
-
 		// Start is called before the first frame update
 		void Start()
 		{
-            onTest.Raise();
-			onBool.Raise(true);
+
+		}
+
+		// Update is called once per frame
+		void Update()
+		{
+
 		}
 	}
 }
