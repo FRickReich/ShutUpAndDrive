@@ -8,23 +8,20 @@ using Game.Base;
 
 namespace Game.States
 {
-	public class GameRunningState : IState
+	public class GameLoadingState : IState
 	{
         private StateMachine stateMachine;
 
-		public GameRunningState(StateMachine stateMachine)
+		public GameLoadingState(StateMachine stateMachine)
 		{
 			this.stateMachine = stateMachine;
 		}
 
 		public void Execute(float delta)
 		{
-			Debug.Log("GAME RUNNING STATE...");
+			Debug.Log("GAME LOADING STATE...");
 
-			if(GameManager.Instance.gamePaused == true)
-			{
-				GameManager.Instance.PauseGame();
-			}
+			InitializeGame();
 		}
 
 		public void Exit()
@@ -37,9 +34,9 @@ namespace Game.States
 			
 		}
 
-		public void isPaused(bool tx)
+		private void InitializeGame()
 		{
-			Debug.Log("test");
+			this.stateMachine.ChangeState(new GameInitializeState(stateMachine));
 		}
 	}
 }

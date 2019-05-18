@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,23 +8,20 @@ using Game.Base;
 
 namespace Game.States
 {
-	public class GameRunningState : IState
+	public class NewGameState : IState
 	{
         private StateMachine stateMachine;
 
-		public GameRunningState(StateMachine stateMachine)
+		public NewGameState(StateMachine stateMachine)
 		{
 			this.stateMachine = stateMachine;
 		}
 
 		public void Execute(float delta)
 		{
-			Debug.Log("GAME RUNNING STATE...");
+			Debug.Log("NEW GAME STATE...");
 
-			if(GameManager.Instance.gamePaused == true)
-			{
-				GameManager.Instance.PauseGame();
-			}
+			InitializeGame();
 		}
 
 		public void Exit()
@@ -36,10 +33,10 @@ namespace Game.States
 		{
 			
 		}
-
-		public void isPaused(bool tx)
+		
+		private void InitializeGame()
 		{
-			Debug.Log("test");
+			this.stateMachine.ChangeState(new GameInitializeState(stateMachine));
 		}
 	}
 }

@@ -6,16 +6,23 @@ using UnityEngine.Experimental.Input;
 
 using Game.Events;
 using Game.States;
+using Game.Enums;
 
 namespace Game.Modules
 {
 	public class GameManager : Game.Base.SingletonPersistent<GameManager>
 	{
-		private StateMachine stateManager = new StateMachine();
+		private StateMachine stateMachine = new StateMachine();
 
 		public InputMaster controls;
 		public CheckpointZone currentCheckpoint;
 		public SimpleTimer timer;
+
+		public GameplayMode currentGameplayMode;
+
+		public GameObject playerCharacterPrefab;
+
+		public GameObject player;
 
 		public float slowdownLength = 2f;
 		public bool slowDown;
@@ -55,18 +62,18 @@ namespace Game.Modules
 
 			if(firstRun)
 			{
-				RunGame();
+				this.stateMachine.ChangeState(new NewGameState(stateMachine));
 			}
 			else
 			{
-				LoadGame();
+				this.stateMachine.ChangeState(new GameLoadingState(stateMachine));
 			}
 		}
 
 		// Update is called once per frame
 		void Update()
 		{
-			this.stateManager.ExecuteStateUpdate();
+			this.stateMachine.ExecuteStateUpdate();
 
             gameSpeed = Time.timeScale;
 			gameTime = timer.elapsed;
@@ -108,17 +115,19 @@ namespace Game.Modules
 
 		public void LoadGame()
 		{
-
+			this.stateMachine.ChangeState(new GameLoadingState(
+				stateMachine
+			));
 		}
 
 		public void RunGame()
 		{
-			this.stateManager.ChangeState(new GameRunningState(stateManager));
+			this.stateMachine.ChangeState(new GameRunningState(stateMachine));
 		}
 
 		public void PauseGame()
 		{
-			this.stateManager.ChangeState(new GamePauseState(stateManager));
+			this.stateMachine.ChangeState(new GamePauseState(stateMachine));
 		}
 
 		public void SetGamePause()
@@ -131,6 +140,16 @@ namespace Game.Modules
             {
 	            gamePaused = false;
 	        }
+		}
+
+		public void AttachCameraToPlayer()
+		{
+			
+		}
+
+		public void SpawnPlayer()
+		{
+			player = Instantiate(playerCharacterPrefab, currentCheckpoint.transform.position, currentCheckpoint.transform.rotation);
 		}
 	}
 }
