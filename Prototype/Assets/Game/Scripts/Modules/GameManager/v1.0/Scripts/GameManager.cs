@@ -12,12 +12,6 @@ namespace Game.Modules
 	{
 		private StateMachine stateManager = new StateMachine();
 
-		public enum PlayMode
-		{
-			CHARACTER,
-			VEHICLE
-		}
-
 		public InputMaster controls;
 		public CheckpointZone currentCheckpoint;
 		public SimpleTimer timer;
@@ -31,6 +25,8 @@ namespace Game.Modules
 		public bool gamePaused;
 		public bool debugMode;
 		public bool firstRun;
+
+		public static event Action<bool> setDebugModeEvent;
 
 		private void OnEnable()
 		{
@@ -83,6 +79,8 @@ namespace Game.Modules
 				Time.fixedDeltaTime = .02f * Time.timeScale;
 			}
 
+			SetDebugMode(debugMode);
+
 			Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
 		}
 
@@ -123,6 +121,11 @@ namespace Game.Modules
             {
 	            gamePaused = false;
 	        }
+		}
+
+		public void SetDebugMode(bool debugMode)
+		{
+			setDebugModeEvent(debugMode);
 		}
 	}
 }
