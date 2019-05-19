@@ -21,6 +21,8 @@ namespace Game.Managers
 
 		public PlayerMode currentPlayMode = PlayerMode.PLAYSCHARACTER;
 
+		public static event Action<Transform> changeCameraTarget;
+
 		private void OnEnable()
     	{
 			InputControls inputControls = new InputControls();
@@ -72,6 +74,7 @@ namespace Game.Managers
 				case PlayerMode.PLAYSCHARACTER:
 					playerCharacter.enabled = true;
 					playerCharacter.IsPlayer = true;
+					changeCameraTarget(playerCharacter.gameObject.transform);
 					break;
 
 				case PlayerMode.ENTERCAR:
@@ -92,6 +95,7 @@ namespace Game.Managers
 
 				case PlayerMode.PLAYSCAR:
 					playerCar.GetComponent<VehicleStateManager>().currentState = VehicleState.PLAYERDRIVEN;
+					changeCameraTarget(playerCar.gameObject.transform);
 					break;
 			}
 		}
