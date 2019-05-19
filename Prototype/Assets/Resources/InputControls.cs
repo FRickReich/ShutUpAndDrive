@@ -31,6 +31,17 @@ public class InputControls : IInputActionCollection
                     ""bindings"": []
                 },
                 {
+                    ""name"": ""Interact"",
+                    ""id"": ""ffb02823-b5b9-4521-b94c-199f1df28bdf"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": false,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""bindings"": []
+                },
+                {
                     ""name"": ""Run"",
                     ""id"": ""d8b13608-c6ee-4103-bec8-99c93d4245a6"",
                     ""expectedControlLayout"": """",
@@ -112,6 +123,18 @@ public class InputControls : IInputActionCollection
                     ""isComposite"": false,
                     ""isPartOfComposite"": false,
                     ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""844b1f14-a4b4-46dd-ba0a-3a3a1990c1be"",
+                    ""path"": ""<XInputController>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
                 }
             ]
         },
@@ -172,6 +195,17 @@ public class InputControls : IInputActionCollection
                     ""initialStateCheck"": false,
                     ""processors"": """",
                     ""interactions"": ""Press,Press(behavior=1)"",
+                    ""bindings"": []
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""id"": ""2892d7b9-5c9b-4beb-9161-1258984e495f"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": false,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
                     ""bindings"": []
                 }
             ],
@@ -259,6 +293,18 @@ public class InputControls : IInputActionCollection
                     ""isComposite"": false,
                     ""isPartOfComposite"": false,
                     ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4e7bbd1-f954-46ff-8d6c-104cad2204c8"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
                 }
             ]
         },
@@ -299,6 +345,7 @@ public class InputControls : IInputActionCollection
         // Character
         m_Character = asset.GetActionMap("Character");
         m_Character_Shoot = m_Character.GetAction("Shoot");
+        m_Character_Interact = m_Character.GetAction("Interact");
         m_Character_Run = m_Character.GetAction("Run");
         m_Character_Rotate = m_Character.GetAction("Rotate");
         m_Character_Move = m_Character.GetAction("Move");
@@ -309,6 +356,7 @@ public class InputControls : IInputActionCollection
         m_Vehicle_Steer = m_Vehicle.GetAction("Steer");
         m_Vehicle_HandBrake = m_Vehicle.GetAction("HandBrake");
         m_Vehicle_Boost = m_Vehicle.GetAction("Boost");
+        m_Vehicle_Interact = m_Vehicle.GetAction("Interact");
         // Menu
         m_Menu = asset.GetActionMap("Menu");
         m_Menu_Newaction = m_Menu.GetAction("New action");
@@ -355,6 +403,7 @@ public class InputControls : IInputActionCollection
     private InputActionMap m_Character;
     private ICharacterActions m_CharacterActionsCallbackInterface;
     private InputAction m_Character_Shoot;
+    private InputAction m_Character_Interact;
     private InputAction m_Character_Run;
     private InputAction m_Character_Rotate;
     private InputAction m_Character_Move;
@@ -363,6 +412,7 @@ public class InputControls : IInputActionCollection
         private InputControls m_Wrapper;
         public CharacterActions(InputControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Shoot { get { return m_Wrapper.m_Character_Shoot; } }
+        public InputAction @Interact { get { return m_Wrapper.m_Character_Interact; } }
         public InputAction @Run { get { return m_Wrapper.m_Character_Run; } }
         public InputAction @Rotate { get { return m_Wrapper.m_Character_Rotate; } }
         public InputAction @Move { get { return m_Wrapper.m_Character_Move; } }
@@ -379,6 +429,9 @@ public class InputControls : IInputActionCollection
                 Shoot.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnShoot;
                 Shoot.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnShoot;
                 Shoot.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnShoot;
+                Interact.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
+                Interact.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
+                Interact.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnInteract;
                 Run.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
                 Run.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
                 Run.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
@@ -395,6 +448,9 @@ public class InputControls : IInputActionCollection
                 Shoot.started += instance.OnShoot;
                 Shoot.performed += instance.OnShoot;
                 Shoot.cancelled += instance.OnShoot;
+                Interact.started += instance.OnInteract;
+                Interact.performed += instance.OnInteract;
+                Interact.cancelled += instance.OnInteract;
                 Run.started += instance.OnRun;
                 Run.performed += instance.OnRun;
                 Run.cancelled += instance.OnRun;
@@ -422,6 +478,7 @@ public class InputControls : IInputActionCollection
     private InputAction m_Vehicle_Steer;
     private InputAction m_Vehicle_HandBrake;
     private InputAction m_Vehicle_Boost;
+    private InputAction m_Vehicle_Interact;
     public struct VehicleActions
     {
         private InputControls m_Wrapper;
@@ -431,6 +488,7 @@ public class InputControls : IInputActionCollection
         public InputAction @Steer { get { return m_Wrapper.m_Vehicle_Steer; } }
         public InputAction @HandBrake { get { return m_Wrapper.m_Vehicle_HandBrake; } }
         public InputAction @Boost { get { return m_Wrapper.m_Vehicle_Boost; } }
+        public InputAction @Interact { get { return m_Wrapper.m_Vehicle_Interact; } }
         public InputActionMap Get() { return m_Wrapper.m_Vehicle; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -456,6 +514,9 @@ public class InputControls : IInputActionCollection
                 Boost.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnBoost;
                 Boost.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnBoost;
                 Boost.cancelled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnBoost;
+                Interact.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnInteract;
+                Interact.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnInteract;
+                Interact.cancelled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_VehicleActionsCallbackInterface = instance;
             if (instance != null)
@@ -475,6 +536,9 @@ public class InputControls : IInputActionCollection
                 Boost.started += instance.OnBoost;
                 Boost.performed += instance.OnBoost;
                 Boost.cancelled += instance.OnBoost;
+                Interact.started += instance.OnInteract;
+                Interact.performed += instance.OnInteract;
+                Interact.cancelled += instance.OnInteract;
             }
         }
     }
@@ -527,6 +591,7 @@ public class InputControls : IInputActionCollection
     public interface ICharacterActions
     {
         void OnShoot(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
@@ -538,6 +603,7 @@ public class InputControls : IInputActionCollection
         void OnSteer(InputAction.CallbackContext context);
         void OnHandBrake(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
     public interface IMenuActions
     {

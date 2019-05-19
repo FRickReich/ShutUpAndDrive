@@ -83,6 +83,7 @@ namespace Game.Controllers
             }
 
             characterController.Move(movement);
+            characterController.SimpleMove(Physics.gravity);
 		}
 
         private void PlayerAiming()

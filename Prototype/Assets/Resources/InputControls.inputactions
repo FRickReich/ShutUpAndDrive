@@ -17,6 +17,17 @@
                     "bindings": []
                 },
                 {
+                    "name": "Interact",
+                    "id": "ffb02823-b5b9-4521-b94c-199f1df28bdf",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
+                    "bindings": []
+                },
+                {
                     "name": "Run",
                     "id": "d8b13608-c6ee-4103-bec8-99c93d4245a6",
                     "expectedControlLayout": "",
@@ -98,6 +109,18 @@
                     "isComposite": false,
                     "isPartOfComposite": false,
                     "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "844b1f14-a4b4-46dd-ba0a-3a3a1990c1be",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
                 }
             ]
         },
@@ -158,6 +181,17 @@
                     "initialStateCheck": false,
                     "processors": "",
                     "interactions": "Press,Press(behavior=1)",
+                    "bindings": []
+                },
+                {
+                    "name": "Interact",
+                    "id": "2892d7b9-5c9b-4beb-9161-1258984e495f",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
                     "bindings": []
                 }
             ],
@@ -242,6 +276,18 @@
                     "processors": "",
                     "groups": "",
                     "action": "Boost",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "d4e7bbd1-f954-46ff-8d6c-104cad2204c8",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false,
                     "modifiers": ""
