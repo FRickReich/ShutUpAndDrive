@@ -39,6 +39,17 @@
                     "bindings": []
                 },
                 {
+                    "name": "Reload",
+                    "id": "6868c369-7348-4ae5-a6df-e2b7fa6f3597",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press,Press(behavior=1)",
+                    "bindings": []
+                },
+                {
                     "name": "Rotate",
                     "id": "4f0d2e9a-eb52-4b06-9509-e06856e3375b",
                     "expectedControlLayout": "",
@@ -59,13 +70,68 @@
                     "processors": "",
                     "interactions": "",
                     "bindings": []
+                },
+                {
+                    "name": "PrevWeapon",
+                    "id": "5ed79789-4a83-4007-b8ea-653f9b62c357",
+                    "expectedControlLayout": "",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press,Press(behavior=1)",
+                    "bindings": []
+                },
+                {
+                    "name": "NextWeapon",
+                    "id": "543d55d4-9a3e-42aa-900d-0b715cb676eb",
+                    "expectedControlLayout": "",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press,Press(behavior=1)",
+                    "bindings": []
+                },
+                {
+                    "name": "PrevItem",
+                    "id": "436eefde-a568-4f10-b4f2-82b51a797f43",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
+                    "bindings": []
+                },
+                {
+                    "name": "NextItem",
+                    "id": "b2e8d7e5-1e68-4b33-b5f8-979ebec469e5",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
+                    "bindings": []
+                },
+                {
+                    "name": "UseItem",
+                    "id": "38ceaf71-d7f1-4c11-9178-120ae4854e0a",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
+                    "processors": "",
+                    "interactions": "Press",
+                    "bindings": []
                 }
             ],
             "bindings": [
                 {
                     "name": "",
                     "id": "4132d978-c0ee-4fdc-89a6-6d799a355f4b",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<XInputController>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -121,6 +187,78 @@
                     "isComposite": false,
                     "isPartOfComposite": false,
                     "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "5c36be74-4dd0-4a93-b604-edcd2dd34690",
+                    "path": "<XInputController>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrevWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "380bafa3-b395-458f-9660-472fdc1f3571",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "ddc43fa0-1c78-4117-8d95-411c6ef0a9ce",
+                    "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "d42a9ad7-f583-4606-b73e-b8c5f8388491",
+                    "path": "<XInputController>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PrevItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "8a85773a-5425-4b52-a373-c843f46b7519",
+                    "path": "<XInputController>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "NextWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "id": "f8c25e22-8a7e-4348-b6b2-cb781606fb0b",
+                    "path": "<XInputController>/leftShoulder",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UseItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
                 }
             ]
         },
@@ -128,28 +266,6 @@
             "name": "Vehicle",
             "id": "f1926770-9983-402f-bcf2-d7d16a49eccc",
             "actions": [
-                {
-                    "name": "Brake",
-                    "id": "dda2cba7-be99-4df2-8873-1e53201846d0",
-                    "expectedControlLayout": "",
-                    "continuous": true,
-                    "passThrough": false,
-                    "initialStateCheck": false,
-                    "processors": "",
-                    "interactions": "",
-                    "bindings": []
-                },
-                {
-                    "name": "Accelerate",
-                    "id": "1b4da591-03ae-473f-98f2-05c45d6da50c",
-                    "expectedControlLayout": "",
-                    "continuous": true,
-                    "passThrough": false,
-                    "initialStateCheck": false,
-                    "processors": "",
-                    "interactions": "Press,Press(behavior=1)",
-                    "bindings": []
-                },
                 {
                     "name": "Steer",
                     "id": "ee6cd4a9-14ab-4b3f-b126-ab731e2ae8d9",
@@ -295,12 +411,12 @@
             ]
         },
         {
-            "name": "Menu",
-            "id": "d4767880-d584-4f52-8dff-d3ee91d9ed54",
+            "name": "Camera",
+            "id": "8e2f464d-44c2-418c-9349-91ad7aa3bb56",
             "actions": [
                 {
-                    "name": "New action",
-                    "id": "6a7df02f-782e-48b2-b4e3-5bfa2ec2d9ed",
+                    "name": "Rotate",
+                    "id": "2d9b07f5-a173-4701-afba-ff62a0575c6e",
                     "expectedControlLayout": "",
                     "continuous": false,
                     "passThrough": false,
@@ -313,12 +429,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "8a480c88-3bd6-4870-a2f6-f1f8ece91e28",
-                    "path": "",
+                    "id": "a563f6b7-4ad2-4867-a31d-0c243f7388ba",
+                    "path": "<XInputController>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "New action",
+                    "groups": "GamePad",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": false,
                     "modifiers": ""

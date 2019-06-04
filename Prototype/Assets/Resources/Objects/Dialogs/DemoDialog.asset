@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7462937073b434c87a35a24210a9e8, type: 3}
+  m_Name: DemoDialog
+  m_EditorClassIdentifier: 
+  identifier: 
+  lines:
+  - speaker: {fileID: 11400000, guid: c2ed4e74ec04744769a2c8ff9ad34854, type: 2}
+    portrait: {fileID: 0}
+    sentence: Hey, you're priest?
+  - speaker: {fileID: 11400000, guid: bb6d9bb72a2414600ae58155c330f849, type: 2}
+    portrait: {fileID: 0}
+    sentence: Yes, what can i do for you?
+  - speaker: {fileID: 11400000, guid: c2ed4e74ec04744769a2c8ff9ad34854, type: 2}
+    portrait: {fileID: 0}
+    sentence: Come in.
+  - speaker: {fileID: 11400000, guid: c2ed4e74ec04744769a2c8ff9ad34854, type: 2}
+    portrait: {fileID: 0}
+    sentence: This is my friend tutle.
+  - speaker: {fileID: 11400000, guid: d19381d649d5344a1aeb80d0a0c06efd, type: 2}
+    portrait: {fileID: 0}
+    sentence: Yo!
+  - speaker: {fileID: 11400000, guid: bb6d9bb72a2414600ae58155c330f849, type: 2}
+    portrait: {fileID: 0}
+    sentence: Hey man!

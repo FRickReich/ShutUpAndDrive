@@ -1,0 +1,10 @@
+{
+    "MainMenu_StartGame": "Start Game",
+    "MainMenu_Garage": "Garage",
+    "MainMenu_Multiplayer": "Multiplayer",
+    "MainMenu_Options": "Options",
+    "DebugPanel_FPS": "Running at: {0} FPS",
+    "DebugPanel_ServerPing": "Current Ping: {0}",
+    "DebugPanel_OnlineServer": "Verbunden mit: {0}",
+    "DebugPanel_PlayerName": "Lokaler Spielername: {0}"
+}

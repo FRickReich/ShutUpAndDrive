@@ -53,6 +53,17 @@ public class InputControls : IInputActionCollection
                     ""bindings"": []
                 },
                 {
+                    ""name"": ""Reload"",
+                    ""id"": ""6868c369-7348-4ae5-a6df-e2b7fa6f3597"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": false,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press,Press(behavior=1)"",
+                    ""bindings"": []
+                },
+                {
                     ""name"": ""Rotate"",
                     ""id"": ""4f0d2e9a-eb52-4b06-9509-e06856e3375b"",
                     ""expectedControlLayout"": """",
@@ -73,13 +84,68 @@ public class InputControls : IInputActionCollection
                     ""processors"": """",
                     ""interactions"": """",
                     ""bindings"": []
+                },
+                {
+                    ""name"": ""PrevWeapon"",
+                    ""id"": ""5ed79789-4a83-4007-b8ea-653f9b62c357"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": true,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press,Press(behavior=1)"",
+                    ""bindings"": []
+                },
+                {
+                    ""name"": ""NextWeapon"",
+                    ""id"": ""543d55d4-9a3e-42aa-900d-0b715cb676eb"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": true,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press,Press(behavior=1)"",
+                    ""bindings"": []
+                },
+                {
+                    ""name"": ""PrevItem"",
+                    ""id"": ""436eefde-a568-4f10-b4f2-82b51a797f43"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": false,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""bindings"": []
+                },
+                {
+                    ""name"": ""NextItem"",
+                    ""id"": ""b2e8d7e5-1e68-4b33-b5f8-979ebec469e5"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": false,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""bindings"": []
+                },
+                {
+                    ""name"": ""UseItem"",
+                    ""id"": ""38ceaf71-d7f1-4c11-9178-120ae4854e0a"",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": false,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""bindings"": []
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""4132d978-c0ee-4fdc-89a6-6d799a355f4b"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<XInputController>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -135,6 +201,78 @@ public class InputControls : IInputActionCollection
                     ""isComposite"": false,
                     ""isPartOfComposite"": false,
                     ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c36be74-4dd0-4a93-b604-edcd2dd34690"",
+                    ""path"": ""<XInputController>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""380bafa3-b395-458f-9660-472fdc1f3571"",
+                    ""path"": ""<XInputController>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Reload"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ddc43fa0-1c78-4117-8d95-411c6ef0a9ce"",
+                    ""path"": ""<XInputController>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d42a9ad7-f583-4606-b73e-b8c5f8388491"",
+                    ""path"": ""<XInputController>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PrevItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8a85773a-5425-4b52-a373-c843f46b7519"",
+                    ""path"": ""<XInputController>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8c25e22-8a7e-4348-b6b2-cb781606fb0b"",
+                    ""path"": ""<XInputController>/leftShoulder"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
                 }
             ]
         },
@@ -142,28 +280,6 @@ public class InputControls : IInputActionCollection
             ""name"": ""Vehicle"",
             ""id"": ""f1926770-9983-402f-bcf2-d7d16a49eccc"",
             ""actions"": [
-                {
-                    ""name"": ""Brake"",
-                    ""id"": ""dda2cba7-be99-4df2-8873-1e53201846d0"",
-                    ""expectedControlLayout"": """",
-                    ""continuous"": true,
-                    ""passThrough"": false,
-                    ""initialStateCheck"": false,
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""bindings"": []
-                },
-                {
-                    ""name"": ""Accelerate"",
-                    ""id"": ""1b4da591-03ae-473f-98f2-05c45d6da50c"",
-                    ""expectedControlLayout"": """",
-                    ""continuous"": true,
-                    ""passThrough"": false,
-                    ""initialStateCheck"": false,
-                    ""processors"": """",
-                    ""interactions"": ""Press,Press(behavior=1)"",
-                    ""bindings"": []
-                },
                 {
                     ""name"": ""Steer"",
                     ""id"": ""ee6cd4a9-14ab-4b3f-b126-ab731e2ae8d9"",
@@ -309,12 +425,12 @@ public class InputControls : IInputActionCollection
             ]
         },
         {
-            ""name"": ""Menu"",
-            ""id"": ""d4767880-d584-4f52-8dff-d3ee91d9ed54"",
+            ""name"": ""Camera"",
+            ""id"": ""8e2f464d-44c2-418c-9349-91ad7aa3bb56"",
             ""actions"": [
                 {
-                    ""name"": ""New action"",
-                    ""id"": ""6a7df02f-782e-48b2-b4e3-5bfa2ec2d9ed"",
+                    ""name"": ""Rotate"",
+                    ""id"": ""2d9b07f5-a173-4701-afba-ff62a0575c6e"",
                     ""expectedControlLayout"": """",
                     ""continuous"": false,
                     ""passThrough"": false,
@@ -327,12 +443,12 @@ public class InputControls : IInputActionCollection
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""8a480c88-3bd6-4870-a2f6-f1f8ece91e28"",
-                    ""path"": """",
+                    ""id"": ""a563f6b7-4ad2-4867-a31d-0c243f7388ba"",
+                    ""path"": ""<XInputController>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Rotate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false,
                     ""modifiers"": """"
@@ -347,19 +463,23 @@ public class InputControls : IInputActionCollection
         m_Character_Shoot = m_Character.GetAction("Shoot");
         m_Character_Interact = m_Character.GetAction("Interact");
         m_Character_Run = m_Character.GetAction("Run");
+        m_Character_Reload = m_Character.GetAction("Reload");
         m_Character_Rotate = m_Character.GetAction("Rotate");
         m_Character_Move = m_Character.GetAction("Move");
+        m_Character_PrevWeapon = m_Character.GetAction("PrevWeapon");
+        m_Character_NextWeapon = m_Character.GetAction("NextWeapon");
+        m_Character_PrevItem = m_Character.GetAction("PrevItem");
+        m_Character_NextItem = m_Character.GetAction("NextItem");
+        m_Character_UseItem = m_Character.GetAction("UseItem");
         // Vehicle
         m_Vehicle = asset.GetActionMap("Vehicle");
-        m_Vehicle_Brake = m_Vehicle.GetAction("Brake");
-        m_Vehicle_Accelerate = m_Vehicle.GetAction("Accelerate");
         m_Vehicle_Steer = m_Vehicle.GetAction("Steer");
         m_Vehicle_HandBrake = m_Vehicle.GetAction("HandBrake");
         m_Vehicle_Boost = m_Vehicle.GetAction("Boost");
         m_Vehicle_Interact = m_Vehicle.GetAction("Interact");
-        // Menu
-        m_Menu = asset.GetActionMap("Menu");
-        m_Menu_Newaction = m_Menu.GetAction("New action");
+        // Camera
+        m_Camera = asset.GetActionMap("Camera");
+        m_Camera_Rotate = m_Camera.GetAction("Rotate");
     }
     ~InputControls()
     {
@@ -405,8 +525,14 @@ public class InputControls : IInputActionCollection
     private InputAction m_Character_Shoot;
     private InputAction m_Character_Interact;
     private InputAction m_Character_Run;
+    private InputAction m_Character_Reload;
     private InputAction m_Character_Rotate;
     private InputAction m_Character_Move;
+    private InputAction m_Character_PrevWeapon;
+    private InputAction m_Character_NextWeapon;
+    private InputAction m_Character_PrevItem;
+    private InputAction m_Character_NextItem;
+    private InputAction m_Character_UseItem;
     public struct CharacterActions
     {
         private InputControls m_Wrapper;
@@ -414,8 +540,14 @@ public class InputControls : IInputActionCollection
         public InputAction @Shoot { get { return m_Wrapper.m_Character_Shoot; } }
         public InputAction @Interact { get { return m_Wrapper.m_Character_Interact; } }
         public InputAction @Run { get { return m_Wrapper.m_Character_Run; } }
+        public InputAction @Reload { get { return m_Wrapper.m_Character_Reload; } }
         public InputAction @Rotate { get { return m_Wrapper.m_Character_Rotate; } }
         public InputAction @Move { get { return m_Wrapper.m_Character_Move; } }
+        public InputAction @PrevWeapon { get { return m_Wrapper.m_Character_PrevWeapon; } }
+        public InputAction @NextWeapon { get { return m_Wrapper.m_Character_NextWeapon; } }
+        public InputAction @PrevItem { get { return m_Wrapper.m_Character_PrevItem; } }
+        public InputAction @NextItem { get { return m_Wrapper.m_Character_NextItem; } }
+        public InputAction @UseItem { get { return m_Wrapper.m_Character_UseItem; } }
         public InputActionMap Get() { return m_Wrapper.m_Character; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -435,12 +567,30 @@ public class InputControls : IInputActionCollection
                 Run.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
                 Run.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
                 Run.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRun;
+                Reload.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnReload;
+                Reload.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnReload;
+                Reload.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnReload;
                 Rotate.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRotate;
                 Rotate.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRotate;
                 Rotate.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnRotate;
                 Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                 Move.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
+                PrevWeapon.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnPrevWeapon;
+                PrevWeapon.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnPrevWeapon;
+                PrevWeapon.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnPrevWeapon;
+                NextWeapon.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnNextWeapon;
+                NextWeapon.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnNextWeapon;
+                NextWeapon.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnNextWeapon;
+                PrevItem.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnPrevItem;
+                PrevItem.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnPrevItem;
+                PrevItem.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnPrevItem;
+                NextItem.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnNextItem;
+                NextItem.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnNextItem;
+                NextItem.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnNextItem;
+                UseItem.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnUseItem;
+                UseItem.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnUseItem;
+                UseItem.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnUseItem;
             }
             m_Wrapper.m_CharacterActionsCallbackInterface = instance;
             if (instance != null)
@@ -454,12 +604,30 @@ public class InputControls : IInputActionCollection
                 Run.started += instance.OnRun;
                 Run.performed += instance.OnRun;
                 Run.cancelled += instance.OnRun;
+                Reload.started += instance.OnReload;
+                Reload.performed += instance.OnReload;
+                Reload.cancelled += instance.OnReload;
                 Rotate.started += instance.OnRotate;
                 Rotate.performed += instance.OnRotate;
                 Rotate.cancelled += instance.OnRotate;
                 Move.started += instance.OnMove;
                 Move.performed += instance.OnMove;
                 Move.cancelled += instance.OnMove;
+                PrevWeapon.started += instance.OnPrevWeapon;
+                PrevWeapon.performed += instance.OnPrevWeapon;
+                PrevWeapon.cancelled += instance.OnPrevWeapon;
+                NextWeapon.started += instance.OnNextWeapon;
+                NextWeapon.performed += instance.OnNextWeapon;
+                NextWeapon.cancelled += instance.OnNextWeapon;
+                PrevItem.started += instance.OnPrevItem;
+                PrevItem.performed += instance.OnPrevItem;
+                PrevItem.cancelled += instance.OnPrevItem;
+                NextItem.started += instance.OnNextItem;
+                NextItem.performed += instance.OnNextItem;
+                NextItem.cancelled += instance.OnNextItem;
+                UseItem.started += instance.OnUseItem;
+                UseItem.performed += instance.OnUseItem;
+                UseItem.cancelled += instance.OnUseItem;
             }
         }
     }
@@ -473,8 +641,6 @@ public class InputControls : IInputActionCollection
     // Vehicle
     private InputActionMap m_Vehicle;
     private IVehicleActions m_VehicleActionsCallbackInterface;
-    private InputAction m_Vehicle_Brake;
-    private InputAction m_Vehicle_Accelerate;
     private InputAction m_Vehicle_Steer;
     private InputAction m_Vehicle_HandBrake;
     private InputAction m_Vehicle_Boost;
@@ -483,8 +649,6 @@ public class InputControls : IInputActionCollection
     {
         private InputControls m_Wrapper;
         public VehicleActions(InputControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Brake { get { return m_Wrapper.m_Vehicle_Brake; } }
-        public InputAction @Accelerate { get { return m_Wrapper.m_Vehicle_Accelerate; } }
         public InputAction @Steer { get { return m_Wrapper.m_Vehicle_Steer; } }
         public InputAction @HandBrake { get { return m_Wrapper.m_Vehicle_HandBrake; } }
         public InputAction @Boost { get { return m_Wrapper.m_Vehicle_Boost; } }
@@ -499,12 +663,6 @@ public class InputControls : IInputActionCollection
         {
             if (m_Wrapper.m_VehicleActionsCallbackInterface != null)
             {
-                Brake.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnBrake;
-                Brake.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnBrake;
-                Brake.cancelled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnBrake;
-                Accelerate.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnAccelerate;
-                Accelerate.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnAccelerate;
-                Accelerate.cancelled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnAccelerate;
                 Steer.started -= m_Wrapper.m_VehicleActionsCallbackInterface.OnSteer;
                 Steer.performed -= m_Wrapper.m_VehicleActionsCallbackInterface.OnSteer;
                 Steer.cancelled -= m_Wrapper.m_VehicleActionsCallbackInterface.OnSteer;
@@ -521,12 +679,6 @@ public class InputControls : IInputActionCollection
             m_Wrapper.m_VehicleActionsCallbackInterface = instance;
             if (instance != null)
             {
-                Brake.started += instance.OnBrake;
-                Brake.performed += instance.OnBrake;
-                Brake.cancelled += instance.OnBrake;
-                Accelerate.started += instance.OnAccelerate;
-                Accelerate.performed += instance.OnAccelerate;
-                Accelerate.cancelled += instance.OnAccelerate;
                 Steer.started += instance.OnSteer;
                 Steer.performed += instance.OnSteer;
                 Steer.cancelled += instance.OnSteer;
@@ -549,43 +701,43 @@ public class InputControls : IInputActionCollection
             return new VehicleActions(this);
         }
     }
-    // Menu
-    private InputActionMap m_Menu;
-    private IMenuActions m_MenuActionsCallbackInterface;
-    private InputAction m_Menu_Newaction;
-    public struct MenuActions
+    // Camera
+    private InputActionMap m_Camera;
+    private ICameraActions m_CameraActionsCallbackInterface;
+    private InputAction m_Camera_Rotate;
+    public struct CameraActions
     {
         private InputControls m_Wrapper;
-        public MenuActions(InputControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction { get { return m_Wrapper.m_Menu_Newaction; } }
-        public InputActionMap Get() { return m_Wrapper.m_Menu; }
+        public CameraActions(InputControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Rotate { get { return m_Wrapper.m_Camera_Rotate; } }
+        public InputActionMap Get() { return m_Wrapper.m_Camera; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled { get { return Get().enabled; } }
         public InputActionMap Clone() { return Get().Clone(); }
-        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
-        public void SetCallbacks(IMenuActions instance)
+        public static implicit operator InputActionMap(CameraActions set) { return set.Get(); }
+        public void SetCallbacks(ICameraActions instance)
         {
-            if (m_Wrapper.m_MenuActionsCallbackInterface != null)
+            if (m_Wrapper.m_CameraActionsCallbackInterface != null)
             {
-                Newaction.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnNewaction;
-                Newaction.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnNewaction;
-                Newaction.cancelled -= m_Wrapper.m_MenuActionsCallbackInterface.OnNewaction;
+                Rotate.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnRotate;
+                Rotate.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnRotate;
+                Rotate.cancelled -= m_Wrapper.m_CameraActionsCallbackInterface.OnRotate;
             }
-            m_Wrapper.m_MenuActionsCallbackInterface = instance;
+            m_Wrapper.m_CameraActionsCallbackInterface = instance;
             if (instance != null)
             {
-                Newaction.started += instance.OnNewaction;
-                Newaction.performed += instance.OnNewaction;
-                Newaction.cancelled += instance.OnNewaction;
+                Rotate.started += instance.OnRotate;
+                Rotate.performed += instance.OnRotate;
+                Rotate.cancelled += instance.OnRotate;
             }
         }
     }
-    public MenuActions @Menu
+    public CameraActions @Camera
     {
         get
         {
-            return new MenuActions(this);
+            return new CameraActions(this);
         }
     }
     public interface ICharacterActions
@@ -593,20 +745,24 @@ public class InputControls : IInputActionCollection
         void OnShoot(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
+        void OnReload(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
+        void OnPrevWeapon(InputAction.CallbackContext context);
+        void OnNextWeapon(InputAction.CallbackContext context);
+        void OnPrevItem(InputAction.CallbackContext context);
+        void OnNextItem(InputAction.CallbackContext context);
+        void OnUseItem(InputAction.CallbackContext context);
     }
     public interface IVehicleActions
     {
-        void OnBrake(InputAction.CallbackContext context);
-        void OnAccelerate(InputAction.CallbackContext context);
         void OnSteer(InputAction.CallbackContext context);
         void OnHandBrake(InputAction.CallbackContext context);
         void OnBoost(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
     }
-    public interface IMenuActions
+    public interface ICameraActions
     {
-        void OnNewaction(InputAction.CallbackContext context);
+        void OnRotate(InputAction.CallbackContext context);
     }
 }
