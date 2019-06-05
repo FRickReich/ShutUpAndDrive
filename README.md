@@ -134,7 +134,12 @@ Progressing on the game-map can happen through driving any vehicle, walking by f
 
 
 ## CHARACTER MOVEMENT
+The Character moves into the direction it is pointing to, while the player can freely move the camera box around the players position by rotating the indicator.
+If the ray, going from the player to the indicator hits an NPC, it changes to a crosshair, and the player will look at it. If the player is not allowed to attack the target, it will display a deactivsated crosshair.
+
 ## VEHICLE MOVEMENT
+The vehicle moves into the direction determined by the player, while he can freely move the camera box around the vehicle.
+
 ## QUEST(MISSION) SYSTEM
 The game contains a main quest-line (hereby called missions) and a subset of side-quests, wich can be taken at any time, or will be needed to be triggered.
 
