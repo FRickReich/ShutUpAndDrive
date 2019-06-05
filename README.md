@@ -248,30 +248,37 @@ Possible status:
 - WIP = Work in progress
 - READY = Finished
 
-| STATUS | REAL-LIFE                              | BRAND     | NAME             | TYPE       | CATEGORY  | VERSION | TOP SPEED | WEIGHT  | DRIVE TYPE |
-| ------ | -------------------------------------- | --------- | ---------------- | ---------- | --------- | ------- | --------- | ------- | ---------- |
-| WIP    | (1975) Lamborghini Countach            | Amaretto  | Bull             | Car        | Sport     | Traffic |           |         | RWD        |
-| WIP    | (1974) FERRARI 308 GTO                 | Amaretto  | Mariano          | Car        | Sport     | Traffic |           |         | RWD        |
-| WIP    | (1974) Chevrolet Nova SS               | Bourbon   | Chuckles         | Car        | Coupe     | Traffic |           |         | RWD        |
-| WIP    | (1971) Cadillac Deville                | Bourbon   | Millenium        | Car        | Limousine | Traffic |           |         | RWD        |
-| WIP    | (1973) GMC Van                         | Bourbon   | Mover            | Car        | Van       | Traffic |           |         | AWD        |
-| WIP    | (1974) Dodge Monaco                    | Bourbon   | Panther          | Car        | Limousine | Traffic |           |         | RWD        |
-| WIP    | (1974) Dodge Monaco                    | Bourbon   | Panther (Police) | Car        | Limousine | Police  |           |         | RWD        |
-| WIP    | (1932) Dodge Eight	                  | Cabernet  | Syndicate        | Car        | Limousine | Traffic |           |         | RWD        |
-| WIP    | (1974) Mercedes W115                   | Hopfen    | Teuerwagen       | Car        | Limousine | Traffic |           |         | AWD        |
-| NONE   | (1974) Dodge P30 Food Truck            | Moonshine | Assistant        | Truck      |           | Traffic |           |         | FWD        |
-| WIP    | (1974) Dodge P30 Delivery Truck        | Delivery  | Assistant        | Truck      |           | Traffic |           |         | FWD        |
-| WIP    | Cadillac?!                             | Moonshine | Mahagoni         | Car        | Limousine | Traffic |           |         | RWD        |
-| WIP    | (1967) Chevrolet Impala                | Moonshine | Monsieur         | Car        | Coupe     | Traffic |           |         | RWD        |
-| WIP    | (1970) Mitsubishi Galant               | Sake      | Coupe            | Car        | Coupe     | Traffic |           |         | FWD        |
-| WIP    | (1963) Alfa Romeo TZ2                  | Sambuca   | Elegance         | Car        | Sport     | Traffic |           |         | RWD        |
-| WIP    | (1975) Oldsmobile 98                   | Whiskey   | Statesman        | Car        | Limousine | Traffic |           |         | RWD        |
-| NONE   | (1975) Oldsmobile 98 Stretch Limousine | Whiskey   | Stretchman       | Car        | Limousine | Traffic |           |         | AWD        |
-| WIP    | (1973) Buick Riviera                   | Whiskey   | Boattail         | Car        | Coupe     | Traffic |           |         | RWD        |
-| WIP    | Chevrolet C10                          | Whiskey   | Donkey           | Car        | Pickup    | Traffic |           |         | AWD        |
-| WIP    | (1970) Dodge Superbee                  | Whiskey   | Freeman          | Car        | Coupe     | Traffic |           |         | RWD        |
-| WIP    | (1971) Plymouth GTX                    | Whiskey   | Sportsman        | Car        | Coupe     | Traffic |           |         | RWD        |
-| NONE   | UH-60                                  |           |                  | Helicopter |           |         |           |         |            |
+Vehicles have a rarity, like in RPG's to define the amount of times it can be encountered on the street.
+Rarities are:
+- Common - Vehicle encountered very often
+- Uncommon - Vehicle encountered often
+- Rare - Vehicle encountered rarely
+- Unique - Vehicle only exists Once, can be a special collectible car, or a car only driven by a certain character.
+
+| STATUS | REAL-LIFE                              | BRAND     | NAME             | TYPE       | CATEGORY  | VERSION | TOP SPEED | WEIGHT  | DRIVE TYPE | RARITY   |
+| ------ | -------------------------------------- | --------- | ---------------- | ---------- | --------- | ------- | --------- | ------- | ---------- | -------- |
+| WIP    | (1975) Lamborghini Countach            | Amaretto  | Bull             | Car        | Sport     | Traffic |           |         | RWD        | Rare     |
+| WIP    | (1974) FERRARI 308 GTO                 | Amaretto  | Mariano          | Car        | Sport     | Traffic |           |         | RWD        | Rare     |
+| WIP    | (1974) Chevrolet Nova SS               | Bourbon   | Chuckles         | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon |
+| WIP    | (1971) Cadillac Deville                | Bourbon   | Millenium        | Car        | Limousine | Traffic |           |         | RWD        | Uncommon |
+| WIP    | (1973) GMC Van                         | Bourbon   | Mover            | Car        | Van       | Traffic |           |         | AWD        | Common   |
+| WIP    | (1974) Dodge Monaco                    | Bourbon   | Panther          | Car        | Limousine | Traffic |           |         | RWD        | Common   |
+| WIP    | (1974) Dodge Monaco                    | Bourbon   | Panther (Police) | Car        | Limousine | Police  |           |         | RWD        | Common   |
+| WIP    | (1932) Dodge Eight	                  | Cabernet  | Syndicate        | Car        | Limousine | Traffic |           |         | RWD        | Unique   |
+| WIP    | (1974) Mercedes W115                   | Hopfen    | Teuerwagen       | Car        | Limousine | Traffic |           |         | AWD        | Rare     |
+| NONE   | (1974) Dodge P30 Food Truck            | Moonshine | Assistant        | Truck      |           | Traffic |           |         | FWD        | Uncommon |
+| WIP    | (1974) Dodge P30 Delivery Truck        | Delivery  | Assistant        | Truck      |           | Traffic |           |         | FWD        | Uncommon |
+| WIP    | Cadillac?!                             | Moonshine | Mahagoni         | Car        | Limousine | Traffic |           |         | RWD        | Uncommon |
+| WIP    | (1967) Chevrolet Impala                | Moonshine | Monsieur         | Car        | Coupe     | Traffic |           |         | RWD        | Common   |
+| WIP    | (1970) Mitsubishi Galant               | Sake      | Coupe            | Car        | Coupe     | Traffic |           |         | FWD        | Common   |
+| WIP    | (1963) Alfa Romeo TZ2                  | Sambuca   | Elegance         | Car        | Sport     | Traffic |           |         | RWD        | Unique   |
+| WIP    | (1975) Oldsmobile 98                   | Whiskey   | Statesman        | Car        | Limousine | Traffic |           |         | RWD        | Uncommon |
+| NONE   | (1975) Oldsmobile 98 Stretch Limousine | Whiskey   | Stretchman       | Car        | Limousine | Traffic |           |         | AWD        | Rare     |
+| WIP    | (1973) Buick Riviera                   | Whiskey   | Boattail         | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon |
+| WIP    | Chevrolet C10                          | Whiskey   | Donkey           | Car        | Pickup    | Traffic |           |         | AWD        | Common   |
+| WIP    | (1970) Dodge Superbee                  | Whiskey   | Freeman          | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon |
+| WIP    | (1971) Plymouth GTX                    | Whiskey   | Sportsman        | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon |
+| NONE   | UH-60                                  |           |                  | Helicopter |           |         |           |         |            | Unique   |
 
 ### WEAPONS
 Weapons currently are only one per type, could be more if decided uppon.
