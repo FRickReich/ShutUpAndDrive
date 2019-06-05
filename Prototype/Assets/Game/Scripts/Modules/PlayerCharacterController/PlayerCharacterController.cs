@@ -77,10 +77,10 @@ namespace Game.Controllers
 
             movement = (Vector3.forward * moveAxis.y * speed * Time.deltaTime) + (Vector3.right * moveAxis.x * speed * Time.deltaTime);
 
-            //if ( movement != Vector3.zero )
-            //{
-            //    this.transform.rotation = Quaternion.LookRotation(movement);
-            //}
+            if ( movement != Vector3.zero )
+            {
+                this.transform.rotation = Quaternion.LookRotation(movement);
+            }
 
             characterController.Move(movement);
             characterController.SimpleMove(Physics.gravity);
@@ -89,7 +89,7 @@ namespace Game.Controllers
         private void PlayerAiming()
         {
             rotation = (Vector3.forward * rotationAxis.y * 1 * Time.deltaTime) + (Vector3.right * rotationAxis.x * 1 * Time.deltaTime);
-            this.transform.rotation = Quaternion.LookRotation(rotation);
+            //this.transform.rotation = Quaternion.LookRotation(rotation);
         }
 
         private void PlayerRun()

@@ -70,7 +70,7 @@ public class InputControls : IInputActionCollection
                     ""continuous"": false,
                     ""passThrough"": true,
                     ""initialStateCheck"": false,
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(min=0.1,max=1)"",
                     ""interactions"": """",
                     ""bindings"": []
                 },
@@ -81,7 +81,7 @@ public class InputControls : IInputActionCollection
                     ""continuous"": true,
                     ""passThrough"": false,
                     ""initialStateCheck"": false,
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(min=0.1,max=1)"",
                     ""interactions"": """",
                     ""bindings"": []
                 },
@@ -435,7 +435,7 @@ public class InputControls : IInputActionCollection
                     ""continuous"": false,
                     ""passThrough"": false,
                     ""initialStateCheck"": false,
-                    ""processors"": """",
+                    ""processors"": ""AxisDeadzone(min=0.1,max=1)"",
                     ""interactions"": """",
                     ""bindings"": []
                 }

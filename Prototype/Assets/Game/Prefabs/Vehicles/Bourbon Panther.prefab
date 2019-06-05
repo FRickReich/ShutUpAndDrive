@@ -5082,8 +5082,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 0601ed2ae48864bafad4306c6d30f8b1, type: 2}
+  - {fileID: 2100000, guid: 0601ed2ae48864bafad4306c6d30f8b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10179,7 +10179,6 @@ MonoBehaviour:
   speed: 0
   gasParticles:
   - {fileID: 7494414853975995729}
-  - {fileID: 0}
   allowBoost: 1
   maxBoost: 12
   boost: 12
@@ -10834,7 +10833,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d94c5abe0c88d4f90a5d79ca1ce6e3df, type: 2}
+      objectReference: {fileID: 2100000, guid: 3f83db318c0ff4c96a78cf97d0434e0e, type: 2}
     - target: {fileID: -3813754289171548158, guid: 3cedf20b8b51046caa6978b2dbe02674,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10919,7 +10918,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d94c5abe0c88d4f90a5d79ca1ce6e3df, type: 2}
+      objectReference: {fileID: 2100000, guid: 3f83db318c0ff4c96a78cf97d0434e0e, type: 2}
     - target: {fileID: -3188093562101578598, guid: 3cedf20b8b51046caa6978b2dbe02674,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10949,7 +10948,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d94c5abe0c88d4f90a5d79ca1ce6e3df, type: 2}
+      objectReference: {fileID: 2100000, guid: 3f83db318c0ff4c96a78cf97d0434e0e, type: 2}
     - target: {fileID: 210217391958175805, guid: 3cedf20b8b51046caa6978b2dbe02674,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

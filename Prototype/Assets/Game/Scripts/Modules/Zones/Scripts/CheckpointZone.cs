@@ -12,7 +12,7 @@ namespace Game.Zones
 	{
 		private GameObject debugVisual;
 
-        public static event Action<CheckpointZone> checkpointChangeEvent;
+        public static event Action<Vector3> checkpointChangeEvent;
 		
         public bool initializer;
 
@@ -25,7 +25,7 @@ namespace Game.Zones
 		{
 			if(initializer)
 			{
-				SetCheckpointActive();
+				SetCheckpoint();
 			}
 		}
 
@@ -45,14 +45,20 @@ namespace Game.Zones
 			{
 				if (checkpointChangeEvent != null)
 				{
-					SetCheckpointActive();
+					SetCheckpoint();
 				}
 			}
 		}
 
-		public void SetCheckpointActive()
+		public void SetCheckpoint()
 		{
-			checkpointChangeEvent(this);
+			checkpointChangeEvent(
+				new Vector3(
+					gameObject.transform.position.x,
+					gameObject.transform.position.y,
+					gameObject.transform.position.z
+				)
+				);
 		}
 
 		public void SetDebugVisual(bool setActive)

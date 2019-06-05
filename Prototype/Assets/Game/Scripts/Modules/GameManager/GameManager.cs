@@ -23,7 +23,7 @@ namespace Game.Managers
 		public GameObject CameraManager;
 		public GameObject PlaymodeManager;
 
-		public CheckpointZone currentCheckpoint;
+		public Vector3 currentCheckpoint;
 
 		public bool debugMode;
 		public float gameTime;
@@ -49,9 +49,9 @@ namespace Game.Managers
 			
 		}
 
-		public void ChangeCheckpoint(CheckpointZone newCheckpoint)
+		public void ChangeCheckpoint(Vector3 newCheckpointPosition)
 		{
-			this.currentCheckpoint = newCheckpoint;
+			this.currentCheckpoint = newCheckpointPosition;
 
 			// SAVE GAME
 		}
@@ -73,7 +73,7 @@ namespace Game.Managers
 
 		public void SpawnPlayer()
 		{
-			playerCharacter = Instantiate(playerCharacterPrefab, currentCheckpoint.transform.position, currentCheckpoint.transform.rotation).GetComponent<CharacterManager>();
+			playerCharacter = Instantiate(playerCharacterPrefab, currentCheckpoint, new Quaternion(currentCheckpoint.x, currentCheckpoint.y, currentCheckpoint.z, 0)).GetComponent<CharacterManager>();
 		}
 
 		public void CreateNotification(string headerText, string descriptionText)
