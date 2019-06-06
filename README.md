@@ -335,8 +335,9 @@ a typical module has the following folder layout:
 - [Module Name]
   - Prefabs - Contains Prefabs needed to run the module.
   - Scripts - Scripts, managers and controllers needed to run the module.
-    - Interfaces - Interfaces for module scripts.
     - Editor - Custom editor inspectors for module.
+    - Interfaces - Interfaces for module scripts.
+    - ScriptableObjects - ScriptableObjects attached to script.
   - Demo - Demo scenes to showcase module functionality.
   - States - States used for extended module functionality.
   - Enums - Enumerators used in module.
