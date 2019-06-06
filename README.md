@@ -342,92 +342,92 @@ a typical module has the following folder layout:
 ### MODULES
 
 #### BASE-MODULE
-**Namespace:** Game.Base
+**Namespace:** Game.V1.Base
 
 Collection of singleton classes for persistant modules.
 
 #### CAMERA-MODULE
-**Namespace:** Game.Camera
+**Namespace:** Game.V1.Camera
 
 Handles Camera movement, zooming, attachment and effects.
 
 #### CHARACTER-MODULE
-**Namespace:** Game.Character
+**Namespace:** Game.V1.Character
 
 Determines if the character is player or not, manages a characters life, armor and status and sets up character visually.
 
 #### DIALOG-MODULE
-**Namespace:** Game.Dialog
+**Namespace:** Game.V1.Dialog
 
 A basic dialog system, managing current speaker, dialog management and animation.
 
 #### EXTENSION-MODULE
-**Namespace:** Game.Extensions
+**Namespace:** Game.V1.Extensions
 
 Extensions from external ressources.
 
 #### HEALTH-AND-ARMOR-MODULE
-**Namespace:** Game.HealthArmor
+**Namespace:** Game.V1.HealthArmor
 
 Manages Health and Armor of the player and NPC's
 
 #### HELPER-MODULE
-**Namespace:** Game.Helper
+**Namespace:** Game.V1.Helper
 
 A collection of Helper classes.
 
 #### INVENTORY-MODULE
-**Namespace:** Game.Inventory
+**Namespace:** Game.V1.Inventory
 
 Manages the passive inventory utilized by the player.
 
 #### ITEM-MODULE
-**Namespace:** Game.Item
+**Namespace:** Game.V1.Item
 
 Collectible/Pickup-able items management.
 
 #### LOCALISATION-MODULE
-**Namespace:** Game.Localisation
+**Namespace:** Game.V1.Localisation
 
 Localisation/Translation system.
 
 #### MANAGER-MODULE
-**Namespace:** Game.Manager
+**Namespace:** Game.V1.Manager
 
 General Game Management, like saving and checkpoint loading. Also Game progress management.
 
 #### PLAYER-MODULE
-**Namespace:** Game.Player
+**Namespace:** Game.V1.Player
 
 Player movement and other player-related functions.
 
 #### PLAYMODE-MODULE
-**Namespace:** Game.Playmode
+**Namespace:** Game.V1.Playmode
 
 Sets current playmode, and needed animations.
 
 #### FINITE-STATE-MACHINE-MODULE
-**Namespace:** Game.FSM
+**Namespace:** Game.V1.FSM
 
 A Finite state machine, managing game states, currently supporting Execution and LateExecution of commands.
 
 #### UI-MODULE
-**Namespace:** Game.UI
+**Namespace:** Game.V1.UI
 
 Manages the UI and all its derivates.
 
 #### VEHICLE-MODULE
-**Namespace:** Game.Vehicle
+**Namespace:** Game.V1.Vehicle
 
 Manages vehicle setup.
 
 #### WEAPON-MODULE
-**Namespace:** Game.Weapon
+**Namespace:** Game.V1.Weapon
 
 Weapon management, shooting, ammunition and settings.
 
 #### ZONE-MODULE
-**Namespace:** Game.Zone
+**Namespace:** Game.V1.Zone
 
 Manages game zones, like checkpoints, damage zones, destination zones, teleportation zones and location zones.
 
