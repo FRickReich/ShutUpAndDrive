@@ -61,6 +61,28 @@ By F. Rick Reich
 		- [VEHICLES](#vehicles)
 		- [WEAPONS](#weapons)
 		- [ITEMS](#items)
+	- [DEVELOPMENT](#development)
+		- [OVERVIEW](#overview-1)
+		- [LAYOUT](#layout)
+		- [MODULES](#modules)
+			- [BASE-MODULE](#base-module)
+			- [CAMERA-MODULE](#camera-module)
+			- [CHARACTER-MODULE](#character-module)
+			- [DIALOG-MODULE](#dialog-module)
+			- [EXTENSION-MODULE](#extension-module)
+			- [HEALTH-AND-ARMOR-MODULE](#health-and-armor-module)
+			- [HELPER-MODULE](#helper-module)
+			- [INVENTORY-MODULE](#inventory-module)
+			- [ITEM-MODULE](#item-module)
+			- [LOCALISATION-MODULE](#localisation-module)
+			- [MANAGER-MODULE](#manager-module)
+			- [PLAYER-MODULE](#player-module)
+			- [PLAYMODE-MODULE](#playmode-module)
+			- [FINITE-STATE-MACHINE-MODULE](#finite-state-machine-module)
+			- [UI-MODULE](#ui-module)
+			- [VEHICLE-MODULE](#vehicle-module)
+			- [WEAPON-MODULE](#weapon-module)
+			- [ZONE-MODULE](#zone-module)
 	- [TIME TABLE](#time-table)
 	- [APPENDIX](#appendix)
 	- [NOTES](#notes)
@@ -297,6 +319,117 @@ Weapons currently are only one per type, could be more if decided uppon.
 - Grenades
   
 ### ITEMS
+
+***
+
+## DEVELOPMENT
+
+Version: 1.5 (Fifth iteration of codebase)
+
+### OVERVIEW
+The development of this game is modular, meaning that each functionality can be switched out, modified or changed in any other way, without destroying the game. This opens up the possibility to not only change game mechanics for further development, but also to reuse modules in other projects.
+
+### LAYOUT
+a typical module has the following folder layout:
+
+- [Module Name]
+  - Prefabs - Contains Prefabs needed to run the module.
+  - Scripts - Scripts, managers and controllers needed to run the module.
+  - Scenes - Demo scenes to showcase module functionality.
+  - States - States used for extended module functionality.
+  - Enums - Enumerators used in module.
+
+### MODULES
+
+#### BASE-MODULE
+**Namespace:** Game.Base
+
+Collection of singleton classes for persistant modules.
+
+#### CAMERA-MODULE
+**Namespace:** Game.Camera
+
+Handles Camera movement, zooming, attachment and effects.
+
+#### CHARACTER-MODULE
+**Namespace:** Game.Character
+
+Determines if the character is player or not, manages a characters life, armor and status and sets up character visually.
+
+#### DIALOG-MODULE
+**Namespace:** Game.Dialog
+
+A basic dialog system, managing current speaker, dialog management and animation.
+
+#### EXTENSION-MODULE
+**Namespace:** Game.Extensions
+
+Extensions from external ressources.
+
+#### HEALTH-AND-ARMOR-MODULE
+**Namespace:** Game.HealthArmor
+
+Manages Health and Armor of the player and NPC's
+
+#### HELPER-MODULE
+**Namespace:** Game.Helper
+
+A collection of Helper classes.
+
+#### INVENTORY-MODULE
+**Namespace:** Game.Inventory
+
+Manages the passive inventory utilized by the player.
+
+#### ITEM-MODULE
+**Namespace:** Game.Item
+
+Collectible/Pickup-able items management.
+
+#### LOCALISATION-MODULE
+**Namespace:** Game.Localisation
+
+Localisation/Translation system.
+
+#### MANAGER-MODULE
+**Namespace:** Game.Manager
+
+General Game Management, like saving and checkpoint loading. Also Game progress management.
+
+#### PLAYER-MODULE
+**Namespace:** Game.Player
+
+Player movement and other player-related functions.
+
+#### PLAYMODE-MODULE
+**Namespace:** Game.Playmode
+
+Sets current playmode, and needed animations.
+
+#### FINITE-STATE-MACHINE-MODULE
+**Namespace:** Game.FSM
+
+A Finite state machine, managing game states, currently supporting Execution and LateExecution of commands.
+
+#### UI-MODULE
+**Namespace:** Game.UI
+
+Manages the UI and all its derivates.
+
+#### VEHICLE-MODULE
+**Namespace:** Game.Vehicle
+
+Manages vehicle setup.
+
+#### WEAPON-MODULE
+**Namespace:** Game.Weapon
+
+Weapon management, shooting, ammunition and settings.
+
+#### ZONE-MODULE
+**Namespace:** Game.Zone
+
+Manages game zones, like checkpoints, damage zones, destination zones, teleportation zones and location zones.
 
 ***
 
