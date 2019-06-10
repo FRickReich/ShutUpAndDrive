@@ -77,6 +77,7 @@ By F. Rick Reich
 			- [BASE-MODULE](#base-module)
 			- [CAMERA-MODULE](#camera-module)
 			- [CHARACTER-MODULE](#character-module)
+			- [DAYTIME-MODULE](#daytime-module)
 			- [DIALOG-MODULE](#dialog-module)
 			- [EXTENSION-MODULE](#extension-module)
 			- [HEALTH-AND-ARMOR-MODULE](#health-and-armor-module)
@@ -394,6 +395,11 @@ Handles Camera movement, zooming, attachment and effects.
 **Namespace:** ```Game.[VERSION].Character```
 
 Determines if the character is player or not, manages a characters life, armor and status and sets up character visually.
+
+#### DAYTIME-MODULE
+**Namespace:** ```Game.[VERSION].Daytime```
+
+A system to control all changes connected to day/nighttime.
 
 #### DIALOG-MODULE
 **Namespace:** ```Game.[VERSION].Dialog```
