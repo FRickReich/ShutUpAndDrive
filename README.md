@@ -349,7 +349,7 @@ Rarities are:
 | ```hopfen_teuerwagen```      | WIP    | (1974) Mercedes W115                   | Hopfen    | Teuerwagen       | Car        | Limousine | Traffic |           |         | AWD        | Rare     |
 | ```moonshine_assistant```    | NONE   | (1974) Dodge P30 Food Truck            | Moonshine | Assistant        | Truck      |           | Traffic |           |         | FWD        | Uncommon |
 | ```moonshine_delivery```     | WIP    | (1974) Dodge P30 Delivery Truck        | Moonshine | Delivery         | Truck      |           | Traffic |           |         | FWD        | Uncommon |
-| ```moonshine_mahagoni```     | WIP    | Cadillac?!                             | Moonshine | Mahagoni         | Car        | Limousine | Traffic |           |         | RWD        | Uncommon |
+| ```moonshine_mahagoni```     | WIP    | (1974) Lincoln Continental Mark IV     | Moonshine | Mahagoni         | Car        | Limousine | Traffic |           |         | RWD        | Uncommon |
 | ```moonshine_monsieur```     | WIP    | (1967) Chevrolet Impala                | Moonshine | Monsieur         | Car        | Coupe     | Traffic |           |         | RWD        | Common   |
 | ```sake_coupe```             | WIP    | (1970) Mitsubishi Galant               | Sake      | Coupe            | Car        | Coupe     | Traffic |           |         | FWD        | Common   |
 | ```sambuca_elegance```       | WIP    | (1963) Alfa Romeo TZ2                  | Sambuca   | Elegance         | Car        | Sport     | Traffic |           |         | RWD        | Unique   |
@@ -369,15 +369,19 @@ Weapon ammo comes in 3 categories (plus grenades):
 - Medium - For medium sized weapons
 - Large - For rocket launchers and other big weapons.
 
-|ID                     | Name            | Ammo-Type | Description |
-| --------------------- | --------------- | --------- | ----------- |
-| ```weapon_fists```    | Fists           |           |             |
-| ```weapon_pistol```   | Pistol          | small     |             |
-| ```weapon_smg```      | Machine Gun     | small     |             |
-| ```weapon_rifle```    | Rifle           | medium    |             |
-| ```weapon_shotgun```  | Shotgun         | medium    |             |
-| ```weapon_rpg```      | Rocket Launcher | large     |             |
-| ```weapon_grenades``` | Grenades        | grenades  |             |
+**(Statistics may change after balacing.)**
+
+|ID                     | Name            | Ammo-Type | Max Ammo | Damage | Range | Reload Time | Fire Rate | Description |
+| --------------------- | --------------- | --------- | -------- | ------ | ----- | ----------- | --------- | ----------- |
+| ```weapon_fists```    | Fists           |           | 1        | 10     | 1     | 1           | 1         | -           |
+| ```weapon_pistol```   | Pistol          | small     | 1        | 10     | 1     | 1           | 1         | -           |
+| ```weapon_smg```      | Machine Gun     | small     | 1        | 10     | 1     | 1           | 1         | -           |
+| ```weapon_rifle```    | Rifle           | medium    | 1        | 10     | 1     | 1           | 1         | -           |
+| ```weapon_shotgun```  | Shotgun         | medium    | 1        | 10     | 1     | 1           | 1         | -           |
+| ```weapon_rpg```      | Rocket Launcher | large     | 1        | 10     | 1     | 1           | 1         | -           |
+| ```weapon_grenades``` | Grenades        | grenades  | 1        | 10     | 1     | 1           | 1         | -           |
+
+(* Reload Time and FIre Rate in Seconds)
 
 
 ### ITEMS
