@@ -67,6 +67,7 @@ By F. Rick Reich
 	- [ART](#art)
 	- [ASSETS](#assets)
 		- [CHARACTERS](#characters)
+		- [WHEELS](#wheels)
 		- [VEHICLES](#vehicles)
 		- [WEAPONS](#weapons)
 		- [ITEMS](#items)
@@ -303,6 +304,22 @@ The world-map will be around 256x256 tiles in size, extending upwards for buildi
 - Garrett
 - James
 
+### WHEELS
+The game constits of a set of Wheels, wich are pre attached to vehicles, but "could" also be changed if the game would contain a customization feature.
+
+| ID            | Title   | Description |
+| ------------- | ------- | ----------- |
+| ```wheel_1``` | Wheel 1 |  |
+| ```wheel_2``` | Wheel 2 |  |
+| ```wheel_3``` | Wheel 3 |  |
+| ```wheel_4``` | Wheel 4 |  |
+| ```wheel_5``` | Wheel 5 |  |
+| ```wheel_6``` | Wheel 6 |  |
+| ```wheel_7``` | Wheel 7 |  |
+| ```wheel_8``` | Wheel 8 |  |
+| ```wheel_9``` | Wheel 9 |  |
+
+
 ### VEHICLES
 The game contains a broad list of vehicles. All brands use (Country) local alcoholic beverage names for their name.
 
@@ -343,6 +360,7 @@ Rarities are:
 | ```whiskey_freeman```        | WIP    | (1970) Dodge Superbee                  | Whiskey   | Freeman          | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon |
 | ```whiskey_sportsman```      | WIP    | (1971) Plymouth GTX                    | Whiskey   | Sportsman        | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon |
 
+
 ### WEAPONS
 Weapons currently are only one per type, could be more if decided uppon.
 
@@ -353,7 +371,8 @@ Weapons currently are only one per type, could be more if decided uppon.
 - Shotgun
 - Rocket Launcher
 - Grenades
-  
+
+
 ### ITEMS
 
 ***
