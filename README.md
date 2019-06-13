@@ -307,7 +307,7 @@ The world-map will be around 256x256 tiles in size, extending upwards for buildi
 ### WHEELS
 The game constits of a set of Wheels, wich are pre attached to vehicles, but "could" also be changed if the game would contain a customization feature.
 
-| ID            | Title   | Description |
+| ID            | Name    | Description |
 | ------------- | ------- | ----------- |
 | ```wheel_1``` | Wheel 1 |  |
 | ```wheel_2``` | Wheel 2 |  |
@@ -364,13 +364,15 @@ Rarities are:
 ### WEAPONS
 Weapons currently are only one per type, could be more if decided uppon.
 
-- Fists
-- Pistol
-- Machine Gun
-- Rifle
-- Shotgun
-- Rocket Launcher
-- Grenades
+|ID                     | Name            | Ammo-Type | Description |
+| --------------------- | --------------- | --------- | ----------- |
+| ```weapon_fists```    | Fists           |           |             |
+| ```weapon_pistol```   | Pistol          | small     |             |
+| ```weapon_smg```      | Machine Gun     | small     |             |
+| ```weapon_rifle```    | Rifle           | medium    |             |
+| ```weapon_shotgun```  | Shotgun         | medium    |             |
+| ```weapon_rpg```      | Rocket Launcher | big       |             |
+| ```weapon_grenades``` | Grenades        | grenades  |             |
 
 
 ### ITEMS
