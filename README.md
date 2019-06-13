@@ -364,6 +364,11 @@ Rarities are:
 ### WEAPONS
 Weapons currently are only one per type, could be more if decided uppon.
 
+Weapon ammo comes in 3 categories (plus grenades):
+- Small - For guns and small weapons
+- Medium - For medium sized weapons
+- Large - For rocket launchers and other big weapons.
+
 |ID                     | Name            | Ammo-Type | Description |
 | --------------------- | --------------- | --------- | ----------- |
 | ```weapon_fists```    | Fists           |           |             |
@@ -371,7 +376,7 @@ Weapons currently are only one per type, could be more if decided uppon.
 | ```weapon_smg```      | Machine Gun     | small     |             |
 | ```weapon_rifle```    | Rifle           | medium    |             |
 | ```weapon_shotgun```  | Shotgun         | medium    |             |
-| ```weapon_rpg```      | Rocket Launcher | big       |             |
+| ```weapon_rpg```      | Rocket Launcher | large     |             |
 | ```weapon_grenades``` | Grenades        | grenades  |             |
 
 
@@ -417,6 +422,8 @@ Handles Camera movement, zooming, attachment and effects.
 
 Determines if the character is player or not, manages a characters life, armor and status and sets up character visually.
 
+**Character object:**
+
 #### DAYTIME-MODULE
 **Namespace:** ```Game.[VERSION].Daytime```
 
@@ -426,6 +433,8 @@ A system to control all changes connected to day/nighttime.
 **Namespace:** ```Game.[VERSION].Dialog```
 
 A basic dialog system, managing current speaker, dialog management and animation.
+
+**Dialog object:**
 
 #### EXTENSION-MODULE
 **Namespace:** ```Game.[VERSION].Extensions```
@@ -452,10 +461,14 @@ Manages the passive inventory utilized by the player.
 
 Collectible/Pickup-able items management.
 
+**Item object:**
+
 #### LOCALISATION-MODULE
 **Namespace:** ```Game.[VERSION].Localisation```
 
 Localisation/Translation system.
+
+**Localization object:**
 
 #### MANAGER-MODULE
 **Namespace:** ```Game.[VERSION].Manager```
@@ -476,6 +489,10 @@ Sets current playmode, and needed animations.
 **Namespace:** ```Game.[VERSION].FSM```
 
 A Finite state machine, managing game states, currently supporting Execution and LateExecution of commands.
+
+**States:**
+- InputTest
+- StringTest
 
 #### UI-MODULE
 **Namespace:** ```Game.[VERSION].UI```
@@ -498,6 +515,8 @@ Manages vehicle setup.
 **Namespace:** ```Game.[VERSION].Weapon```
 
 Weapon management, shooting, ammunition and settings.
+
+**Weapon object:**
 
 #### ZONE-MODULE
 **Namespace:** ```Game.[VERSION].Zone```
