@@ -65,6 +65,7 @@ By F. Rick Reich
 		- [PAUSE / OPTIONS SCREEN](#pause--options-screen)
 		- [MISSION LOG/INVENTORY](#mission-loginventory)
 	- [ART](#art)
+		- [Vehicles](#vehicles)
 	- [ASSETS](#assets)
 		- [CHARACTERS](#characters)
 		- [WHEELS](#wheels)
@@ -291,6 +292,20 @@ Shows up-to-date notifications for the player, wether it is that shows have new 
 ## ART
 each tile is 4x4 meters (units) in size, quadratic. 2048x2048px resolution (originally 64x64x64px)
 The world-map will be around 256x256 tiles in size, extending upwards for buildings and structures, and also might extend sideways if map needs more space.
+
+### Vehicles
+
+Vehicles have Materials with Chrome, Detail (dark grey, for plastic) and Window (reflective)
+
+additionally  Vehicles have a set of tags on their objects determining their Material-behavior.
+
+The following tags are availible and can be attached to each main body part of a vehicle:
+- paintable - Color can be changed
+- unpaintable - Color is set by prefab.
+
+**Examples:**
+- ```Roof_unpaintable``` - The Roof is unpaintable
+- ```Body_paintable``` - The main body  paintable
 
 ***
 
