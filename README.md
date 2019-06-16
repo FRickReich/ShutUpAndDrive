@@ -322,17 +322,17 @@ The following tags are availible and can be attached to each main body part of a
 ### WHEELS
 The game constits of a set of Wheels, wich are pre attached to vehicles, but "could" also be changed if the game would contain a customization feature.
 
-| ID            | Name    | Description |
-| ------------- | ------- | ----------- |
-| ```wheel_1``` | Wheel 1 |  |
-| ```wheel_2``` | Wheel 2 |  |
-| ```wheel_3``` | Wheel 3 |  |
-| ```wheel_4``` | Wheel 4 |  |
-| ```wheel_5``` | Wheel 5 |  |
-| ```wheel_6``` | Wheel 6 |  |
-| ```wheel_7``` | Wheel 7 |  |
-| ```wheel_8``` | Wheel 8 |  |
-| ```wheel_9``` | Wheel 9 |  |
+| ID            | Name    | Rim         | Wheel      | Color    | Description                              |
+| ------------- | ------- | ----------- | ---------- | -------- | ---------------------------------------- |
+| ```wheel_1``` | Wheel 1 | Closed      | Standard   | Chrome   | Standard rim with normal tire            |
+| ```wheel_2``` | Wheel 2 | Closed      | Standard   | Chrome   | Larger rim with normal tire              |
+| ```wheel_3``` | Wheel 3 | 5-Spoke     | Standard   | Chrome   | 5 spoke rim with normal wheel            |
+| ```wheel_4``` | Wheel 4 | 5-Spoke     | White-Wall | Two-tone | muscle car rim with white-wall tire      |
+| ```wheel_5``` | Wheel 5 | Multi-Spoke | Standard   | Two-tone | Classic multi-spoke rim with normal tire |
+| ```wheel_6``` | Wheel 6 | Wiremesh    | Standard   | Chrome   | Wiremesh rim with normal tire            |
+| ```wheel_7``` | Wheel 7 | Closed      | Standard   | Chrome   | Closed rim with normal tire              |
+| ```wheel_8``` | Wheel 8 | Luxury      | White-Wall | Chrome   | Luxurious rim with white-wall tire       |
+| ```wheel_9``` | Wheel 9 | Commercial  | Standard   | Two-Tone | Commercial big rim with normal tire      |
 
 
 ### VEHICLES
@@ -349,13 +349,15 @@ Rarities are:
 - Uncommon - Vehicle encountered often
 - Rare - Vehicle encountered rarely
 - Unique - Vehicle only exists Once, can be a special collectible car, or a car only driven by a certain character.
+- Hero - Only exists once, car the player-character drives personally.
 
 
 | ID                           | STATUS | REAL-LIFE                              | BRAND     | NAME             | TYPE       | CATEGORY  | VERSION | TOP SPEED | WEIGHT  | DRIVE TYPE | RARITY   |
 | ---------------------------- | ------ | -------------------------------------- | --------- | ---------------- | ---------- | --------- | ------- | --------- | ------- | ---------- | -------- |
+| ```whiskey_boattail_hero```  | WIP    | (1973) Buick Riviera                   | Whiskey   | Boattail         | Car        | Coupe     | Traffic |           |         | RWD        | Hero     |
 | ```amaretto_bull```          | WIP    | (1975) Lamborghini Countach            | Amaretto  | Bull             | Car        | Sport     | Traffic |           |         | RWD        | Rare     |
-| ```amaretto_mariano```       | WIP    | (1974) FERRARI 308 GTO                 | Amaretto  | Mariano          | Car        | Sport     | Traffic |           |         | RWD        | Rare     |
-| ```bourbon_chuckles```       | WIP    | (1974) Chevrolet Nova SS               | Bourbon   | Chuckles         | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon |
+| ```amaretto_mariano```       | WIP    | (1974) FERRARI 308 GTO                 | Amaretto  | Mariano          | Car        | Sport     | Traffic |           |         | RWD        | Rare     | 
+| ```bourbon_chuckles```       | WIP    | (1974) Chevrolet Nova SS               | Bourbon   | Chuckles         | Car        | Coupe     | Traffic |           |         | RWD        | Uncommon | 
 | ```bourbon_millenium```      | WIP    | (1971) Cadillac Deville                | Bourbon   | Millenium        | Car        | Limousine | Traffic |           |         | RWD        | Uncommon |
 | ```bourbon_mover```          | WIP    | (1973) GMC Van                         | Bourbon   | Mover            | Car        | Van       | Traffic |           |         | AWD        | Common   |
 | ```bourbon_panther```        | WIP    | (1974) Dodge Monaco                    | Bourbon   | Panther          | Car        | Limousine | Traffic |           |         | RWD        | Common   |

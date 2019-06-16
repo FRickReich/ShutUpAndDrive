@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CarPaintTemplate
+  m_Name: Bright Red
   m_Shader: {fileID: -6465566751694194690, guid: dac9720429664465ba886e505f178c93,
     type: 3}
   m_ShaderKeywords: 
@@ -28,11 +28,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Boolean_243842DF: 0
-    - Boolean_7B2CB826: 1
+    - Boolean_7B2CB826: 0
     - Boolean_C07886CB: 0
     - Boolean_F81CF856: 0
     - Vector1_424F7030: 0.3
     - Vector1_689EE0F8: 0.53
     - Vector1_A1B1FEA3: -0.5
     m_Colors:
-    - Color_657D919: {r: 1, g: 0, b: 0, a: 1}
+    - Color_657D919: {r: 0.7921569, g: 0.15294118, b: 0.08627451, a: 1}

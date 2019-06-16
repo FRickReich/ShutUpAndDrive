@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sienna Metallic
+  m_Shader: {fileID: -6465566751694194690, guid: dac9720429664465ba886e505f178c93,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    MotionVector: User
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_3683A165:
+        m_Texture: {fileID: 2800000, guid: 494c6fe7e2bc4411688a91ba9e82c863, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Boolean_243842DF: 0
+    - Boolean_7B2CB826: 1
+    - Boolean_C07886CB: 0
+    - Boolean_F81CF856: 0
+    - Vector1_424F7030: 0.3
+    - Vector1_689EE0F8: 0.53
+    - Vector1_A1B1FEA3: -0.5
+    m_Colors:
+    - Color_657D919: {r: 0.81960785, g: 0.43529412, b: 0.2509804, a: 1}
